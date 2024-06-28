@@ -21,7 +21,7 @@ const Navbar = () => {
               <input
                 type="text"
                 placeholder="Поиск"
-                className="bg-[#F8F7F3] px-4 w-[400px]"
+                className="bg-[#F8F7F3] px-4 w-[400px] outline-none "
               />
               <button className="h-[38px] w-[50px] flex items-center gap-2 text-[15px] text-[#7A7687] rounded-r-full bg-[#D5D1E1] left-2 relative ">
                 <IoSearch className="text-[#7A7687] ml-5" />
