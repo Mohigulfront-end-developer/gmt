@@ -7,6 +7,8 @@ import Clinet from './client/Clinet';
 import Infom from './inform/Infom';
 import News from './news/News';
 import Catalog from './catalog/Catalog';
+import  Question  from './question/Question';
+import Course from './course/Course';
 
 const Main = () => {
   return (
@@ -20,6 +22,8 @@ const Main = () => {
       <Brand />
       <Infom />
       <News />
+      <Question/>
+      <Course/>
     </div>
   );
 }

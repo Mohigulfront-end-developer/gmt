@@ -12,8 +12,9 @@ const Select = () => {
     <div className="bg-[#F8F7F3]">
       <div className="container">
         <h2 className="font-medium text-[30px]">Почему выбирают нас?</h2>
-        <div className="lg:grid lg:grid-cols-4 sm:grid sm:grid-cols-2 sm:justify-center items-center gap-1 justify-between py-10">
-          <div className="border  border-[#E5E2EE] rounded-md p-[80px] flex flex-col items-center w-[97%] h-[315px] gap-[41px]">
+        <div className="grid lg:grid lg:grid-cols-4 sm:grid sm:grid-cols-2 sm:justify-center items-center gap-[10px] justify-between py-10">
+         
+          <div className="border border-[#E5E2EE] rounded-md p-[80px] flex flex-col items-center w-[97%] h-[315px] gap-[41px]">
             <img src={Light} alt="" className="w-[36px] h-[75px]" />
             <p className="text-[16px] font-medium">Весь товар сертифицирован</p>
           </div>
@@ -29,6 +30,7 @@ const Select = () => {
             <img src={Number} alt="" className="w-[36px] h-[60px]" />
             <p className="text-[16px] font-medium">Быстрая доставка</p>
           </div>
+
         </div>
       </div>
     </div>
