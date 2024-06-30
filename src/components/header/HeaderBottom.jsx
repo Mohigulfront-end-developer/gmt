@@ -7,26 +7,47 @@ const HeaderBottom = () => {
     <div className="bg-[#F8F7F3] border-b-2 border-[#E5E2EE]">
       <div className="container flex items-center justify-between py-2">
         <ul className="flex items-center justify-between gap-5">
-          <NavLink className="flex items-center gap-2 text-[14px] font-semibold">
+          <NavLink
+            to={"/katalog"}
+            className="flex items-center gap-2 text-[14px] font-semibold active:text-green-600"
+          >
             <HiOutlineMenuAlt1 />
             Каталог
           </NavLink>
-          <NavLink className="flex items-center text-[14px] font-semibold">
+          <NavLink
+            to={"/proizvoditel"}
+            className="flex items-center text-[14px] font-semibold"
+          >
             Производители
           </NavLink>
-          <NavLink className="flex items-center text-[14px] font-semibold">
+          <NavLink
+            to={"/kabinet-podklyuch"}
+            className="flex items-center text-[14px] font-semibold"
+          >
             Кабинеты под ключ
           </NavLink>
-          <NavLink className="flex items-center text-[14px] font-semibold">
+          <NavLink
+            to={"/servisi"}
+            className="flex items-center text-[14px] font-semibold"
+          >
             Услуги
           </NavLink>
-          <NavLink className="flex items-center text-[14px] font-semibold">
+          <NavLink
+            to={"/aktsiya"}
+            className="flex items-center text-[14px] font-semibold"
+          >
             Акции
           </NavLink>
-          <NavLink className="flex items-center text-[14px] font-semibold">
+          <NavLink
+            to={"/pokupatel"}
+            className="flex items-center text-[14px] font-semibold"
+          >
             Покупателям
           </NavLink>
-          <NavLink className="flex items-center text-[14px] font-semibold">
+          <NavLink
+            to={"/kontakt"}
+             className="flex items-center text-[14px] font-semibold"
+          >
             Контакты
           </NavLink>
         </ul>

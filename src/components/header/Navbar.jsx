@@ -5,6 +5,7 @@ import { IoIosHeartEmpty } from "react-icons/io";
 import { FiShoppingCart } from "react-icons/fi";
 import { RiAlignItemBottomLine } from "react-icons/ri";
 import { IoSearch } from "react-icons/io5";
+import { NavLink } from "react-router-dom";
 
 
 const Navbar = () => {
@@ -13,7 +14,10 @@ const Navbar = () => {
       <div className="container py-4">
         <div className="flex justify-between items-center">
           <div className="flex items-center gap-8">
-            <img src={Logo} alt="" />
+            <NavLink to={"/"}>
+              <img src={Logo} alt="" />
+            </NavLink>
+
             <div className="flex items-center border border-[#D5D1E1]  px-2 rounded-full">
               <button className="flex font-bold items-center gap-2 text-[14px] text-[#7A7687] rounded-full bg-[#EFEFEF] p-2 relative right-[8px]">
                 Все категории <FaCaretDown className="text-[#7A7687]" />

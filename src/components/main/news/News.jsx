@@ -20,7 +20,7 @@ const News = () => {
 
   return (
     <div className="bg-[#F8F7F3]">
-      <div className=" py-[100px]">
+      <div className="py-[100px]">
         <div className="flex justify-between ">
           <div className="container">
             <h2 className="ml-[80px] text-[30px] font-medium">Новости компании</h2>
