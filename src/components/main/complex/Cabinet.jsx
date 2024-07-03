@@ -29,7 +29,7 @@ const Cabinet = () => {
   const displayedImages = images.slice(startIndex, startIndex + 3);
 
   return (
-    <div className="bg-[#F8F7F3] py-[30px]">
+    <div className="bg-[#F8F7F3] pt-[30px]">
       <div className="container mx-auto">
         <h2 className="text-[30px] font-medium ">
           Комплексное оснащение кабинетов

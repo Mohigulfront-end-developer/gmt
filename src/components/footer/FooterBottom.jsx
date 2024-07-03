@@ -5,6 +5,7 @@ import { FaWhatsapp } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
 
 
+
 const FooterBottom = () => {
   return (
     <div className="bg-[#088269]">

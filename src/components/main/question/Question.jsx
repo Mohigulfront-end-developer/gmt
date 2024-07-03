@@ -29,7 +29,7 @@ const Question = () => {
             className="outline-none bg-transparent px-4 py-2 mb-[10px]  border-b-[1px] border-b-[#7A768] w-full text-[16px] font-normal"
           />
           <input
-            type="text"
+            type="number"
             placeholder="Ваш телефон"
             className="outline-none bg-transparent px-4 py-2 mb-[10px]  border-b-[1px] border-b-[#7A768] w-full text-[16px] font-normal"
           />

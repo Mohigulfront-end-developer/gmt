@@ -30,7 +30,7 @@ const Category = () => {
               <img
                 src={img1}
                 alt="image"
-                className="w-full h-[250px] object-center "
+                className="w-full h-[200px] object-contain rounded-t-xl bg-white p-10 "
               />
               <p className="text-[16px] font-normal p-4 ">
                 Дерматологическое оборудование
@@ -40,35 +40,39 @@ const Category = () => {
               <img
                 src={img2}
                 alt="image"
-                className="w-full h-[250px] object-center"
+                className="w-full h-[200px] object-contain rounded-t-xl bg-white p-10"
               />
               <p className="text-[16px] font-normal p-4">
                 Ветеринарное оборудование
               </p>
             </div>
           </div>
-          <div className="w-[98%] h-[624px] border border-[#E5E2EE] rounded-lg row-span-2">
-            <img src={img3} alt="" className=" h-[570px] w-full " />
+          <div className="w-[98%] h-[578px] border border-[#E5E2EE] rounded-lg row-span-2">
+            <img
+              src={img3}
+              alt=""
+              className=" w-full h-[470px] object-contain rounded-t-xl bg-white p-10"
+            />
             <p className="text-[16px] font-normal p-4">
               Дерматологическое оборудование
             </p>
           </div>
           <div className="grid grid-cols-1 gap-4">
-            <div className=" w-[98%] h-[304px] border border-[#E5E2EE] rounded-lg">
+            <div className=" w-[98%] h-[280px] border border-[#E5E2EE] rounded-lg">
               <img
                 src={img4}
                 alt="image"
-                className="w-full h-[250px] object-center"
+                className="w-full h-[200px] object-contain rounded-t-xl bg-white p-10"
               />
               <p className="text-[16px] font-normal p-4">
                 Оборудование для анастезиологии
               </p>
             </div>
-            <div className="w-[98%] h-[304px] border border-[#E5E2EE] rounded-lg">
+            <div className="w-[98%] h-[280px] border border-[#E5E2EE] rounded-lg">
               <img
                 src={img5}
                 alt="image"
-                className="w-full h-[250px] object-center"
+                className="w-full h-[200px] object-contain rounded-t-xl bg-white p-10"
               />
               <p className="text-[16px] font-normal p-4">
                 Мебель для медецинских целей
@@ -76,21 +80,21 @@ const Category = () => {
             </div>
           </div>
           <div className="grid grid-cols-1 gap-4">
-            <div className="w-[98%] h-[304px] border border-[#E5E2EE] rounded-lg">
+            <div className="w-[98%] h-[280px] border border-[#E5E2EE] rounded-lg">
               <img
                 src={img6}
                 alt="image"
-                className="w-full h-[250px] object-center"
+                className="w-full h-[200px] object-contain rounded-t-xl bg-white p-10"
               />
               <p className="text-[16px] font-normal p-4">
                 Оборудование для анастезиологии
               </p>
             </div>
-            <div className="w-[98%] h-[304px] border border-[#E5E2EE] rounded-lg">
+            <div className="w-[98%] h-[280px] border border-[#E5E2EE] rounded-lg">
               <img
                 src={img7}
                 alt="image"
-                className="w-full h-[250px] object-center"
+                className="w-full h-[200px] object-contain rounded-t-xl bg-white p-10"
               />
               <p className="text-[16px] font-normal p-4">
                 Дерматологическое оборудование

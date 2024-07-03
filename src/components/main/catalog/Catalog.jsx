@@ -1,9 +1,11 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { GoArrowLeft, GoArrowRight } from "react-icons/go";
 import Data from "../../../data/catalog";
+import { useNavigate } from "react-router-dom";
 
 const Catalog = () => {
   const [startIndex, setStartIndex] = useState(0);
+  const navigate = useNavigate();
 
   const handleNext = () => {
     setStartIndex((prevIndex) => (prevIndex + 1) % Data.length);
@@ -20,7 +22,7 @@ const Catalog = () => {
 
   return (
     <div className="bg-[#F8F7F3]">
-      <div className=" py-[100px]">
+      <div className=" pb-[100px]">
         <div className="flex justify-between ">
           <div className="container">
             <h2 className="ml-[80px] text-[30px] font-medium">
@@ -46,7 +48,8 @@ const Catalog = () => {
                   <img
                     src={data.image}
                     alt={data.alt}
-                    className="w-full h-[200px] object-contain rounded-t-xl bg-white p-10"
+                    className="w-full h-[200px] object-contain rounded-t-xl bg-white p-10 cursor-pointer"
+                    onClick={() => navigate(`/katalog/laboratornoe/${data.id}`)}
                   />
                   <div className="p-4">
                     <h3 className="pr-[80px] text-[18px] font-semibold mb-2 text-[#202020]">

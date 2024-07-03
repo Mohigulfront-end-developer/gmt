@@ -10,7 +10,7 @@ import Number from "../../../../public/Icons/number.svg";
 const Select = () => {
   return (
     <div className="bg-[#F8F7F3]">
-      <div className="container">
+      <div className="container py-[150px]">
         <h2 className="font-medium text-[30px]">Почему выбирают нас?</h2>
         <div className="grid lg:grid lg:grid-cols-4 sm:grid sm:grid-cols-2 sm:justify-center items-center gap-[10px] justify-between py-10">
          
