@@ -1,6 +1,5 @@
 import React from 'react'
 import { Link, NavLink } from 'react-router-dom';
-import Question from "../components/main/question/Question"
 import Consult from '../components/garantii/Consult';
 
 const Oplata = () => {

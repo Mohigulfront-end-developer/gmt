@@ -1,11 +1,1 @@
-<svg width="50" height="68" viewBox="0 0 50 68" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g id="Group">
-<g id="Group_2">
-<rect id="Rectangle" x="49.501" y="46.3008" width="4" height="42" transform="rotate(-180 49.501 46.3008)" fill="#202020"/>
-<rect id="Rectangle_2" x="4" y="46.3008" width="4" height="42" transform="rotate(-180 4 46.3008)" fill="#202020"/>
-<rect id="Rectangle_3" x="45.2002" width="4" height="41" transform="rotate(90 45.2002 0)" fill="#202020"/>
-<rect id="Rectangle_4" width="4.12803" height="27.4583" transform="matrix(-0.656466 -0.754355 0.749012 -0.662556 27.7119 67.666)" fill="#202020"/>
-<rect id="Rectangle_5" width="4.12803" height="27.46" transform="matrix(0.656466 -0.754355 -0.749012 -0.662556 22.291 67.666)" fill="#202020"/>
-</g>
-</g>
-</svg>
+<svg width="50" height="68" fill="none" xmlns="http://www.w3.org/2000/svg"><g fill="#202020"><path d="M49.501 46.3h-4v-42h4zM4 46.3H0v-42h4zM45.2 0v4h-41V0zM27.712 67.666l-2.71-3.114L45.568 46.36l2.71 3.114zM22.291 67.666l2.71-3.114L4.433 46.358l-2.71 3.114z"/></g></svg>

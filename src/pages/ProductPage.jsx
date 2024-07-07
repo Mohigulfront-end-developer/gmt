@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Data from "../data/catalog";
 import { Link, NavLink, useParams } from "react-router-dom";
 import Product from "../components/productComp/Characterics";
-import Star from "../../public/assets/productpage/Star.svg"
+import Star from "../../public/assets/productpage/star.svg"
 import Catalog from "../components/main/catalog/Catalog"
 import Cabinet from "../components/main/complex/Cabinet";
 import Brend from "../components/main/brend/Brand";

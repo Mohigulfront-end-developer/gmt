@@ -1,13 +1,13 @@
 
 // import Image from "next/image";
 // import Link from "next/link";
-import img1 from "../../../../public/assets/category1.png";
-import img2 from "../../../../public/assets/category2.png";
-import img3 from "../../../../public/assets/category3.png";
-import img4 from "../../../../public/assets/category4.png";
-import img5 from "../../../../public/assets/category5.png";
-import img6 from "../../../../public/assets/category6.png";
-import img7 from "../../../../public/assets/category7.png";
+import img1 from "../../../../public/assets/category/category1.png"
+import img2 from "../../../../public/assets/category/category2.png";
+import img3 from "../../../../public/assets/category/category3.png";
+import img4 from "../../../../public/assets/category/category4.png";
+import img5 from "../../../../public/assets/category/category5.png";
+import img6 from "../../../../public/assets/category/category6.png";
+import img7 from "../../../../public/assets/category/category7.png";
 import { Link } from "react-router-dom";
 
 const Category = () => {

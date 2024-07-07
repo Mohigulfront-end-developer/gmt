@@ -21,25 +21,30 @@ import Korzinka from "./pages/Korzinka";
 import Liked from "./pages/Liked";
 import SalePage from "./pages/Sale";
 import CabinetInform from "./pages/CabinetInform";
+import BrendPage from "./pages/BrendPage";
+
 // import Text from "./pages/Text"
 
 
 
 
 function App() {
+ 
   return (
     <>
       <BrowserRouter>
         <Header />
+       
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/katalog" element={<Catalog />} />
           <Route path="/katalog/laboratornoe" element={<Labaratory />} />
           <Route path="/katalog/laboratornoe/:id" element={<ProductPage />} />
           <Route path="/proizvoditel" element={<Manifacture />} />
+          <Route path="/proizvoditel/:id" element={<BrendPage />} />
+
           <Route path="/kabinet-podklyuch" element={<CabinetRegister />} />
           <Route path="/kabinet-podklyuch/:id" element={<CabinetInform />} />
-
           <Route path="/servisi" element={<Services />} />
           <Route path="/aktsiya" element={<SalePage />} />
           <Route path="/pokupatel" element={<Customers />} />

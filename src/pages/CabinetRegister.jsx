@@ -3,7 +3,6 @@ import { Link, NavLink, useNavigate } from 'react-router-dom';
 import Data from "../data/cabinet"
 import Select from '../components/main/select/Select';
 import Order from '../components/cabinet/Order';
-import Inform from "../components/main/inform/Infom"
 import Question from '../components/main/question/Question';
 import Course from '../components/main/course/Course';
 import FastQuestion from '../components/delivery/FastQuestion';

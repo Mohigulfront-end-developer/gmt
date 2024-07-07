@@ -1,6 +1,5 @@
 import React from 'react'
 import PositiveSide from '../components/delivery/PositiveSide';
-import Inform from "../components/main/inform/Infom"
 import Course from "../components/main/course/Course"
 import { Link, NavLink } from 'react-router-dom';
 import Document from '../components/delivery/Document';
