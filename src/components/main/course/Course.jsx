@@ -1,4 +1,3 @@
-import React from 'react'
 import Img from "../../../../public/message.svg"
 
 const Course = () => {

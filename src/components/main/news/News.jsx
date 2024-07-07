@@ -1,77 +1,112 @@
-import { useState } from "react";
-import { GoArrowLeft, GoArrowRight } from "react-icons/go";
+import { useRef } from "react";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import Data from "../../../data/news";
+import { HiArrowSmLeft, HiArrowSmRight } from "react-icons/hi";
 
-const News = () => {
-  const [startIndex, setStartIndex] = useState(0);
+const Brend = () => {
+  const sliderRef = useRef(null);
 
-  const handleNext = () => {
-    setStartIndex((prevIndex) => (prevIndex + 1) % Data.length);
+  const settings = {
+    dots: false,
+    infinite: false,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    initialSlide: 0,
+    infinite: true,
+
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true,
+        },
+      },
+    ],
   };
-
-  const handlePrev = () => {
-    setStartIndex((prevIndex) => (prevIndex - 1 + Data.length) % Data.length);
-  };
-
-  const displayedData = Data.slice(startIndex, startIndex + 3);
-  if (displayedData.length < 3) {
-    displayedData.push(...Data.slice(0, 3 - displayedData.length));
-  }
 
   return (
-    <div className="bg-[#F8F7F3]">
-      <div className="py-[100px]">
-        <div className="flex justify-between ">
-          <div className="container">
-            <h2 className="ml-[80px] text-[30px] font-medium">Новости компании</h2>
+    <div className="bg-[#f8f7f3]  py-[150px]">
+      <div className="container flex flex-col md:flex-row w-full gap-[30px]">
+        <div className=" md:w-1/3 w-full">
+          <div className="flex justify-between">
+            <h1 className="text-[30px] font-medium">Новости компании</h1>
+            <button className="px-5 py-3 hidden sm:block md:hidden  rounded-full border text-[14px] text-[#fff] bg-[#088269]">
+              Все новости
+            </button>
           </div>
-
-          <div className="">
-            <div className="flex items-center gap-2">
-              {displayedData.map((data, index) => (
-                <div key={index} className="border rounded-xl w-[300px]">
-                  <img
-                    src={data.image}
-                    alt={data.alt}
-                    className="w-full h-[300px] object-cover rounded-t-xl"
-                  />
-                  <div className="p-5">
-                    <span className="block text-[#7A7687] text-[12px] font-normal mb-2">
-                      {data.time}
+        </div>
+        <div className="h-[430px] md:w-2/3 w-full flex flex-col gap-[40px]">
+          <div>
+            <Slider ref={sliderRef} {...settings}>
+              {Data.map((item, index) => (
+                <div
+                  key={index}
+                  className="w-[320px] border-[1px] bg-[#f8f7f3]  rounded-lg"
+                >
+                  <div className="w-full h-[250px]  flex items-center justify-center rounded-lg">
+                    <img
+                      src={item.image}
+                      alt={item.title}
+                      className="w-full h-full rounded-t-lg"
+                    />
+                  </div>
+                  <div className=" px-[14px] py-[20px]">
+                    <span className="text-[14px] font-normal text-[#7A7687]">
+                      {item.time}
                     </span>
-                    <h3 className="text-[18px] font-semibold mb-2">
-                      {data.title}
-                    </h3>
-                    <p className="text-[16px] font-medium text-[#7A7687]">
-                      {data.desc}
+                    <h2 className="text-[#202020] text-[12px] sm:text-[18px] font-semibold mb-[8px] w-full sm:w-[80%]">
+                      {item.title}
+                    </h2>
+                    <p className="text-[15px] font-medium text-[#7A7687]">
+                      {item.desc}
                     </p>
                   </div>
                 </div>
               ))}
+            </Slider>
+          </div>
+          <div className="flex sm:hidden md:flex justify-center md:justify-between  ">
+            <div className="hidden md:flex gap-3 ml-3">
+              <button
+                className="p-[10px] rounded-full border flex items-center justify-center"
+                onClick={() => sliderRef.current.slickNext()}
+              >
+                <HiArrowSmLeft className="w-[25px] h-[25px] hover:text-green-600" />
+              </button>
+              <button
+                className="p-[10px] rounded-full border flex items-center justify-center"
+                onClick={() => sliderRef.current.slickPrev()}
+              >
+                <HiArrowSmRight className="w-[25px] h-[25px] hover:text-green-600" />
+              </button>
             </div>
-
-            <div className=" flex justify-between items-center mt-[40px]">
-              <div className="flex items-center gap-3">
-                <div
-                  onClick={handlePrev}
-                  className="p-[10px] border border-[#D5D1E1] rounded-full cursor-pointer"
-                >
-                  <GoArrowLeft />
-                </div>
-                <div
-                  onClick={handleNext}
-                  className="p-[10px] border border-[#D5D1E1] rounded-full cursor-pointer"
-                >
-                  <GoArrowRight />
-                </div>
-              </div>
-
-              <div className="mr-[100px] flex justify-items-end">
-                <button className="transition duration-300 flex justify-center items-center px-6 py-[11px] rounded-full font-manrope font-semibold text-[16px] text-white bg-[#088269] border-none">
-                  Все новости
-                </button>
-              </div>
-            </div>
+            <button className="px-5 py-3 font-semibold  rounded-full border text-[14px] text-[#fff] bg-[#088269]">
+              Все новости
+            </button>
           </div>
         </div>
       </div>
@@ -79,4 +114,4 @@ const News = () => {
   );
 };
 
-export default News;
+export default Brend;

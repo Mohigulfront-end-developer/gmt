@@ -19,7 +19,7 @@ const Question = () => {
           <h4 className="text-[30px] font-semibold pb-[20px]">
             Остались вопросы?
           </h4>
-          <p className="text-[#7A7687] text-[16px] font-medium pb-5">
+          <p className="w-[80%] text-[#7A7687] text-[16px] font-medium pb-5">
             Задайте их по номеру телефона +7 (495) 000-00-00 или оставьте свои
             координаты и наш менеджер перезвонит вам через 10 минут
           </p>

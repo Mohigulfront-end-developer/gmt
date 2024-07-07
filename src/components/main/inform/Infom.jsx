@@ -1,7 +1,7 @@
 import { Collapse } from "antd";
 import { PlusOutlined } from "@ant-design/icons";
 import { GoArrowUpRight } from "react-icons/go";
-import React from "react";
+
 
 
 const text = (
@@ -20,14 +20,16 @@ const items = [
   {
     key: "1",
     label: (
-      <span className="text-white text-[18px] font-medium">О компании</span>
+      <span className="text-white text-[18px] font-medium ml-[-12px]">
+        О компании
+      </span>
     ),
     children: text,
   },
   {
     key: "2",
     label: (
-      <span className="text-white text-[18px] font-medium">
+      <span className="text-white text-[18px] font-medium ml-[-12px]">
         Преимущества сотрудников
       </span>
     ),
@@ -36,7 +38,7 @@ const items = [
   {
     key: "3",
     label: (
-      <span className="text-white text-[18px] font-medium">
+      <span className="text-white text-[18px] font-medium ml-[-12px]">
         Достижения компании
       </span>
     ),
@@ -45,7 +47,9 @@ const items = [
   {
     key: "4",
     label: (
-      <span className="text-white text-[18px] font-medium">Карьерный рост</span>
+      <span className="text-white text-[18px] font-medium ml-[-12px]">
+        Карьерный рост
+      </span>
     ),
     children: text,
   },
@@ -54,9 +58,9 @@ const items = [
 const Infom = () => {
   return (
     <div className="bg-[#088269]">
-      <div className="container flex justify-between py-[100px]">
+      <div className="container flex justify-between py-[100px]  ">
         <div>
-          <h2 className="text-white text-[30px] font-medium">
+          <h2 className="text-white text-[30px] font-medium sm:mb-[30px] ">
             Информация о компании
           </h2>
         </div>
@@ -65,7 +69,7 @@ const Infom = () => {
           items={items}
           bordered={false}
           expandIcon={({ isActive }) => (
-            <div className=" absolute right-4 top-2 border rounded-full border-white p-2 active:bg-white ">
+            <div className=" absolute right-4 top-2 border rounded-full border-white p-2 active:bg-white  ">
               <PlusOutlined
                 rotate={isActive ? 45 : 0}
                 className="text-white text-[20px] w-[15px] h-[15px] active:text-black "

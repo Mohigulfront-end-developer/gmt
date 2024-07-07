@@ -3,6 +3,7 @@ import img1 from "../../public/assets/aboutus/licensia.png";
 
 
 
+
 export default [
   {
     id: 1,

@@ -46,7 +46,7 @@ const HeaderBottom = () => {
           </NavLink>
           <NavLink
             to={"/kontakt"}
-             className="flex items-center text-[14px] font-semibold"
+            className="flex items-center text-[14px] font-semibold"
           >
             Контакты
           </NavLink>

@@ -24,7 +24,11 @@ const catalog = [
     position: "В наличии",
     price: "300 000 руб",
     slug: `Новинки`,
+    sale:"-30%",
     category: "Реанимация",
+    labelClass: "bg-[#59599A]",
+    label: "Хит продаж",
+
   },
   {
     id: 2,
@@ -37,7 +41,11 @@ const catalog = [
     price: "300 000 руб",
     slug: "Новинки",
     category: "Хирургия",
+    labelClass: "bg-[#AD7B00]",
+    sale:"-30%",
+    label: "-30%",
   },
+
   {
     id: 3,
     image: catalog3,
@@ -49,6 +57,10 @@ const catalog = [
     price: "300 000 руб",
     slug: "Новинки",
     category: "Офтальмология",
+    sale:"-30%",
+    labelClass: "bg-[#088269]",
+    label: "Новинки",
+  
   },
   {
     id: 4,
@@ -61,7 +73,11 @@ const catalog = [
     price: "300 000 руб",
     slug: "Акции",
     category: "Лабораторная диагностика",
+    labelClass: "bg-[#AD7B00]",
+    sale:"-30%",
+    label: "-30%",
   },
+
   {
     id: 5,
     image: catalog5,
@@ -72,7 +88,11 @@ const catalog = [
     position: "В наличии",
     price: "300 000 руб",
     slug: "Хиты продаж",
+    sale:"-30%",
     category: "Акушерство и Гинекология",
+    labelClass: "bg-[#59599A]",
+    label: "Хит продаж",
+
   },
   {
     id: 6,
@@ -85,6 +105,10 @@ const catalog = [
     price: "300 000 руб",
     slug: "Акции",
     category: "Гистология",
+    sale:"-30%",
+    labelClass: "bg-[#088269]",
+    label: "Новинки",
+  
   },
   {
     id: 7,
@@ -97,7 +121,11 @@ const catalog = [
     price: "300 000 руб",
     slug: "Хиты продаж",
     category: "Косметология",
+    labelClass: "bg-[#AD7B00]",
+    sale:"-30%",
+    label: "-30%",
   },
+
   {
     id: 8,
     image: catalog8,
@@ -109,6 +137,10 @@ const catalog = [
     price: "300 000 руб",
     slug: "Акции",
     category: "Оториноларингология",
+    sale:"-30%",
+    labelClass: "bg-[#088269]",
+    label: "Новинки",
+  
   },
   {
     id: 9,
@@ -120,7 +152,11 @@ const catalog = [
     position: "В наличии",
     price: "300 000 руб",
     slug: "Хиты продаж",
+    sale:"-30%",
     category: "Рентгенология и томография",
+    labelClass: "bg-[#59599A]",
+    label: "Хит продаж",
+
   },
   {
     id: 10,
@@ -133,6 +169,10 @@ const catalog = [
     price: "300 000 руб",
     slug: "Новинки",
     category: "Стерилизация",
+    sale:"-30%",
+    labelClass: "bg-[#088269]",
+    label: "Новинки",
+  
   },
   {
     id: 11,
@@ -145,7 +185,11 @@ const catalog = [
     price: "300 000 руб",
     slug: "Акции",
     category: "Физиотерапия и реабилитация",
+    labelClass: "bg-[#AD7B00]",
+    sale:"-30%",
+    label: "-30%",
   },
+
   {
     id: 12,
     image: catalog12,
@@ -157,7 +201,11 @@ const catalog = [
     price: "300 000 руб",
     slug: "Новинки",
     category: "Функциональная диагностика",
+    labelClass: "bg-[#AD7B00]",
+    sale:"-30%",
+    label: "-30%",
   },
+
   {
     id: 13,
     image: catalog13,
@@ -169,6 +217,10 @@ const catalog = [
     price: "300 000 руб",
     slug: "Новинки",
     category: "Эндоскопия",
+    sale:"-30%",
+    labelClass: "bg-[#088269]",
+    label: "Новинки",
+  
   },
   {
     id: 14,
@@ -180,7 +232,11 @@ const catalog = [
     position: "В наличии",
     price: "300 000 руб",
     slug: "Хиты продаж",
+    sale:"-30%",
     category: "Новинки",
+    labelClass: "bg-[#59599A]",
+    label: "Хит продаж",
+
   },
   {
     id: 15,
@@ -193,6 +249,10 @@ const catalog = [
     price: "300 000 руб",
     slug: "Хиты продаж",
     category: "Распродажи",
+    sale:"-30%",
+    labelClass: "bg-[#088269]",
+    label: "Новинки",
+  
   },
   {
     id: 15,
@@ -204,7 +264,11 @@ const catalog = [
     position: "В наличии",
     price: "300 000 руб",
     slug: "Хиты продаж",
+    sale:"-30%",
     category: "Кабинеты под ключ",
+    labelClass: "bg-[#59599A]",
+    label: "Хит продаж",
+
   },
 ];
 export default catalog;

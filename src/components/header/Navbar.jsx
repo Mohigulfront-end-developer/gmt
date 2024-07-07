@@ -1,14 +1,24 @@
-import Logo from "../../../public/Logo.svg"
+import Logo from "../../../public/Logo.svg";
 import { FaCaretDown } from "react-icons/fa";
 import { IoPersonOutline } from "react-icons/io5";
 import { IoIosHeartEmpty } from "react-icons/io";
 import { FiShoppingCart } from "react-icons/fi";
 import { RiAlignItemBottomLine } from "react-icons/ri";
 import { IoSearch } from "react-icons/io5";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
+// import {  useSelector } from "react-redux";
 
 
 const Navbar = () => {
+  //  const dispatch = useDispatch();
+
+  //  const [isInputVisible, setIsInputVisible] = useState(false);
+  //  const { card } = useSelector((card) => card.card);
+  //  console.log(card, "cartpage for");
+
+  //  const toggleInputVisibility = () => {
+  //    setIsInputVisible(!isInputVisible);
+  //  };
   return (
     <div className="bg-[#F8F7F3] border-b-2 border-[#E5E2EE]">
       <div className="container py-4">
@@ -50,15 +60,24 @@ const Navbar = () => {
               <RiAlignItemBottomLine className="text-[black] text-center w-[20px] h-[22px]" />
               Сравнить
             </button>
-            <button className="text-[#7A7687] text-[13px] flex flex-col items-center">
-              <FiShoppingCart className="text-[black] text-center w-[20px] h-[22px]" />
-              Корзина
-            </button>
+            <Link to={"/korzinka"}>
+              <button className="text-[#7A7687] text-[13px] flex flex-col items-center">
+                <FiShoppingCart className="text-[black] text-center w-[20px] h-[22px]" />
+                Корзина
+              </button>
+              {/* {card.length ? (
+                <p className="absolute left-[22px] top-[-10px] rounded-full bg-green-600 px-[5px] text-white">
+                  {card.length}
+                </p>
+              ) : (
+                ""
+              )} */}
+            </Link>
           </div>
         </div>
       </div>
     </div>
   );
-}
+};
 
-export default Navbar
+export default Navbar;

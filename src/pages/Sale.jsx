@@ -1,10 +1,17 @@
 import React from 'react'
 import { Link, NavLink } from 'react-router-dom';
+import Sale from "../components/sale/Sale"
+import { GoChevronRight } from "react-icons/go";
+import Cabinet from '../components/main/complex/Cabinet';
+import CategoryProduct from '../components/productComp/CategoryProduct';
+import Brend from '../components/main/brend/Brand';
+import Consult from "../components/garantii/Consult"
+import Course from '../components/main/course/Course';
 
-const Sale = () => {
+const SalePage = () => {
   return (
-    <div>
-      <div className="container">
+    <div className="bg-[#F8F7F3]">
+      <div className="container pb-[50px]">
         <div className="flex items-center gap-2 py-5 text-[16px] font-normal">
           <Link to={"/"} className="text-[#7A7687]">
             Главная
@@ -14,9 +21,42 @@ const Sale = () => {
             Акции
           </NavLink>
         </div>
+        <div className="my-10">
+          <div className="flex justify-between gap-4">
+            <div className="w-[25%] h-[50%]">
+              <div className="border rounded-xl  px-4">
+                <h3 className="flex justify-between items-center py-2  border-b-[1px] border-[#E5E2EE]">
+                  Категории
+                </h3>
+                <p className="flex justify-between items-center py-2">
+                  Группы товаров <GoChevronRight />
+                </p>
+                <p className="flex justify-between items-center py-2">
+                  Мониторы <GoChevronRight />
+                </p>
+                <p className="flex justify-between items-center py-2">
+                  Лампы <GoChevronRight />
+                </p>
+                <p className="flex justify-between items-center py-2">
+                  Кровати <GoChevronRight />
+                </p>
+                <p className="flex justify-between items-center py-2">
+                  Рентгены <GoChevronRight />
+                </p>
+              </div>
+            </div>
+            <Sale />
+          </div>
+        </div>
       </div>
+      <Cabinet/>
+      <CategoryProduct/>
+      <Brend/>
+      <Consult/>
+      <Course/>
+
     </div>
   );
 }
 
-export default Sale
+export default SalePage

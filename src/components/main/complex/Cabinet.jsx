@@ -1,7 +1,7 @@
 import { useState } from "react";
-import Img1 from "../../../../public/assets/complex1.png";
-import Img2 from "../../../../public/assets/complex2.png";
-import Img3 from "../../../../public/assets/complex3.png";
+import Img1 from "../../../../public/assets/cabinet/complex1.png";
+import Img2 from "../../../../public/assets/cabinet/complex2.png";
+import Img3 from "../../../../public/assets/cabinet/complex3.png";
 import { GoArrowLeft, GoArrowRight } from "react-icons/go";
 
 const Cabinet = () => {

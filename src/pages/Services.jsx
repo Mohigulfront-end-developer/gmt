@@ -4,6 +4,7 @@ import Data from "../data/uslugi"
 import Number from '../components/aboutUs/Number';
 import Certificate from '../components/aboutUs/Certificate';
 import Question from '../components/main/question/Question';
+import Consult from '../components/garantii/Consult';
 
 const Services = () => {
   return (
@@ -70,7 +71,7 @@ const Services = () => {
         </div>
       </div>
       <Certificate/>
-      <Question/>
+      <Consult/>
     </div>
   );
 }
