@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import Data from "../data/catalog";
 import { Link, NavLink, useParams } from "react-router-dom";
 import Product from "../components/productComp/Characterics";
@@ -9,7 +9,7 @@ import Brend from "../components/main/brend/Brand";
 import Course from "../components/main/course/Course"
 import CategoryProduct from "../components/productComp/CategoryProduct";
 import ProductData from "../components/productComp/ProductData";
-
+import { RiArrowRightSLine } from "react-icons/ri";
 
 
 
@@ -75,13 +75,13 @@ const StranitsaProduct = () => {
               Главная
             </Link>
             <Link to="/katalog" className="text-[#7A7687]">
-              > Каталог
+              Каталог
             </Link>
-            <span className="text-[#7A7687]">></span>
+            <RiArrowRightSLine className="text-[20px] text-[#7A7687]" />
             <Link to="/katalog/laboratornoe" className="text-[#7A7687]">
               Лабораторное оборудование
             </Link>
-            <span className="text-[#7A7687]">></span>
+            <RiArrowRightSLine className="text-[20px] text-[#7A7687]" />
             <NavLink to={`/katalog/laboratornoe/${id}`} className="">
               {product?.title || "Product"}
             </NavLink>

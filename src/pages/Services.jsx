@@ -1,10 +1,9 @@
-import React from 'react'
 import { Link, NavLink } from 'react-router-dom';
 import Data from "../data/uslugi"
 import Number from '../components/aboutUs/Number';
 import Certificate from '../components/aboutUs/Certificate';
-import Question from '../components/main/question/Question';
 import Consult from '../components/garantii/Consult';
+import { RiArrowRightSLine } from "react-icons/ri";
 
 const Services = () => {
   return (
@@ -14,7 +13,7 @@ const Services = () => {
           <Link to={"/"} className="text-[#7A7687]">
             Главная
           </Link>
-          <span className="text-[#7A7687]">></span>
+          <RiArrowRightSLine className="text-[20px] text-[#7A7687]" />
           <NavLink to={"/uslugi"} className="">
             Услуги
           </NavLink>
@@ -70,8 +69,8 @@ const Services = () => {
           </button>
         </div>
       </div>
-      <Certificate/>
-      <Consult/>
+      <Certificate />
+      <Consult />
     </div>
   );
 }

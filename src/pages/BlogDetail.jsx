@@ -1,4 +1,3 @@
-import React from 'react'
 import { Link, NavLink } from 'react-router-dom';
 import Img1 from "../../public/assets/statya/img1.png"
 import Img2 from "../../public/assets/statya/img2.png";
@@ -8,6 +7,7 @@ import RecommendProduct from '../components/blog/RecommendProduct';
 import Cabinet  from "../components/main/complex/Cabinet"
 import Brend from "../components/main/brend/Brand";
 import Concult from "../components/garantii/Consult"
+import { RiArrowRightSLine } from "react-icons/ri";
 
 
 
@@ -19,11 +19,11 @@ const BlogDetail = () => {
           <Link to={"/"} className="text-[#7A7687]">
             Главная
           </Link>
-          <span className="text-[#7A7687]">></span>
+          <RiArrowRightSLine className="text-[20px] text-[#7A7687]" />
           <Link to={"/blog"} className="text-[#7A7687]">
             Блог
           </Link>
-          <span className="text-[#7A7687]">></span>
+          <RiArrowRightSLine className="text-[20px] text-[#7A7687]" />
           <NavLink to={"/blog/informatsioniy-statya"} className="">
             Информационная статья
           </NavLink>
@@ -122,10 +122,10 @@ const BlogDetail = () => {
           </p>
         </div>
       </div>
-      <RecommendProduct/>
-      <Cabinet/>
-      <Brend/>
-      <Concult/>
+      <RecommendProduct />
+      <Cabinet />
+      <Brend />
+      <Concult />
     </div>
   );
 }

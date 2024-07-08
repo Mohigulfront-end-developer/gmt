@@ -1,10 +1,13 @@
-import React from 'react'
 import PositiveSide from '../components/delivery/PositiveSide';
 import Course from "../components/main/course/Course"
 import { Link, NavLink } from 'react-router-dom';
 import Document from '../components/delivery/Document';
 import Concultation from '../components/delivery/Concultation';
 import FastQuestion from '../components/delivery/FastQuestion';
+import { RiArrowRightSLine } from "react-icons/ri";
+import MapPostroitMashrut from '../components/Map/MapPostroitMashrut';
+import MapPunktVidacha from "../components/Map/MapPunktVidacha";
+
 
 const Dostavka = () => {
   return (
@@ -14,26 +17,16 @@ const Dostavka = () => {
           <Link to={"/"} className="text-[#7A7687]">
             Главная
           </Link>
-          <span className="text-[#7A7687]">></span>
+          <RiArrowRightSLine className="text-[20px] text-[#7A7687]" />
           <NavLink to={"/dostavka"} className="">
             Доставка
           </NavLink>
         </div>
-        <h1 className="font-medium text-[48px] pt-[80px]">
+        <h1 className="font-medium text-[48px] pt-[80px] pb-[40px]">
           Информация о доставке
         </h1>
-        <div className="w-full h-[400px] overflow-hidden rounded-lg shadow-lg my-[30px] ">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3001.2059578359613!2d69.223697175525!3d41.217282006530105!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae6108936e27e3%3A0x860a0f4c630d017f!2sGlobal%20Medical%20Center!5e0!3m2!1sru!2s!4v1719634329575!5m2!1sru!2s"
-            width="100%"
-            height="100%"
-            style={{ border: 0 }}
-            allowFullScreen=""
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-          ></iframe>
-        </div>
-        <div className="ml-[50%] w-[50%] mt-[40px]">
+      <MapPunktVidacha/>
+        <div className="ml-[50%] w-[50%] ">
           <p className="text-[16px] font-medium">
             Учитывая стремительное развитие мировых медицинских технологий,
             врачи в Российской Федерации и соседних странах столкнулись
@@ -81,7 +74,7 @@ const Dostavka = () => {
           </div>
         </div>
       </div>
-      <FastQuestion/>
+      <FastQuestion />
       <div className="container py-[150px]">
         <div className="flex justify-between mb-[15px] items-center">
           <h2 className="w-[50%] text-[30px] font-medium">
@@ -110,17 +103,7 @@ const Dostavka = () => {
             </div>
           </div>
         </div>
-        <div className="w-full h-[400px] overflow-hidden rounded-lg shadow-lg mb-[50px]">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3001.2059578359613!2d69.223697175525!3d41.217282006530105!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae6108936e27e3%3A0x860a0f4c630d017f!2sGlobal%20Medical%20Center!5e0!3m2!1sru!2s!4v1719634329575!5m2!1sru!2s"
-            width="100%"
-            height="100%"
-            style={{ border: 0 }}
-            allowFullScreen=""
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-          ></iframe>
-        </div>
+       <MapPostroitMashrut/>
       </div>
 
       <Document />

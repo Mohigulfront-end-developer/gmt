@@ -1,5 +1,5 @@
-import React from 'react'
 import { Link, NavLink } from 'react-router-dom';
+import { RiArrowRightSLine } from "react-icons/ri";
 
 const Customers = () => {
   return (
@@ -9,7 +9,7 @@ const Customers = () => {
           <Link to={"/"} className="text-[#7A7687]">
             Главная
           </Link>
-          <span className="text-[#7A7687]">></span>
+          <RiArrowRightSLine className="text-[20px] text-[#7A7687]" />
           <NavLink to={"/pokupatel"} className="">
             Покупателям
           </NavLink>

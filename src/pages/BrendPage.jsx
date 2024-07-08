@@ -5,6 +5,7 @@ import Img2 from "../../public/assets/brend/img2.png";
 import Brend from '../components/main/brend/Brand';
 import FastQuestion from '../components/delivery/FastQuestion';
 import Question from '../components/main/question/Question';
+import { RiArrowRightSLine } from "react-icons/ri";
 
 const BrendPage = () => {
   return (
@@ -14,11 +15,11 @@ const BrendPage = () => {
           <Link to={"/"} className="text-[#7A7687]">
             Главная
           </Link>
-          <span className="text-[#7A7687]">></span>
+          <RiArrowRightSLine className="text-[20px] text-[#7A7687]" />
           <Link to={"/proizvoditel"} className="text-[#7A7687]">
             Производители
           </Link>
-          <span className="text-[#7A7687]">></span>
+          <RiArrowRightSLine className="text-[20px] text-[#7A7687]" />
           <NavLink to={"/proizvoditel"} className="">
             Медецинское оборудование Draeger
           </NavLink>
@@ -56,9 +57,9 @@ const BrendPage = () => {
           </p>
         </div>
       </div>
-      <Brend/>
-      <FastQuestion/>
-      <Question/>
+      <Brend />
+      <FastQuestion />
+      <Question />
     </div>
   );
 }

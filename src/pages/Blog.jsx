@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { RiArrowRightSLine } from "react-icons/ri";
 import { Link, NavLink } from "react-router-dom";
 import Data from "../data/news";
 import { GoChevronRight } from "react-icons/go";
@@ -26,7 +27,7 @@ const Blog = () => {
           <Link to={"/"} className="text-[#7A7687]">
             Главная
           </Link>
-          <span className="text-[#7A7687]">></span>
+          <RiArrowRightSLine className="text-[20px] text-[#7A7687]" />
           <NavLink to={"/blog"} className="">
             Блог
           </NavLink>

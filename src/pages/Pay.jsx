@@ -1,6 +1,6 @@
-import React from 'react'
 import { Link, NavLink } from 'react-router-dom';
 import Consult from '../components/garantii/Consult';
+import { RiArrowRightSLine } from "react-icons/ri";
 
 const Oplata = () => {
   return (
@@ -10,7 +10,7 @@ const Oplata = () => {
           <Link to={"/"} className="text-[#7A7687]">
             Главная
           </Link>
-          <span className="text-[#7A7687]">></span>
+          <RiArrowRightSLine className="text-[20px] text-[#7A7687]" />
           <NavLink to={"/oplata"} className="">
             Оплата
           </NavLink>

@@ -38,7 +38,7 @@ const PositiveSide = () => {
             </p>
           </div>
         </div>
-        <button className="bg-[#088269] text-[16px] font-semibold text-[#F8F7F3] px-[30px] py-[12px] rounded-full border ml-[79%]">
+        <button className="bg-[#088269] text-[16px] font-semibold text-[#F8F7F3] px-[20px] py-[12px] rounded-full border ml-[79%]">
           Проверить статус доставки
         </button>
       </div>

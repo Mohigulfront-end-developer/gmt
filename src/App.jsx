@@ -22,6 +22,12 @@ import Liked from "./pages/Liked";
 import SalePage from "./pages/Sale";
 import CabinetInform from "./pages/CabinetInform";
 import BrendPage from "./pages/BrendPage";
+import Compare from "./pages/Compare";
+import Otziv from "./pages/Otziv"
+import CertificatePage from "./pages/CertificatePage";
+import FAQS from "./pages/FAQS";
+import Account from "./pages/Account";
+import JobAplication from "./pages/JobAplication";
 
 // import Text from "./pages/Text"
 
@@ -34,31 +40,44 @@ function App() {
     <>
       <BrowserRouter>
         <Header />
-       
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/katalog" element={<Catalog />} />
-          <Route path="/katalog/laboratornoe" element={<Labaratory />} />
-          <Route path="/katalog/laboratornoe/:id" element={<ProductPage />} />
-          <Route path="/proizvoditel" element={<Manifacture />} />
-          <Route path="/proizvoditel/:id" element={<BrendPage />} />
+        <div className="pt-[160px]">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/katalog" element={<Catalog />} />
+            <Route path="/katalog/laboratornoe" element={<Labaratory />} />
+            <Route path="/katalog/laboratornoe/:id" element={<ProductPage />} />
+            <Route path="/proizvoditel" element={<Manifacture />} />
+            <Route path="/proizvoditel/:id" element={<BrendPage />} />
+            <Route path="/kabinet-podklyuch" element={<CabinetRegister />} />
+            <Route path="/kabinet-podklyuch/:id" element={<CabinetInform />} />
+            <Route path="/uslugi" element={<Services />} />
+            <Route path="/aktsiya" element={<SalePage />} />
+            <Route path="/pokupatel" element={<Customers />} />
+            <Route path="/kontakt" element={<Contact />} />
+            <Route path="/o-kompanii" element={<AboutUs />} />
+            <Route
+              path="/o-kompanii/certificate"
+              element={<CertificatePage />}
+            />
+            <Route path="/dostavka" element={<Dostavka />} />
+            <Route path="/oplata" element={<Oplata />} />
+            <Route path="/garantii" element={<Garantii />} />
+            <Route path="/blog" element={<Blog />} />
+            <Route path="/korzinka" element={<Korzinka />} />
+            <Route path="/izbrannoe" element={<Liked />} />
+            <Route path="/sravniti" element={<Compare />} />
+            <Route path="/otziv" element={<Otziv />} />
+            <Route path="/faq" element={<FAQS />} />
+            <Route path="/otziv" element={<Otziv />} />
+            <Route path="/profil" element={<Account />} />
+            <Route path="/vakansi" element={<JobAplication />} />
+            <Route
+              path="/blog/informatsioniy-statya"
+              element={<BlogDetail />}
+            />
+          </Routes>
+        </div>
 
-          <Route path="/kabinet-podklyuch" element={<CabinetRegister />} />
-          <Route path="/kabinet-podklyuch/:id" element={<CabinetInform />} />
-          <Route path="/servisi" element={<Services />} />
-          <Route path="/aktsiya" element={<SalePage />} />
-          <Route path="/pokupatel" element={<Customers />} />
-          <Route path="/kontakt" element={<Contact />} />
-          <Route path="/o-kompanii" element={<AboutUs />} />
-          <Route path="/dostavka" element={<Dostavka />} />
-          <Route path="/oplata" element={<Oplata />} />
-          <Route path="/garantii" element={<Garantii />} />
-          <Route path="/blog" element={<Blog />} />
-          <Route path="/korzinka" element={<Korzinka />} />
-          <Route path="/избранное" element={<Liked />} />
-
-          <Route path="/blog/informatsioniy-statya" element={<BlogDetail />} />
-        </Routes>
         {/* <Text /> */}
         <Footer />
       </BrowserRouter>

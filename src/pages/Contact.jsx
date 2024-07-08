@@ -1,12 +1,11 @@
-import React from 'react'
 import { Link, NavLink } from 'react-router-dom';
 import { IoLocationOutline } from "react-icons/io5";
 import { LuClock } from "react-icons/lu";
 import { BsTelephone } from "react-icons/bs";
 import { MdOutlineMail } from "react-icons/md";
 import { SlSocialVkontakte } from "react-icons/sl";
-import { FaTelegramPlane } from "react-icons/fa";
-import { FaWhatsapp } from "react-icons/fa";
+import { FaTelegramPlane, FaWhatsapp } from "react-icons/fa";
+import { RiArrowRightSLine } from "react-icons/ri";
 
 const Contact = () => {
   return (
@@ -16,7 +15,7 @@ const Contact = () => {
           <Link to={"/"} className="text-[#7A7687]">
             Главная
           </Link>
-          <span className="text-[#7A7687]">></span>
+          <RiArrowRightSLine className="text-[20px] text-[#7A7687]" />
           <NavLink to={"/kontakt"} className="">
             Контакты
           </NavLink>

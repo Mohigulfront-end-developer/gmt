@@ -72,7 +72,7 @@ const Catalog = () => {
   };
 
   return (
-    <div className="bg-[#f8f7f3]  pb-[550px] pt-[50px] ">
+    <div className="bg-[#f8f7f3]  pb-[350px] pt-[50px] ">
       <div className=" container flex flex-col md:flex-row w-full gap-[30px]">
         <div className=" md:w-1/3 w-full ">
           <div className="flex justify-between">

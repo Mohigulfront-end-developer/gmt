@@ -128,7 +128,7 @@ const LabaratoriyaProduct = () => {
         pageLinkClassName={
           "px-3 py-1 rounded-lg border border-[#E5E2EE] font-semibold text-[#202020] bg-white"
         }
-        activeLinkClassName={"bg-emerald-600 text-[#FFFFFF]"}
+        activeLinkClassName={"bg-emerald-400 text-[#FFFFFF]"}
       />
     </div>
   );

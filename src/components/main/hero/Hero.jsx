@@ -2,21 +2,21 @@ import Slider from "react-slick";
 import Img from "../../../../public/assets/hero/Vector.png";
 import { GoArrowRight, GoArrowLeft } from "react-icons/go";
 import { useRef, useState } from "react";
-import Modal from "./Modal"; // Make sure to update the path based on your file structure
+import Modal from "./Modal";
+import { Formik, Form, Field, ErrorMessage } from "formik";
+import * as Yup from "yup";
 
 export default function SimpleSlider() {
-   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const carouselRef = useRef(null);
 
-   const carouselRef = useRef(null);
+  const handleOpenModal = () => {
+    setIsModalOpen(true);
+  };
 
-   const handleOpenModal = () => {
-     setIsModalOpen(true);
-   };
-
-   const handleCloseModal = () => {
-     setIsModalOpen(false);
-   };
-
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+  };
 
   const previous = () => {
     carouselRef.current.slickPrev();
@@ -25,6 +25,16 @@ export default function SimpleSlider() {
   const next = () => {
     carouselRef.current.slickNext();
   };
+
+  const validationSchema = Yup.object().shape({
+    username: Yup.string().required("Обязательно для заполнения"),
+    phone: Yup.string()
+      .matches(/^[0-9]{10}$/, "Некорректный номер телефона")
+      .required("Обязательно для заполнения"),
+    email: Yup.string().email("Некорректный email").required("Обязательно для заполнения"),
+    organization: Yup.string().required("Обязательно для заполнения"),
+    message: Yup.string().required("Обязательно для заполнения"),
+  });
 
   var settings = {
     dots: true,
@@ -89,52 +99,93 @@ export default function SimpleSlider() {
         <br />
       </div>
       <Modal show={isModalOpen} onClose={handleCloseModal}>
-        <h2 className="text-xl font-semibold mb-4">Login</h2>
-        {/* You can add your login form or content here */}
-        <form>
-          <div className="mb-4">
-            <label
-              className="block text-gray-700 text-sm font-bold mb-2"
-              htmlFor="username"
-            >
-              Username
-            </label>
-            <input
-              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-              id="username"
-              type="text"
-              placeholder="Username"
-            />
-          </div>
-          <div className="mb-6">
-            <label
-              className="block text-gray-700 text-sm font-bold mb-2"
-              htmlFor="password"
-            >
-              Password
-            </label>
-            <input
-              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
-              id="password"
-              type="password"
-              placeholder="************"
-            />
-          </div>
-          <div className="flex items-center justify-between">
-            <button
-              className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-              type="button"
-            >
-              Sign In
-            </button>
-            <button
-              className="inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800"
-              onClick={handleCloseModal}
-            >
-              Cancel
-            </button>
-          </div>
-        </form>
+        <h2 className="text-xl font-medium mb-6">Запросить цену</h2>
+        <Formik
+          initialValues={{ username: "", phone: "", email: "", organization: "", message: "" }}
+          validationSchema={validationSchema}
+          onSubmit={(values, { setSubmitting }) => {
+            setTimeout(() => {
+              console.log(JSON.stringify(values, null, 2));
+              setSubmitting(false);
+              handleCloseModal();
+            }, 400);
+          }}
+        >
+          {({ isSubmitting }) => (
+            <Form>
+              <div className="mb-10">
+                <div className="flex justify-between gap-2">
+                  <div>
+                    <Field
+                      className="py-2 px-3 text-gray-700 leading-tight border-b-[1px] outline-none"
+                      id="username"
+                      type="text"
+                      name="username"
+                      placeholder="Ваше имя*"
+                    />
+                    <ErrorMessage name="username" component="div" className="text-red-500 text-sm" />
+                  </div>
+                  <div>
+                    <Field
+                      id="phone"
+                      type="number"
+                      name="phone"
+                      placeholder="Ваш телефон*"
+                      className="py-2 px-3 text-gray-700 leading-tight border-b-[1px] outline-none"
+                    />
+                    <ErrorMessage name="phone" component="div" className="text-red-500 text-sm" />
+                  </div>
+                </div>
+                <div className="mb-2">
+                  <Field
+                    className="w-full py-2 px-3 border-b-[1px] text-gray-700 leading-tight outline-none"
+                    id="email"
+                    type="email"
+                    name="email"
+                    placeholder="Ваш email"
+                  />
+                  <ErrorMessage name="email" component="div" className="text-red-500 text-sm" />
+                </div>
+                <div className="mb-2">
+                  <Field
+                    className="w-full py-3 px-3 border-b-[1px] text-gray-700 leading-tight outline-none"
+                    id="organization"
+                    type="text"
+                    name="organization"
+                    placeholder="Название вашей организации"
+                  />
+                  <ErrorMessage name="organization" component="div" className="text-red-500 text-sm" />
+                </div>
+                <div className="">
+                  <Field
+                    className="w-full pb-[70px] pt-[10px] px-3 border-b-[1px] text-gray-700 leading-tight outline-none"
+                    id="message"
+                    type="text"
+                    name="message"
+                    placeholder="Ваше сообщение"
+                  />
+                  <ErrorMessage name="message" component="div" className="text-red-500 text-sm" />
+                </div>
+              </div>
+              <div className="flex items-center justify-between gap-2">
+                <button
+                  className="bg-[#088269] text-[#F8F7F3] font-semibold py-2 px-4 rounded-full"
+                  type="submit"
+                  disabled={isSubmitting}
+                >
+                  Отправить
+                </button>
+                <span className="text-[12px] text-[#7A7687]">
+                  Нажимая «Отправить», я соглашаюсь c обработкой персональных данных
+                  на условиях{" "}
+                  <span className="text-[#088269]">
+                    Политики конфиденциальности.
+                  </span>
+                </span>
+              </div>
+            </Form>
+          )}
+        </Formik>
       </Modal>
     </div>
   );

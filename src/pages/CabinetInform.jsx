@@ -4,6 +4,7 @@ import Img from "../../public/assets/cabinet/cabinet.png"
 import Order from '../components/cabinet/Order';
 import FastQuestion from '../components/delivery/FastQuestion';
 import Consult from "../components/garantii/Consult"
+import { RiArrowRightSLine } from "react-icons/ri";
 
 const CabinetInform = () => {
   return (
@@ -13,11 +14,11 @@ const CabinetInform = () => {
           <Link to={"/"} className="text-[#7A7687]">
             Главная
           </Link>
-          <span className="text-[#7A7687]">></span>
+          <RiArrowRightSLine className="text-[20px] text-[#7A7687]" />
           <Link to={"/kabinet-podklyuch"} className="text-[#7A7687]">
             Кабинет под ключ
           </Link>
-          <span className="text-[#7A7687]">></span>
+          <RiArrowRightSLine className="text-[20px] text-[#7A7687]" />
           <Link to={"/kabinet-podklyuch"} className="text-[#7A7687]">
             Реанимация
           </Link>
@@ -50,9 +51,8 @@ const CabinetInform = () => {
         </div>
       </div>
       <Order />
-      <FastQuestion/>
-      <Consult/>
-
+      <FastQuestion />
+      <Consult />
     </div>
   );
 }

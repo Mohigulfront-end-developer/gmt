@@ -1,9 +1,11 @@
 import { useState } from "react";
 import { GoArrowLeft, GoArrowRight } from "react-icons/go";
 import Data from "../../data/certificate";
+import { useNavigate } from "react-router-dom";
 
 const Certificate = () => {
   const [startIndex, setStartIndex] = useState(0);
+   const navigate = useNavigate();
 
   const handleNext = () => {
     setStartIndex((prevIndex) => (prevIndex + 5) % Data.length);
@@ -42,6 +44,7 @@ const Certificate = () => {
                   src={data.image}
                   alt={data.alt}
                   className="w-full h-auto object-cover rounded-t-xl"
+                  onClick={() => navigate(`/o-kompanii/certificate`)}
                 />
                 <p>{data.title}</p>
               </div>

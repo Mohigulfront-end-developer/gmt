@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import  { useState } from "react";
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import { GoChevronDown, GoChevronUp, GoSearch } from "react-icons/go";
 import Data from "../data/brend";
@@ -9,6 +9,7 @@ import Select from "../components/main/select/Select";
 import News from "../components/main/news/News"
 import FastQuestion from "../components/delivery/FastQuestion";
 import Consult from "../components/garantii/Consult";
+import { RiArrowRightSLine } from "react-icons/ri";
 
 
 const Manifacture = () => {
@@ -74,7 +75,7 @@ const Manifacture = () => {
           <Link to={"/"} className="text-[#7A7687]">
             Главная
           </Link>
-          <span className="text-[#7A7687]">></span>
+          <RiArrowRightSLine className="text-[20px] text-[#7A7687]" />
           <NavLink to={"/proizvoditel"} className="">
             Производители
           </NavLink>

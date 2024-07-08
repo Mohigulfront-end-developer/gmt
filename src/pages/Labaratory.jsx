@@ -1,8 +1,8 @@
-import React from "react";
 import { Link, NavLink, } from "react-router-dom";
 import { GoChevronDown } from "react-icons/go";
 import { GoChevronUp } from "react-icons/go";
 import LabaratoriyaProduct from "../components/labaratoriya/LabaratoriyaProduct";
+import { RiArrowRightSLine } from "react-icons/ri";
 
 const Labaratory = () => {
   return (
@@ -12,11 +12,11 @@ const Labaratory = () => {
           <Link to={"/"} className="text-[#7A7687]">
             Главная
           </Link>
-          <span className="text-[#7A7687]">></span>
+          <RiArrowRightSLine className="text-[20px] text-[#7A7687]" />
           <Link to={"/katalog"} className="text-[#7A7687]">
             Каталог
           </Link>
-          <span className="text-[#7A7687]">></span>
+          <RiArrowRightSLine className="text-[20px] text-[#7A7687]" />
           <NavLink to={"/katalog/laboratornoe"} className="">
             Лабораторное оборудование
           </NavLink>

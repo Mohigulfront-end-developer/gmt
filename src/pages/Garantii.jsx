@@ -1,9 +1,8 @@
-import React from 'react'
 import { Link, NavLink } from 'react-router-dom';
 import GarantiiService from '../components/garantii/GarantiService';
 import Warning from '../components/garantii/Warning';
-import Question from "../components/main/question/Question"
 import Consult from '../components/garantii/Consult';
+import { RiArrowRightSLine } from "react-icons/ri";
 
 const Garantii = () => {
   return (
@@ -13,7 +12,7 @@ const Garantii = () => {
           <Link to={"/"} className="text-[#7A7687]">
             Главная
           </Link>
-          <span className="text-[#7A7687]">></span>
+          <RiArrowRightSLine className="text-[20px] text-[#7A7687]" />
           <NavLink to={"/garantii"} className="">
             Гарантии
           </NavLink>
@@ -54,9 +53,9 @@ const Garantii = () => {
           </p>
         </div>
       </div>
-      <GarantiiService/>
-      <Warning/>
-      <Consult/>
+      <GarantiiService />
+      <Warning />
+      <Consult />
     </div>
   );
 }

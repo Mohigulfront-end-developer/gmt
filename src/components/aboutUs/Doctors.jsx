@@ -1,4 +1,4 @@
-import Img1 from "../../../public/assets/aboutus/person1.png";
+import Img1 from "../../../public/assets/aboutus/person2.png";
 import Img2 from "../../../public/assets/aboutus/person2.png";
 import Img3 from "../../../public/assets/aboutus/person3.png";
 import { GoArrowLeft, GoArrowRight } from "react-icons/go";
@@ -46,8 +46,8 @@ const Doctors = () => {
   return (
     <div>
       <div className="bg-[#F8F7F3]">
-        <div className="py-20 container flex justify-between">
-          <div className="w-[50%]">
+        <div className="py-20 container flex justify-between gap-2">
+          <div className="w-[45%]">
             <h3 className="text-[30px] font-medium pb-10">
               Опытные сотрудники из производственных компаний
             </h3>
@@ -59,7 +59,7 @@ const Doctors = () => {
             </p>
           </div>
 
-          <div className=" w-[50%]">
+          <div className=" w-[50%] ">
             <div className="w-full h-[430px] grid grid-cols-2 gap-4 ">
               {displayedImages.map((image, index) => (
                 <div
@@ -71,7 +71,7 @@ const Doctors = () => {
                   <img
                     src={image.src}
                     alt={image.alt}
-                    className="w-full h-full  rounded-lg"
+                    className="w-full h-full  rounded-lg object-cover"
                   />
                   {index === 0 && (
                     <div className="absolute bottom-0 left-0 bg-[#F8F7F3] w-full h-[25%] py-2 px-4">

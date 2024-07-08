@@ -1,6 +1,5 @@
-
 import { Link, NavLink } from "react-router-dom";
-
+import { RiArrowRightSLine } from "react-icons/ri";
 import Img from "../../public/assets/aboutus/mainimg.png";
 import Partner from "../../public/assets/aboutus/partner.png";
 import Clinet from "../components/main/client/Clinet";
@@ -12,7 +11,7 @@ import Doctors from "../components/aboutUs/Doctors";
 import Number from "../components/aboutUs/Number";
 
 const AboutUs = () => {
-  
+ 
 
   return (
     <>
@@ -22,7 +21,7 @@ const AboutUs = () => {
             <Link to={"/"} className="text-[#7A7687]">
               Главная
             </Link>
-            <span className="text-[#7A7687]">></span>
+            <RiArrowRightSLine className="text-[20px] text-[#7A7687]" />
             <NavLink to={"/katalog"} className="">
               О компании
             </NavLink>

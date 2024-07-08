@@ -12,43 +12,81 @@ const FooterTop = () => {
           </h4>
           <div className="flex justify-between py-5 gap-5">
             <div className="flex flex-col">
-              <NavLink className="text-[14px]  text-[#F8F7F3] mb-[10px]">
+              <NavLink
+                to={"/o-kompanii"}
+                className="text-[14px]  text-[#F8F7F3] mb-[10px]"
+              >
                 О компании
               </NavLink>
-              <NavLink className="text-[14px]  text-[#F8F7F3] mb-[10px]">
+              <NavLink
+                to={"/certificate"}
+                className="text-[14px]  text-[#F8F7F3] mb-[10px]"
+              >
                 Сертификаты
               </NavLink>
-              <NavLink className="text-[14px]  text-[#F8F7F3] mb-[10px]">
+              <NavLink
+                to={"/vakansi"}
+                className="text-[14px]  text-[#F8F7F3] mb-[10px]"
+              >
                 Вакансии
               </NavLink>
-              <NavLink className="text-[14px]  text-[#F8F7F3] mb-[10px]">
+              <NavLink
+                to={"/garantii"}
+                className="text-[14px]  text-[#F8F7F3] mb-[10px]"
+              >
                 Гарантии
               </NavLink>
-              <NavLink className="text-[14px]  text-[#F8F7F3] mb-[10px]">
+              <NavLink
+                to={"/uslugi"}
+                className="text-[14px]  text-[#F8F7F3] mb-[10px]"
+              >
                 Услуги
               </NavLink>
-              <NavLink className="text-[14px]  text-[#F8F7F3] mb-[10px]">
+              <NavLink
+                to={"/aktsiya"}
+                className="text-[14px]  text-[#F8F7F3] mb-[10px]"
+              >
                 Акции
               </NavLink>
-              <NavLink className="text-[14px]  text-[#F8F7F3]">Доставка</NavLink>
+              <NavLink to={"/dostavka"} className="text-[14px]  text-[#F8F7F3]">
+                Доставка
+              </NavLink>
             </div>
             <div className="flex flex-col">
-              <NavLink className="text-[14px]  text-[#F8F7F3] mb-[10px]">
+              <NavLink
+                to={"/oplata"}
+                className="text-[14px]  text-[#F8F7F3] mb-[10px]"
+              >
                 Оплата
               </NavLink>
-              <NavLink className="text-[14px]  text-[#F8F7F3] mb-[10px]">
+              <NavLink
+                to={"/"}
+                className="text-[14px]  text-[#F8F7F3] mb-[10px]"
+              >
                 Возврат
               </NavLink>
-              <NavLink className="text-[14px]  text-[#F8F7F3] mb-[10px]">
+              <NavLink
+                to={"/faq"}
+                className="text-[14px]  text-[#F8F7F3] mb-[10px]"
+              >
                 FAQ
               </NavLink>
-              <NavLink className="text-[14px]  text-[#F8F7F3] mb-[10px]">
+              <NavLink
+                to={"/"}
+                className="text-[14px]  text-[#F8F7F3] mb-[10px]"
+              >
                 Лизинг
               </NavLink>
-              <NavLink className="text-[14px]  text-[#F8F7F3] mb-[10px]">
+              <NavLink
+                to={"/otziv"}
+                className="text-[14px]  text-[#F8F7F3] mb-[10px]"
+              >
                 Отзывы
               </NavLink>
-              <NavLink className="text-[14px]  text-[#F8F7F3] mb-[10px]">
+              <NavLink
+                to={"/blog"}
+                className="text-[14px]  text-[#F8F7F3] mb-[10px]"
+              >
                 Блог
               </NavLink>
             </div>
@@ -60,57 +98,104 @@ const FooterTop = () => {
           </h4>
           <div className="flex justify-between gap-10 py-5">
             <ul className="flex flex-col">
-              <NavLink className="text-[14px]  text-[#F8F7F3] mb-[10px]">
+              <NavLink
+                to={"/katalog"}
+                className="text-[14px]  text-[#F8F7F3] mb-[10px]"
+              >
                 Реанимацияи
               </NavLink>
-              <NavLink className="text-[14px]  text-[#F8F7F3] mb-[10px]">
+              <NavLink
+                to={"/katalog"}
+                className="text-[14px]  text-[#F8F7F3] mb-[10px]"
+              >
                 Хирургия
               </NavLink>
-              <NavLink className="text-[14px]  text-[#F8F7F3] mb-[10px]">
+              <NavLink
+                to={"/katalog"}
+                className="text-[14px]  text-[#F8F7F3] mb-[10px]"
+              >
                 Офтальмология
               </NavLink>
-              <NavLink className="text-[14px]  text-[#F8F7F3] mb-[10px]">
+              <NavLink
+                to={"/katalog/laboratornoe"}
+                className="text-[14px]  text-[#F8F7F3] mb-[10px]"
+              >
                 Лабораторная диагностика
               </NavLink>
-              <NavLink className="text-[14px]  text-[#F8F7F3] mb-[10px]">
+              <NavLink
+                to={"/katalog"}
+                className="text-[14px]  text-[#F8F7F3] mb-[10px]"
+              >
                 Акушерство и Гинекология
               </NavLink>
-              <NavLink className="text-[14px]  text-[#F8F7F3] mb-[10px]">
+              <NavLink
+                to={"/katalog"}
+                className="text-[14px]  text-[#F8F7F3] mb-[10px]"
+              >
                 Гистология
               </NavLink>
-              <NavLink className="text-[14px]  text-[#F8F7F3]">Косметология</NavLink>
+              <NavLink to={"/katalog"} className="text-[14px]  text-[#F8F7F3]">
+                Косметология
+              </NavLink>
             </ul>
             <ul className="flex flex-col">
-              <NavLink className="text-[14px]  text-[#F8F7F3] mb-[10px]">
+              <NavLink
+                to={"/katalog"}
+                className="text-[14px]  text-[#F8F7F3] mb-[10px]"
+              >
                 Орториноларингология
               </NavLink>
-              <NavLink className="text-[14px]  text-[#F8F7F3] mb-[10px]">
+              <NavLink
+                to={"/katalog"}
+                className="text-[14px]  text-[#F8F7F3] mb-[10px]"
+              >
                 Рентгенология и томография
               </NavLink>
               <NavLink className="text-[14px]  text-[#F8F7F3] mb-[10px]">
                 Стрерилизация
               </NavLink>
-              <NavLink className="text-[14px]  text-[#F8F7F3] mb-[10px]">
+              <NavLink
+                to={"/katalog"}
+                className="text-[14px]  text-[#F8F7F3] mb-[10px]"
+              >
                 Физиотерапия и реабилитация
               </NavLink>
-              <NavLink className="text-[14px]  text-[#F8F7F3] mb-[10px]">
+              <NavLink
+                to={"/katalog"}
+                className="text-[14px]  text-[#F8F7F3] mb-[10px]"
+              >
                 Функциональная диагностика
               </NavLink>
-              <NavLink className="text-[14px]  text-[#F8F7F3] mb-[10px]">
+              <NavLink
+                to={"/katalog"}
+                className="text-[14px]  text-[#F8F7F3] mb-[10px]"
+              >
                 Эндоскопия
               </NavLink>
             </ul>
             <ul className="flex flex-col">
-              <NavLink className="text-[14px]  text-[#F8F7F3] mb-[10px]">
+              <NavLink
+                to={"/katalog"}
+                className="text-[14px]  text-[#F8F7F3] mb-[10px]"
+              >
                 Новинки
               </NavLink>
-              <NavLink className="text-[14px]  text-[#F8F7F3] mb-[10px]">
+              <NavLink
+                to={"/aktsiya"}
+                className="text-[14px]  text-[#F8F7F3] mb-[10px]"
+              >
                 Распродажи
               </NavLink>
-              <NavLink className="text-[14px]  text-[#F8F7F3] mb-[10px]">
+              <NavLink
+                to={"/kabinet-podklyuch"}
+                className="text-[14px]  text-[#F8F7F3] mb-[10px]"
+              >
                 Кабинеты под ключ
               </NavLink>
-              <NavLink className="text-[14px]  text-[#F8F7F3] mb-[10px]">
+              <NavLink
+                to={"/katalog"}
+                className="text-[14px]  text-[#F8F7F3] mb-[10px]"
+              >
                 Скачать каталог
               </NavLink>
             </ul>
@@ -126,8 +211,10 @@ const FooterTop = () => {
               г. Москва, ул. Московская, д. 35{" "}
             </p>
             <div className=" flex items-center gap-3 mb-[20px]">
-              <span className="text-[14px]  text-[#F8F7F3] ">Карта проезда</span>
-              < MdArrowOutward/>
+              <span className="text-[14px]  text-[#F8F7F3] ">
+                Карта проезда
+              </span>
+              <MdArrowOutward />
             </div>
             <p className="text-[14px]  text-[#F8F7F3] ">График работы:</p>
             <p className="text-[14px]  text-[#F8F7F3] mb-[25px]">
@@ -141,8 +228,12 @@ const FooterTop = () => {
               <p className="text-[14px]  text-[#F8F7F3] mb-[5px]">
                 +7 495-000-00-00
               </p>
-              <p className="text-[14px]  text-[#F8F7F3] mb-[5px]">8 800-000-00-00</p>
-              <p className="text-[14px]  text-[#F8F7F3] mb-[5px]">info@mail.ru</p>
+              <p className="text-[14px]  text-[#F8F7F3] mb-[5px]">
+                8 800-000-00-00
+              </p>
+              <p className="text-[14px]  text-[#F8F7F3] mb-[5px]">
+                info@mail.ru
+              </p>
             </div>
           </div>
         </div>

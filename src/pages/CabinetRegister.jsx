@@ -6,6 +6,7 @@ import Order from '../components/cabinet/Order';
 import Question from '../components/main/question/Question';
 import Course from '../components/main/course/Course';
 import FastQuestion from '../components/delivery/FastQuestion';
+import { RiArrowRightSLine } from "react-icons/ri";
 
 const CabinetRegister = () => {
     const navigate = useNavigate();
@@ -16,7 +17,7 @@ const CabinetRegister = () => {
           <Link to={"/"} className="text-[#7A7687]">
             Главная
           </Link>
-          <span className="text-[#7A7687]">></span>
+          <RiArrowRightSLine className="text-[20px] text-[#7A7687]" />
           <NavLink to={"/kabinet-podklyuch"} className="">
             Кабинеты под ключ
           </NavLink>
@@ -48,11 +49,11 @@ const CabinetRegister = () => {
           </div>
         </div>
       </div>
-      <Select/>
-      <Order/>
-      <FastQuestion/>
-      <Question/>
-      <Course/>
+      <Select />
+      <Order />
+      <FastQuestion />
+      <Question />
+      <Course />
     </div>
   );
 }

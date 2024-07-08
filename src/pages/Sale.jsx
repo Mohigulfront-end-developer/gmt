@@ -1,4 +1,3 @@
-import React from 'react'
 import { Link, NavLink } from 'react-router-dom';
 import Sale from "../components/sale/Sale"
 import { GoChevronRight } from "react-icons/go";
@@ -7,6 +6,7 @@ import CategoryProduct from '../components/productComp/CategoryProduct';
 import Brend from '../components/main/brend/Brand';
 import Consult from "../components/garantii/Consult"
 import Course from '../components/main/course/Course';
+import { RiArrowRightSLine } from "react-icons/ri";
 
 const SalePage = () => {
   return (
@@ -16,7 +16,7 @@ const SalePage = () => {
           <Link to={"/"} className="text-[#7A7687]">
             Главная
           </Link>
-          <span className="text-[#7A7687]">></span>
+          <RiArrowRightSLine className="text-[20px] text-[#7A7687]" />
           <NavLink to={"/aktsiya"} className="">
             Акции
           </NavLink>
@@ -49,12 +49,11 @@ const SalePage = () => {
           </div>
         </div>
       </div>
-      <Cabinet/>
-      <CategoryProduct/>
-      <Brend/>
-      <Consult/>
-      <Course/>
-
+      <Cabinet />
+      <CategoryProduct />
+      <Brend />
+      <Consult />
+      <Course />
     </div>
   );
 }
