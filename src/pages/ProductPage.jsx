@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import Data from "../data/catalog";
 import { Link, NavLink, useParams } from "react-router-dom";
 import Product from "../components/productComp/Characterics";
-import Star from "../../public/assets/productpage/star.svg"
 import Catalog from "../components/main/catalog/Catalog"
 import Cabinet from "../components/main/complex/Cabinet";
 import Brend from "../components/main/brend/Brand";
@@ -10,6 +9,7 @@ import Course from "../components/main/course/Course"
 import CategoryProduct from "../components/productComp/CategoryProduct";
 import ProductData from "../components/productComp/ProductData";
 import { RiArrowRightSLine } from "react-icons/ri";
+import { Rate } from "antd";
 
 
 
@@ -127,12 +127,12 @@ const StranitsaProduct = () => {
                   {product?.title}
                 </h2>
                 <div className="flex gap-2 my-2 items-center">
-                  <img src={Star} alt="" />
+                 <Rate disabled defaultValue={4} />
                   <p className="font-medium text-[#202020] opacity-80 text-[14px]">
                     4.0
                   </p>
                 </div>
-
+  
                 <p className="text-[12px] font-normal text-[#7A7687]">
                   Категория: {product?.category}
                 </p>

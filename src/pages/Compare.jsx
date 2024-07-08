@@ -1,9 +1,6 @@
 import { useSelector } from "react-redux";
 import { RiArrowRightSLine } from "react-icons/ri";
 import { Link, NavLink } from "react-router-dom";
-import { IoIosArrowDown } from "react-icons/io";
-import Burger from "../../public/assets/signin/burger.svg"
-import Table from "../../public/assets/signin/table.svg"
 
 
 
