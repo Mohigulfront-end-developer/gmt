@@ -25,38 +25,38 @@ const StranitsaProduct = () => {
     }
   }, [product]);
 
-  const [isActive1, setIsActive1] = useState(true);
-  const [isActive2, setIsActive2] = useState(false);
-  const [isActive3, setIsActive3] = useState(false);
-  // const [isActive4, setIsActive4] = useState(false);
+  // // const [isActive1, setIsActive1] = useState(true);
+  // // const [isActive2, setIsActive2] = useState(false);
+  // // const [isActive3, setIsActive3] = useState(false);
+  // // // const [isActive4, setIsActive4] = useState(false);
 
-  const clicked1 = () => {
-    setIsActive1(true);
-    setIsActive2(false);
-    setIsActive3(false);
-    // setIsActive4(false);
-  };
+  // // const clicked1 = () => {
+  // //   setIsActive1(true);
+  // //   setIsActive2(false);
+  // //   setIsActive3(false);
+  // //   // setIsActive4(false);
+  // // };
 
-  const clicked2 = () => {
-    setIsActive1(false);
-    setIsActive2(true);
-    setIsActive3(false);
-    // setIsActive4(false);
-  };
+  // // const clicked2 = () => {
+  // //   setIsActive1(false);
+  // //   setIsActive2(true);
+  // //   setIsActive3(false);
+  // //   // setIsActive4(false);
+  // // };
 
-  const clicked3 = () => {
-    setIsActive1(false);
-    setIsActive2(false);
-    setIsActive3(true);
-    // setIsActive4(false);
-  };
-
-  // const clicked4 = () => {
-  //   setIsActive1(false);
-  //   setIsActive2(false);
-  //   setIsActive3(false);
-  //   setIsActive4(true);
+  // // const clicked3 = () => {
+  // //   setIsActive1(false);
+  // //   setIsActive2(false);
+  // //   setIsActive3(true);
+  //   // setIsActive4(false);
   // };
+
+  // // const clicked4 = () => {
+  // //   setIsActive1(false);
+  // //   setIsActive2(false);
+  // //   setIsActive3(false);
+  // //   setIsActive4(true);
+  // // };
 
   const minusCount = () => {
     setCount(count === 1 ? 1 : count - 1);
