@@ -19,7 +19,7 @@ const FooterTop = () => {
                 О компании
               </NavLink>
               <NavLink
-                to={"/certificate"}
+                to={"/o-kompanii/certificate"}
                 className="text-[14px]  text-[#F8F7F3] mb-[10px]"
               >
                 Сертификаты

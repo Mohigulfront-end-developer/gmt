@@ -3,6 +3,14 @@ import { GoChevronDown } from "react-icons/go";
 import { GoChevronUp } from "react-icons/go";
 import LabaratoriyaProduct from "../components/labaratoriya/LabaratoriyaProduct";
 import { RiArrowRightSLine } from "react-icons/ri";
+import { Slider } from 'antd';
+
+const onChange = (value) => {
+  console.log('onChange: ', value);
+};
+const onChangeComplete = (value) => {
+  console.log('onChangeComplete: ', value);
+};
 
 const Labaratory = () => {
   return (
@@ -52,6 +60,8 @@ const Labaratory = () => {
                 <p className="flex justify-between items-center py-2">
                   Цена <GoChevronUp />
                 </p>
+                <Slider defaultValue={30} onChange={onChange} onChangeComplete={onChangeComplete} className="" />
+                                      
               </div>
             </div>
             <LabaratoriyaProduct />

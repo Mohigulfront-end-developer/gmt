@@ -29,7 +29,6 @@ import FAQS from "./pages/FAQS";
 import Account from "./pages/Account";
 import JobAplication from "./pages/JobAplication";
 
-// import Text from "./pages/Text"
 
 
 
@@ -78,7 +77,7 @@ function App() {
           </Routes>
         </div>
 
-        {/* <Text /> */}
+       
         <Footer />
       </BrowserRouter>
     </>

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import  { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import ReactPaginate from "react-paginate";
 import { RiAlignItemBottomLine } from "react-icons/ri";
@@ -8,6 +8,9 @@ import { IoIosHeartEmpty } from "react-icons/io";
 import Data from "../../data/catalog";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../../redux/addToCard";
+
+
+
 
 const LabaratoriyaProduct = () => {
   const [currentPage, setCurrentPage] = useState(0);
@@ -126,9 +129,9 @@ const dispatch = useDispatch();
         containerClassName={"flex justify-center mt-4 items-center"}
         pageClassName={"mx-1"}
         pageLinkClassName={
-          "px-3 py-1 rounded-lg border border-[#E5E2EE] font-semibold text-[#202020] bg-white"
+          "px-3 py-2 rounded-lg border border-[#E5E2EE] font-semibold text-[#202020] bg-white"
         }
-        activeLinkClassName={"bg-emerald-700 text-[#FFFFFF]"}
+        activeLinkClassName={"bg-emerald-600 text-[#FFFFFF]"}
       />
     </div>
   );

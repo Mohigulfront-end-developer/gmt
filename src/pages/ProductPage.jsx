@@ -7,7 +7,6 @@ import Cabinet from "../components/main/complex/Cabinet";
 import Brend from "../components/main/brend/Brand";
 import Course from "../components/main/course/Course"
 import CategoryProduct from "../components/productComp/CategoryProduct";
-import ProductData from "../components/productComp/ProductData";
 import { RiArrowRightSLine } from "react-icons/ri";
 import { Rate } from "antd";
 
@@ -74,6 +73,7 @@ const StranitsaProduct = () => {
             <Link to="/" className="text-[#7A7687]">
               Главная
             </Link>
+            <RiArrowRightSLine className="text-[20px] text-[#7A7687]" />
             <Link to="/katalog" className="text-[#7A7687]">
               Каталог
             </Link>
@@ -202,7 +202,6 @@ const StranitsaProduct = () => {
       <CategoryProduct />
       <Brend />
       <Course />
-      <ProductData />
     </div>
   );
 };
