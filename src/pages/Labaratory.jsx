@@ -4,7 +4,7 @@ import { GoChevronUp } from "react-icons/go";
 import LabaratoriyaProduct from "../components/labaratoriya/LabaratoriyaProduct";
 import { RiArrowRightSLine } from "react-icons/ri";
 import { Slider } from "antd";
-import FilterCountry from "../components/manifacture/FilterCountry";
+
 
 const onChange = (value) => {
   console.log("onChange: ", value);
@@ -82,7 +82,6 @@ const Labaratory = () => {
                     onChangeComplete={onChangeComplete}
                     className=""
                   />
-                  <FilterCountry />
                   <div className=""></div>
                 </div>
               </div>
