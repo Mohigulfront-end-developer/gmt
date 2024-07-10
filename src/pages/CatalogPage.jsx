@@ -22,7 +22,7 @@ import FastQuestion from "../components/delivery/FastQuestion";
 import { RiArrowRightSLine } from "react-icons/ri";
 
 const CatalogPage = () => {
-   const navigate = useNavigate();
+  const navigate = useNavigate();
   return (
     <>
       <div className="bg-[#F8F7F3]">
@@ -48,7 +48,8 @@ const CatalogPage = () => {
                       to={"/katalog/laboratornoe"}
                       className="flex justify-between text-[16px]  text-[#202020] hover:text-[#07745E]"
                     >
-                      {data.category} <GoChevronRight className="sm:flex hidden"/>
+                      {data.category}{" "}
+                      <GoChevronRight className="sm:flex hidden" />
                     </NavLink>
                   </div>
                 </div>

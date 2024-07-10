@@ -1,4 +1,4 @@
-import { NavLink } from 'react-router-dom';
+import { NavLink } from "react-router-dom";
 import { MdArrowOutward } from "react-icons/md";
 
 const FooterTop = () => {
@@ -47,7 +47,10 @@ const FooterTop = () => {
               >
                 Акции
               </NavLink>
-              <NavLink to={"/dostavka"} className="text-[14px]  text-[#F8F7F3] hover:text-[#BDDBC7]">
+              <NavLink
+                to={"/dostavka"}
+                className="text-[14px]  text-[#F8F7F3] hover:text-[#BDDBC7]"
+              >
                 Доставка
               </NavLink>
             </div>
@@ -93,7 +96,7 @@ const FooterTop = () => {
         </div>
         <div className="w-[650px]">
           <h4 className="border-b-2 border-b-[#F8F7F3]  text-[#F8F7F3] text-[14px] py-5">
-         Каталог
+            Каталог
           </h4>
           <div className="flex justify-between gap-10 py-5 flex-wrap">
             <ul className="flex flex-col">
@@ -133,7 +136,10 @@ const FooterTop = () => {
               >
                 Гистология
               </NavLink>
-              <NavLink to={"/katalog"} className="text-[14px]  text-[#F8F7F3] hover:text-[#BDDBC7]">
+              <NavLink
+                to={"/katalog"}
+                className="text-[14px]  text-[#F8F7F3] hover:text-[#BDDBC7]"
+              >
                 Косметология
               </NavLink>
             </ul>
@@ -239,6 +245,6 @@ const FooterTop = () => {
       </div>
     </div>
   );
-}
+};
 
-export default FooterTop
+export default FooterTop;

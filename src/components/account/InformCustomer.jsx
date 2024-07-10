@@ -1,4 +1,4 @@
-import Img from "../../../public/assets/signin/edit.svg"
+import Img from "../../../public/assets/signin/edit.svg";
 const InformCustomer = () => {
   return (
     <div className="pb-10">
@@ -54,6 +54,6 @@ const InformCustomer = () => {
       </button>
     </div>
   );
-}
+};
 
-export default InformCustomer
+export default InformCustomer;

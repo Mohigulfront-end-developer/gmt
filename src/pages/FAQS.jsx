@@ -5,11 +5,10 @@ import { PlusOutlined } from "@ant-design/icons";
 import { GoArrowUpRight } from "react-icons/go";
 import { IoSearch } from "react-icons/io5";
 import { useState } from "react";
-import faqData from "../data/faq"
+import faqData from "../data/faq";
 import { MdOutlineKeyboardDoubleArrowRight } from "react-icons/md";
 import { MdOutlineKeyboardDoubleArrowLeft } from "react-icons/md";
-import Question from "../components/main/question/Question"
-
+import Question from "../components/main/question/Question";
 
 const FAQS = () => {
   const [currentPage, setCurrentPage] = useState(1);
@@ -127,7 +126,7 @@ const FAQS = () => {
           </div>
         </div>
       </div>
-      <Question/>
+      <Question />
     </div>
   );
 };

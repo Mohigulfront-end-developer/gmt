@@ -9,9 +9,9 @@ import { RiAlignItemBottomLine } from "react-icons/ri";
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
-import Modal from "./Modal"; 
-import { handleLogin } from "../../redux/login"
-import Burger from "../../../public/assets/signin/burger.svg"
+import Modal from "./Modal";
+import { handleLogin } from "../../redux/login";
+import Burger from "../../../public/assets/signin/burger.svg";
 
 const Navbar = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -22,7 +22,7 @@ const Navbar = () => {
   const { compare } = useSelector((state) => state.compareProducts);
   const { cards, totalPrice } = useSelector((state) => state.cartProducts);
 
-  console.log(liked.length,'count');
+  console.log(liked.length, "count");
   const handleOpenModal = () => {
     setIsModalOpen(true);
   };
@@ -56,20 +56,20 @@ const Navbar = () => {
             </NavLink>
             <div className="lg:hidden sm:flex hidden justify-between gap-[500px]">
               <NavLink to={"/"} className="">
-              <img src={Logo} alt="Logo" />
-            </NavLink>
-             <div className=" lg:hidden">
-              <img src={Burger} alt="" className="w-[45px] h-[45px]" />
-             </div>
-             </div>
-              <div className="lg:hidden sm:hidden flex justify-between gap-[200px]">
+                <img src={Logo} alt="Logo" />
+              </NavLink>
+              <div className=" lg:hidden">
+                <img src={Burger} alt="" className="w-[45px] h-[45px]" />
+              </div>
+            </div>
+            <div className="lg:hidden sm:hidden flex justify-between gap-[200px]">
               <NavLink to={"/"} className="">
-              <img src={Logo} alt="Logo" />
-            </NavLink>
-             <div className=" lg:hidden">
-              <img src={Burger} alt="" className="w-[45px] h-[45px]" />
-             </div>
-             </div>
+                <img src={Logo} alt="Logo" />
+              </NavLink>
+              <div className=" lg:hidden">
+                <img src={Burger} alt="" className="w-[45px] h-[45px]" />
+              </div>
+            </div>
 
             <div className="lg:flex hidden items-center border border-[#D5D1E1] px-2 rounded-full">
               <button className="flex font-bold items-center gap-2 text-[14px] text-[#7A7687] rounded-full bg-[#EFEFEF] p-2 relative right-[8px]">
@@ -114,9 +114,13 @@ const Navbar = () => {
             >
               <div className="flex flex-col items-center">
                 <IoIosHeartEmpty className="text-[black] text-center w-[20px] h-[22px] hover:text-[#088269] " />
-              Избранное
+                Избранное
               </div>
-               {liked.length > 0 && <span className="relative bottom-4 right-2 text-[14px] font-bold text-green-600">{liked.length}</span>}
+              {liked.length > 0 && (
+                <span className="relative bottom-4 right-2 text-[14px] font-bold text-green-600">
+                  {liked.length}
+                </span>
+              )}
             </Link>
             <Link
               to={"/sravniti"}
@@ -124,16 +128,27 @@ const Navbar = () => {
             >
               <div className="flex flex-col items-center">
                 <RiAlignItemBottomLine className="text-[black] text-center w-[20px] h-[22px] hover:text-[#088269]" />
-              Сравнить
+                Сравнить
               </div>
-              {compare.length > 0 && <span className="relative bottom-4 right-2 text-[14px] font-bold text-green-600">{compare.length}</span>}
+              {compare.length > 0 && (
+                <span className="relative bottom-4 right-2 text-[14px] font-bold text-green-600">
+                  {compare.length}
+                </span>
+              )}
             </Link>
-            <Link to={"/korzinka"} className="text-[#7A7687] text-[13px] flex items-center hover:text-[#088269]">
+            <Link
+              to={"/korzinka"}
+              className="text-[#7A7687] text-[13px] flex items-center hover:text-[#088269]"
+            >
               <div className="flex flex-col items-center">
                 <FiShoppingCart className="text-[black] text-center w-[20px] h-[22px] hover:text-[#088269]" />
                 Корзина
               </div>
-                {cards.length > 0 && <span className="relative bottom-4 right-2 text-[14px] font-bold text-green-600">{cards.length}</span>}
+              {cards.length > 0 && (
+                <span className="relative bottom-4 right-2 text-[14px] font-bold text-green-600">
+                  {cards.length}
+                </span>
+              )}
             </Link>
           </div>
         </div>

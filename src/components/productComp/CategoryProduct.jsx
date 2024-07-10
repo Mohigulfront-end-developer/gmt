@@ -1,4 +1,4 @@
-import { useRef} from "react";
+import { useRef } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -6,10 +6,8 @@ import { GoArrowLeft, GoArrowRight } from "react-icons/go";
 import Data from "../../data/catalog";
 import { Link, useNavigate } from "react-router-dom";
 
-
 const CategoryProduct = () => {
   const navigate = useNavigate();
-
 
   const sliderRef = useRef(null);
 
@@ -68,7 +66,8 @@ const CategoryProduct = () => {
           <div className="flex justify-between">
             <div className="">
               <h2 className="mb-[20px] text-[30px] font-medium">
-                Популярные <br />категории
+                Популярные <br />
+                категории
               </h2>
             </div>
 
@@ -129,7 +128,10 @@ const CategoryProduct = () => {
             </div>
 
             <div className=" flex  gap-4 h-[40px]  md:gap-4 justify-items-end ">
-              <Link to={"/katalog/laboratornoe"} className=" px-4 py-[4px] text-[14px] transition duration-300 flex justify-center items-center md:px-6 lg:py-[11px] rounded-full font-semibold lg:text-[16px] text-white bg-[#088269] border-none ">
+              <Link
+                to={"/katalog/laboratornoe"}
+                className=" px-4 py-[4px] text-[14px] transition duration-300 flex justify-center items-center md:px-6 lg:py-[11px] rounded-full font-semibold lg:text-[16px] text-white bg-[#088269] border-none "
+              >
                 Все категории
               </Link>
             </div>

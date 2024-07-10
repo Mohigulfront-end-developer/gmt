@@ -1,5 +1,3 @@
-import React from 'react'
-
 const Order = () => {
   return (
     <div className="bg-[#F8F7F3]">
@@ -31,6 +29,6 @@ const Order = () => {
       </div>
     </div>
   );
-}
+};
 
-export default Order
+export default Order;

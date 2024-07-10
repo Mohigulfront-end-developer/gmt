@@ -7,7 +7,6 @@ import uslugi6 from "../../public/assets/uslugi/uslugi6.png";
 import uslugi7 from "../../public/assets/uslugi/uslugi7.png";
 import uslugi8 from "../../public/assets/uslugi/uslugi8.png";
 
-
 export default [
   {
     id: 1,

@@ -3,7 +3,6 @@ import Icon2 from "../../../public/assets/delivery/icon2.svg";
 import Icon4 from "../../../public/assets/delivery/icon4.svg";
 import Icon5 from "../../../public/assets/delivery/icon5.svg";
 
-
 const PositiveSide = () => {
   return (
     <div className="bg-[#F8F7F3]">
@@ -42,6 +41,6 @@ const PositiveSide = () => {
       </div>
     </div>
   );
-}
+};
 
-export default PositiveSide
+export default PositiveSide;

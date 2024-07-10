@@ -1,21 +1,20 @@
-import  { useState } from "react";
+import { useState } from "react";
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import { GoChevronDown, GoChevronUp, GoSearch } from "react-icons/go";
 import Data from "../data/brend";
 import { MdKeyboardDoubleArrowRight } from "react-icons/md";
 import { MdKeyboardDoubleArrowLeft } from "react-icons/md";
-import Catalog from "../components/main/catalog/Catalog"
+import Catalog from "../components/main/catalog/Catalog";
 import Select from "../components/main/select/Select";
-import News from "../components/main/news/News"
+import News from "../components/main/news/News";
 import FastQuestion from "../components/delivery/FastQuestion";
 import Consult from "../components/garantii/Consult";
 import { RiArrowRightSLine } from "react-icons/ri";
 
-
 const Manifacture = () => {
   const [selectedCountries, setSelectedCountries] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
- const navigate = useNavigate();
+  const navigate = useNavigate();
   const [showFilters, setShowFilters] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 12;

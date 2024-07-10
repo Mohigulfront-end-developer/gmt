@@ -1,17 +1,15 @@
-import React from 'react'
-import { useDispatch } from 'react-redux';
-import { useNavigate } from 'react-router-dom';
-import { handleLogout } from '../../redux/login';
+import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
+import { handleLogout } from "../../redux/login";
 
 const Settings = () => {
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
 
-     const dispatch = useDispatch();
-   const navigate = useNavigate()
-
-   const logout = () => {
+  const logout = () => {
     dispatch(handleLogout());
     navigate("/");
-   }
+  };
   return (
     <div>
       <div className="flex justify-between">
@@ -57,13 +55,16 @@ const Settings = () => {
               </div>
             </div>
           </div>
-          <button onClick={logout} className="bg-[#088269] text-[#F8F7F3] px-6 py-2 rounded-full my-[100px] w-[200px]">
+          <button
+            onClick={logout}
+            className="bg-[#088269] text-[#F8F7F3] px-6 py-2 rounded-full my-[100px] w-[200px]"
+          >
             Выйти
           </button>
         </div>
       </div>
     </div>
   );
-}
+};
 
-export default Settings
+export default Settings;

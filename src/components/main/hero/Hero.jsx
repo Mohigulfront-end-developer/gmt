@@ -7,7 +7,6 @@ import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import { Link } from "react-router-dom";
 
-
 export default function SimpleSlider() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const carouselRef = useRef(null);
@@ -33,7 +32,9 @@ export default function SimpleSlider() {
     phone: Yup.string()
       .matches(/^[0-9]{10}$/, "Некорректный номер телефона")
       .required("Обязательно для заполнения"),
-    email: Yup.string().email("Некорректный email").required("Обязательно для заполнения"),
+    email: Yup.string()
+      .email("Некорректный email")
+      .required("Обязательно для заполнения"),
     organization: Yup.string().required("Обязательно для заполнения"),
     message: Yup.string().required("Обязательно для заполнения"),
   });
@@ -70,7 +71,10 @@ export default function SimpleSlider() {
                     >
                       Запросить цену
                     </button>
-                    <Link to={"/katalog"} className="sm:w-[100%] lg:w-[50%] w-full border text-center lg:text-[14px] sm:text-[14px] text-[12px] font-semibold border-[#D5D1E1] text-[#088269] rounded-full bg-transparent py-2 px-6 hover:bg-[#07745E] hover:text-[#F8F7F3] ">
+                    <Link
+                      to={"/katalog"}
+                      className="sm:w-[100%] lg:w-[50%] w-full border text-center lg:text-[14px] sm:text-[14px] text-[12px] font-semibold border-[#D5D1E1] text-[#088269] rounded-full bg-transparent py-2 px-6 hover:bg-[#07745E] hover:text-[#F8F7F3] "
+                    >
                       В каталог
                     </Link>
                   </div>
@@ -105,7 +109,13 @@ export default function SimpleSlider() {
       <Modal show={isModalOpen} onClose={handleCloseModal}>
         <h2 className="text-xl font-medium mb-6">Запросить цену</h2>
         <Formik
-          initialValues={{ username: "", phone: "", email: "", organization: "", message: "" }}
+          initialValues={{
+            username: "",
+            phone: "",
+            email: "",
+            organization: "",
+            message: "",
+          }}
           validationSchema={validationSchema}
           onSubmit={(values, { setSubmitting }) => {
             setTimeout(() => {
@@ -127,7 +137,11 @@ export default function SimpleSlider() {
                       name="username"
                       placeholder="Ваше имя*"
                     />
-                    <ErrorMessage name="username" component="div" className="text-red-500 text-sm" />
+                    <ErrorMessage
+                      name="username"
+                      component="div"
+                      className="text-red-500 text-sm"
+                    />
                   </div>
                   <div>
                     <Field
@@ -137,7 +151,11 @@ export default function SimpleSlider() {
                       placeholder="Ваш телефон*"
                       className="py-2 px-3 text-gray-700 leading-tight border-b-[1px] outline-none"
                     />
-                    <ErrorMessage name="phone" component="div" className="text-red-500 text-sm" />
+                    <ErrorMessage
+                      name="phone"
+                      component="div"
+                      className="text-red-500 text-sm"
+                    />
                   </div>
                 </div>
                 <div className="mb-2">
@@ -148,7 +166,11 @@ export default function SimpleSlider() {
                     name="email"
                     placeholder="Ваш email"
                   />
-                  <ErrorMessage name="email" component="div" className="text-red-500 text-sm" />
+                  <ErrorMessage
+                    name="email"
+                    component="div"
+                    className="text-red-500 text-sm"
+                  />
                 </div>
                 <div className="mb-2">
                   <Field
@@ -158,7 +180,11 @@ export default function SimpleSlider() {
                     name="organization"
                     placeholder="Название вашей организации"
                   />
-                  <ErrorMessage name="organization" component="div" className="text-red-500 text-sm" />
+                  <ErrorMessage
+                    name="organization"
+                    component="div"
+                    className="text-red-500 text-sm"
+                  />
                 </div>
                 <div className="">
                   <Field
@@ -168,7 +194,11 @@ export default function SimpleSlider() {
                     name="message"
                     placeholder="Ваше сообщение"
                   />
-                  <ErrorMessage name="message" component="div" className="text-red-500 text-sm" />
+                  <ErrorMessage
+                    name="message"
+                    component="div"
+                    className="text-red-500 text-sm"
+                  />
                 </div>
               </div>
               <div className="flex items-center justify-between gap-2">
@@ -180,8 +210,8 @@ export default function SimpleSlider() {
                   Отправить
                 </button>
                 <span className="text-[12px] text-[#7A7687]">
-                  Нажимая «Отправить», я соглашаюсь c обработкой персональных данных
-                  на условиях{" "}
+                  Нажимая «Отправить», я соглашаюсь c обработкой персональных
+                  данных на условиях{" "}
                   <span className="text-[#088269]">
                     Политики конфиденциальности.
                   </span>

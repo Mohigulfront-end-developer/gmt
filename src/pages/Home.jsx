@@ -1,11 +1,11 @@
-import Main from '../components/main/Main'
+import Main from "../components/main/Main";
 
 const Home = () => {
   return (
     <div>
-        <Main/>
+      <Main />
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;

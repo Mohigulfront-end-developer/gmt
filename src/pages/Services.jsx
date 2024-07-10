@@ -1,8 +1,8 @@
-import { Link, NavLink } from 'react-router-dom';
-import Data from "../data/uslugi"
-import Number from '../components/aboutUs/Number';
-import Certificate from '../components/aboutUs/Certificate';
-import Consult from '../components/garantii/Consult';
+import { Link, NavLink } from "react-router-dom";
+import Data from "../data/uslugi";
+import Number from "../components/aboutUs/Number";
+import Certificate from "../components/aboutUs/Certificate";
+import Consult from "../components/garantii/Consult";
 import { RiArrowRightSLine } from "react-icons/ri";
 
 const Services = () => {
@@ -73,6 +73,6 @@ const Services = () => {
       <Consult />
     </div>
   );
-}
+};
 
-export default Services
+export default Services;

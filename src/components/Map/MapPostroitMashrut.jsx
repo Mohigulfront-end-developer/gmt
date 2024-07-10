@@ -1,5 +1,3 @@
-import React from 'react'
-
 const MapPostroitMashrut = () => {
   return (
     <div className="">
@@ -19,6 +17,6 @@ const MapPostroitMashrut = () => {
       </div>
     </div>
   );
-}
+};
 
-export default MapPostroitMashrut
+export default MapPostroitMashrut;

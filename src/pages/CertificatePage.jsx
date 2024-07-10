@@ -2,10 +2,8 @@ import { Link, NavLink } from "react-router-dom";
 import { RiArrowRightSLine } from "react-icons/ri";
 import { Collapse } from "antd";
 import { PlusOutlined } from "@ant-design/icons";
-import Catalog from "../components/main/catalog/Catalog"
+import Catalog from "../components/main/catalog/Catalog";
 import Consult from "../components/garantii/Consult";
-
-
 
 const text = (
   <>
@@ -129,8 +127,8 @@ const CertificatePage = () => {
           />
         </div>
       </div>
-      <Catalog/>
-      <Consult/>
+      <Catalog />
+      <Consult />
     </div>
   );
 };

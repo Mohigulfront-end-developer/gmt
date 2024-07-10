@@ -1,4 +1,4 @@
-import Img from "../../../../public/message.svg"
+import Img from "../../../../public/message.svg";
 
 const Course = () => {
   return (
@@ -34,6 +34,6 @@ const Course = () => {
       </div>
     </div>
   );
-}
+};
 
-export default Course
+export default Course;

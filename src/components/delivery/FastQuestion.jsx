@@ -2,8 +2,6 @@ import { Collapse } from "antd";
 import { PlusOutlined } from "@ant-design/icons";
 import { GoArrowUpRight } from "react-icons/go";
 
-
-
 const text = (
   <>
     <p className="bg-[#088269] py-4 text-white text-[16px] font-medium">
@@ -12,7 +10,10 @@ const text = (
       рамках спецификации современных стандартов, сторонники тоталитаризма в
       науке будут функционально разнесены.
     </p>
-    <button className="flex gap-2 items-center text-white font-medium text-[16px] py-2 mt-[15px]">Подробнее<GoArrowUpRight className="w-[20px] h-[20px]"/></button>
+    <button className="flex gap-2 items-center text-white font-medium text-[16px] py-2 mt-[15px]">
+      Подробнее
+      <GoArrowUpRight className="w-[20px] h-[20px]" />
+    </button>
   </>
 );
 

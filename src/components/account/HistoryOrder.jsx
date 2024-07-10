@@ -1,8 +1,7 @@
 import { IoIosArrowUp } from "react-icons/io";
-import Img1 from "../../../public/assets/signin/img2.png"
+import Img1 from "../../../public/assets/signin/img2.png";
 import Img2 from "../../../public/assets/signin/img1.png";
 import { IoIosArrowDown } from "react-icons/io";
-
 
 const HistoryOrder = () => {
   return (

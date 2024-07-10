@@ -3,7 +3,6 @@ import Icon2 from "../../../public/assets/garantii/img2.svg";
 import Icon3 from "../../../public/assets/garantii/img3.svg";
 import Icon4 from "../../../public/assets/delivery/icon5.svg";
 
-
 const GarantiiService = () => {
   return (
     <div className="bg-[#F8F7F3]">

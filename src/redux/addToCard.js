@@ -6,7 +6,10 @@ const initialState = {
 };
 
 const calculateTotalPrice = (cards) => {
-  return cards.reduce((total, product) => total + product.qty * product.price, 0);
+  return cards.reduce(
+    (total, product) => total + product.qty * product.price,
+    0
+  );
 };
 
 const cartProductsSlice = createSlice({
@@ -21,7 +24,9 @@ const cartProductsSlice = createSlice({
 
     addToCart: (state, action) => {
       const item = action.payload;
-      const cardProduct = state.cards.findIndex(product => product.id === item.id);
+      const cardProduct = state.cards.findIndex(
+        (product) => product.id === item.id
+      );
       if (cardProduct === -1) {
         state.cards = [...state.cards, { ...item, qty: 1 }];
       } else {
@@ -32,7 +37,9 @@ const cartProductsSlice = createSlice({
     },
 
     removeCard: (state, action) => {
-      state.cards = state.cards.filter(product => product.id !== action.payload);
+      state.cards = state.cards.filter(
+        (product) => product.id !== action.payload
+      );
       localStorage.setItem("cards", JSON.stringify(state.cards));
       state.totalPrice = calculateTotalPrice(state.cards);
     },

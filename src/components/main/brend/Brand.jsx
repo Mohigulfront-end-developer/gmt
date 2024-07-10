@@ -1,8 +1,8 @@
-import  { useRef } from "react";
+import { useRef } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import  Data  from "../../../data/brend";
+import Data from "../../../data/brend";
 import { GoArrowLeft, GoArrowRight } from "react-icons/go";
 import { Link, useNavigate } from "react-router-dom";
 
@@ -20,8 +20,6 @@ const Brend = () => {
     slidesToScroll: 1,
     initialSlide: 0,
     infinite: true,
-    
-  
 
     responsive: [
       {
@@ -81,9 +79,7 @@ const Brend = () => {
                 <div
                   key={index}
                   className="w-[320px] border bg-[#f8f7f3]  rounded-lg"
-                   onClick={() =>
-                        navigate(`/proizvoditel/${slide.id}`)
-                      }
+                  onClick={() => navigate(`/proizvoditel/${slide.id}`)}
                 >
                   <div className="w-full h-[220px] bg-[#fff] flex items-center justify-center rounded-t-lg">
                     <img src={slide.image} alt={slide.title} className="" />
@@ -112,7 +108,10 @@ const Brend = () => {
                 <GoArrowRight className="w-[22px] h-[22px] " />
               </button>
             </div>
-            <Link to={"/o-kompanii/certificate"} className="px-5 py-3  rounded-full font-semibold border text-[14px] text-[#F8F7F3] bg-[#088269] hover:bg-[#07745E]">
+            <Link
+              to={"/o-kompanii/certificate"}
+              className="px-5 py-3  rounded-full font-semibold border text-[14px] text-[#F8F7F3] bg-[#088269] hover:bg-[#07745E]"
+            >
               Сертификаты
             </Link>
           </div>

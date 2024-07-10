@@ -1,15 +1,14 @@
-import React from 'react'
-import { Link, NavLink, useNavigate } from 'react-router-dom';
-import Data from "../data/cabinet"
-import Select from '../components/main/select/Select';
-import Order from '../components/cabinet/Order';
-import Question from '../components/main/question/Question';
-import Course from '../components/main/course/Course';
-import FastQuestion from '../components/delivery/FastQuestion';
+import { Link, NavLink, useNavigate } from "react-router-dom";
+import Data from "../data/cabinet";
+import Select from "../components/main/select/Select";
+import Order from "../components/cabinet/Order";
+import Question from "../components/main/question/Question";
+import Course from "../components/main/course/Course";
+import FastQuestion from "../components/delivery/FastQuestion";
 import { RiArrowRightSLine } from "react-icons/ri";
 
 const CabinetRegister = () => {
-    const navigate = useNavigate();
+  const navigate = useNavigate();
   return (
     <div className="bg-[#F8F7F3]">
       <div className="container pb-[20px]">
@@ -56,6 +55,6 @@ const CabinetRegister = () => {
       <Course />
     </div>
   );
-}
+};
 
-export default CabinetRegister
+export default CabinetRegister;

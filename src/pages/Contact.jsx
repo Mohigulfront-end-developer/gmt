@@ -1,4 +1,4 @@
-import { Link, NavLink } from 'react-router-dom';
+import { Link, NavLink } from "react-router-dom";
 import { IoLocationOutline } from "react-icons/io5";
 import { LuClock } from "react-icons/lu";
 import { BsTelephone } from "react-icons/bs";
@@ -182,7 +182,6 @@ const Contact = () => {
       </div>
     </div>
   );
-}
+};
 
-export default Contact
-
+export default Contact;

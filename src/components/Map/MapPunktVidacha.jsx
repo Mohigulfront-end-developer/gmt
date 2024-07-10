@@ -1,5 +1,3 @@
-
-
 const MapPunktVidacha = () => {
   return (
     <div className="">

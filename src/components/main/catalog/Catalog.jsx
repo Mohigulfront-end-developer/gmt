@@ -16,7 +16,7 @@ const Catalog = () => {
   const navigate = useNavigate();
   const [favorites, setFavorites] = useState([]);
   const [compare, setCompare] = useState([]);
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
 
   const sliderRef = useRef(null);
 
@@ -47,11 +47,10 @@ const Catalog = () => {
         settings: {
           autoplay: true,
           autoplaySpeed: 3000,
-          dost:false,
+          dost: false,
           slidesToShow: 2,
           slidesToScroll: 1,
           infinite: true,
-          
         },
       },
       {
@@ -59,11 +58,10 @@ const Catalog = () => {
         settings: {
           autoplay: true,
           autoplaySpeed: 3000,
-          dots:false,
+          dots: false,
           slidesToShow: 1,
           slidesToScroll: 1,
           infinite: true,
-       
         },
       },
     ],
@@ -148,9 +146,9 @@ const Catalog = () => {
                           : "text-[#202020]"
                       }`}
                       onClick={() => {
-                  handleCompareToggle(item.id)
-                  dispatch(handleCompare(item));
-                }}
+                        handleCompareToggle(item.id);
+                        dispatch(handleCompare(item));
+                      }}
                     />
                     <IoIosHeartEmpty
                       className={`absolute top-2 right-2 text-2xl cursor-pointer ${
@@ -158,10 +156,10 @@ const Catalog = () => {
                           ? "text-[#088269]"
                           : "text-[#202020]"
                       }`}
-                     onClick={() =>{ 
-                   handleFavoriteToggle(item.id);
-                   dispatch(handleLiked(item));
-                }}
+                      onClick={() => {
+                        handleFavoriteToggle(item.id);
+                        dispatch(handleLiked(item));
+                      }}
                     />
                   </div>
 
@@ -186,7 +184,10 @@ const Catalog = () => {
                     </p>
                   </div>
                   <div className="p-4">
-                    <button onClick={() => dispatch(addToCart(item))} className="w-[100%] transition duration-300 flex justify-center items-center px-4 py-[8px] rounded-full font-semibold text-[16px] text-[#088269]  border border-[#D5D1E1] hover:bg-[#07745E] hover:text-[#F8F7F3]">
+                    <button
+                      onClick={() => dispatch(addToCart(item))}
+                      className="w-[100%] transition duration-300 flex justify-center items-center px-4 py-[8px] rounded-full font-semibold text-[16px] text-[#088269]  border border-[#D5D1E1] hover:bg-[#07745E] hover:text-[#F8F7F3]"
+                    >
                       Добавить в корзину
                     </button>
                   </div>
@@ -212,10 +213,16 @@ const Catalog = () => {
             </div>
 
             <div className=" flex  gap-4 h-[40px]  md:gap-4 justify-items-end ">
-              <Link to={"/kontakt"} className="lg:px-4 px-[12px] py-[4px] text-[14px] transition duration-300 flex justify-center items-center md:px-4 lg:py-[11px] rounded-full font-semibold lg:text-[16px] text-[#088269]  border border-[#D5D1E1] hover:bg-[#07745E] hover:text-[#F8F7F3] ">
+              <Link
+                to={"/kontakt"}
+                className="lg:px-4 px-[12px] py-[4px] text-[14px] transition duration-300 flex justify-center items-center md:px-4 lg:py-[11px] rounded-full font-semibold lg:text-[16px] text-[#088269]  border border-[#D5D1E1] hover:bg-[#07745E] hover:text-[#F8F7F3] "
+              >
                 Бесплатная консультация
               </Link>
-              <Link to={"/katalog"} className=" lg:px-4 px-[12px] py-[4px] text-[14px] transition duration-300 flex justify-center items-center md:px-4 lg:py-[11px] rounded-full font-semibold lg:text-[16px] text-white bg-[#088269] border-none hover:bg-[#07745E] hover:text-[#F8F7F3] ">
+              <Link
+                to={"/katalog"}
+                className=" lg:px-4 px-[12px] py-[4px] text-[14px] transition duration-300 flex justify-center items-center md:px-4 lg:py-[11px] rounded-full font-semibold lg:text-[16px] text-white bg-[#088269] border-none hover:bg-[#07745E] hover:text-[#F8F7F3] "
+              >
                 Все товары
               </Link>
             </div>

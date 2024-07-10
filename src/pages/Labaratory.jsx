@@ -5,7 +5,6 @@ import LabaratoriyaProduct from "../components/labaratoriya/LabaratoriyaProduct"
 import { RiArrowRightSLine } from "react-icons/ri";
 import { Slider } from "antd";
 
-
 const onChange = (value) => {
   console.log("onChange: ", value);
 };

@@ -11,8 +11,6 @@ import Doctors from "../components/aboutUs/Doctors";
 import Number from "../components/aboutUs/Number";
 
 const AboutUs = () => {
- 
-
   return (
     <>
       <div className="bg-[#F8F7F3]">

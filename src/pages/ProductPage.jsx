@@ -2,27 +2,30 @@ import { useState, useEffect } from "react";
 import Data from "../data/catalog";
 import { Link, NavLink, useParams } from "react-router-dom";
 import Product from "../components/productComp/Characterics";
-import Catalog from "../components/main/catalog/Catalog"
+import Catalog from "../components/main/catalog/Catalog";
 import Cabinet from "../components/main/complex/Cabinet";
 import Brend from "../components/main/brend/Brand";
-import Course from "../components/main/course/Course"
+import Course from "../components/main/course/Course";
 import CategoryProduct from "../components/productComp/CategoryProduct";
 import { RiArrowRightSLine } from "react-icons/ri";
 import { Rate } from "antd";
 import { useDispatch } from "react-redux";
-import { addToCart, decrementQuantity, incrementQuantity } from "../redux/addToCard";
+import {
+  addToCart,
+  decrementQuantity,
+  incrementQuantity,
+} from "../redux/addToCard";
 import { RiAlignItemBottomLine } from "react-icons/ri";
 import { IoIosHeartEmpty } from "react-icons/io";
 import { handleCompare } from "../redux/Compare";
 import { handleLiked } from "../redux/Liked";
 
-
 const StranitsaProduct = () => {
   const { id } = useParams();
   const product = Data.find((item) => item.id == id);
   const [selectedImg, setSelectedImg] = useState(product?.image);
-  const dispatch = useDispatch()
-   const [favorites, setFavorites] = useState([]);
+  const dispatch = useDispatch();
+  const [favorites, setFavorites] = useState([]);
   const [compare, setCompare] = useState([]);
 
   useEffect(() => {
@@ -62,11 +65,17 @@ const StranitsaProduct = () => {
               Каталог
             </Link>
             <RiArrowRightSLine className="text-[20px] text-[#7A7687] sm:flex hidden" />
-            <Link to="/katalog/laboratornoe" className="text-[#7A7687] sm:flex hidden">
+            <Link
+              to="/katalog/laboratornoe"
+              className="text-[#7A7687] sm:flex hidden"
+            >
               Лабораторное оборудование
             </Link>
             <RiArrowRightSLine className="text-[20px] text-[#7A7687] sm:flex hidden" />
-            <NavLink to={`/katalog/laboratornoe/${id}`} className="sm:flex hidden">
+            <NavLink
+              to={`/katalog/laboratornoe/${id}`}
+              className="sm:flex hidden"
+            >
               {product?.title || "Product"}
             </NavLink>
           </div>
@@ -78,55 +87,51 @@ const StranitsaProduct = () => {
                   alt="image"
                   className="w-[300px] h-[300px] object-cover mx-auto"
                 />
-                
-                 <div className="">
-                    <RiAlignItemBottomLine
-                      className={`relative bottom-[325px] left-[85%]  text-2xl cursor-pointer w-[35px] h-[35px] ${
-                        compare.includes(product.id)
-                          ? "text-[#088269]"
-                          : "text-[#202020]"
-                      }`}
-                      onClick={() => {
-                      handleCompareToggle(product.id)
+
+                <div className="">
+                  <RiAlignItemBottomLine
+                    className={`relative bottom-[325px] left-[85%]  text-2xl cursor-pointer w-[35px] h-[35px] ${
+                      compare.includes(product.id)
+                        ? "text-[#088269]"
+                        : "text-[#202020]"
+                    }`}
+                    onClick={() => {
+                      handleCompareToggle(product.id);
                       dispatch(handleCompare(product));
-                }}
-                    />
-                    <IoIosHeartEmpty
-                      className={`relative bottom-[360px] left-[95%] text-2xl cursor-pointer w-[35px] h-[35px] ${
-                        favorites.includes(product.id)
-                          ? "text-[#088269]"
-                          : "text-[#202020]"
-                      }`}
-                      onClick={() =>{ 
+                    }}
+                  />
+                  <IoIosHeartEmpty
+                    className={`relative bottom-[360px] left-[95%] text-2xl cursor-pointer w-[35px] h-[35px] ${
+                      favorites.includes(product.id)
+                        ? "text-[#088269]"
+                        : "text-[#202020]"
+                    }`}
+                    onClick={() => {
                       handleFavoriteToggle(product.id);
                       dispatch(handleLiked(product));
-                }}
-                    />
-                  </div>
-
+                    }}
+                  />
+                </div>
               </div>
 
               <div className="px-2 h-[150px] w-[150px]">
                 {product ? (
                   <div className="flex gap-4 ">
-                    {[
-                      product.image,
-                      product.image,
-                      product.image,
-                    ].map((img, index) => (
-                      <img
-                        key={index}
-                        onClick={() => setSelectedImg(img)}
-                        src={img}
-                        alt=""
-                        className={`mt-[-90px] h-[70px] w-[70px] p-2 border rounded-xl${
-                          selectedImg === img
-                            ? "border  duration-200 rounded-lg"
-                            : ""
-                        }`}
-                      />
-                      
-                    ))}
+                    {[product.image, product.image, product.image].map(
+                      (img, index) => (
+                        <img
+                          key={index}
+                          onClick={() => setSelectedImg(img)}
+                          src={img}
+                          alt=""
+                          className={`mt-[-90px] h-[70px] w-[70px] p-2 border rounded-xl${
+                            selectedImg === img
+                              ? "border  duration-200 rounded-lg"
+                              : ""
+                          }`}
+                        />
+                      )
+                    )}
                   </div>
                 ) : null}
               </div>
@@ -137,12 +142,12 @@ const StranitsaProduct = () => {
                   {product?.title}
                 </h2>
                 <div className="flex gap-2 my-2 items-center">
-                 <Rate disabled defaultValue={4} />
+                  <Rate disabled defaultValue={4} />
                   <p className="font-medium text-[#202020] opacity-80 text-[14px]">
                     4.0
                   </p>
                 </div>
-  
+
                 <p className="text-[12px] font-normal text-[#7A7687]">
                   Категория: {product?.category}
                 </p>
@@ -163,7 +168,7 @@ const StranitsaProduct = () => {
                 <div className="border rounded-full px-4 h-[45px] flex justify-between items-center gap-5 ">
                   <button
                     className="text-center text-[20px] font-medium hover:text-[#088269] "
-                     onClick={() => dispatch(decrementQuantity(product.id))}
+                    onClick={() => dispatch(decrementQuantity(product.id))}
                   >
                     -
                   </button>
@@ -172,7 +177,7 @@ const StranitsaProduct = () => {
                   </p>
                   <button
                     className="text-center text-[20px] font-medium  hover:text-[#088269]"
-                   onClick={() => dispatch(incrementQuantity(product.id))}
+                    onClick={() => dispatch(incrementQuantity(product.id))}
                   >
                     +
                   </button>
@@ -184,7 +189,6 @@ const StranitsaProduct = () => {
                   </button>
                 </Link>
                 <Link
-                 
                   onClick={() => dispatch(addToCart(product))}
                   className=" rounded-full  bg-[#088269] px-6 py-[10px]  border   text-[#F8F7F3] gover:bg-[#07745E]"
                 >

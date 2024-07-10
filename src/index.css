@@ -2,9 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@600&display=swap");
 
-*{
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
@@ -19,10 +19,9 @@
   padding-right: 20px;
 }
 
-.slick-track{
- display: flex;
- gap: 10px;
- 
+.slick-track {
+  display: flex;
+  gap: 10px;
 }
 
 .slick-prev,
@@ -37,7 +36,7 @@
 }
 
 .slick-dots li {
-  margin: 0 10px; 
+  margin: 0 10px;
 }
 
 .slick-dots li button:before {

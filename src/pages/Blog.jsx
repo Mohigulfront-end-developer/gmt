@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { RiArrowRightSLine } from "react-icons/ri";
 import { Link, NavLink } from "react-router-dom";
 import Data from "../data/news";
@@ -6,7 +6,7 @@ import { GoChevronRight } from "react-icons/go";
 import ReactPaginate from "react-paginate";
 import { MdOutlineKeyboardDoubleArrowLeft } from "react-icons/md";
 import { MdOutlineKeyboardDoubleArrowRight } from "react-icons/md";
-import Course from "../components/main/course/Course"
+import Course from "../components/main/course/Course";
 
 const Blog = () => {
   const [currentPage, setCurrentPage] = useState(0);

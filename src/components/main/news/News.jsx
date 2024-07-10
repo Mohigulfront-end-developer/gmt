@@ -74,9 +74,9 @@ const Brend = () => {
                 <div
                   key={index}
                   className="w-[320px] border-[1px] bg-[#f8f7f3]  rounded-lg"
-                   onClick={() =>
-                        navigate(`/blog/informatsioniy-statya/${item.id}`)
-                      }
+                  onClick={() =>
+                    navigate(`/blog/informatsioniy-statya/${item.id}`)
+                  }
                 >
                   <div className="w-full h-[250px]  flex items-center justify-center rounded-lg">
                     <img
@@ -115,7 +115,10 @@ const Brend = () => {
                 <GoArrowRight className="w-[22px] h-[22px] " />
               </button>
             </div>
-            <NavLink to={"/blog"} className="px-5 py-3 font-semibold  rounded-full border text-[14px] text-[#F8F7F3] bg-[#088269] hover:bg-[#07745E] hover:text-[#F8F7F3]">
+            <NavLink
+              to={"/blog"}
+              className="px-5 py-3 font-semibold  rounded-full border text-[14px] text-[#F8F7F3] bg-[#088269] hover:bg-[#07745E] hover:text-[#F8F7F3]"
+            >
               Все новости
             </NavLink>
           </div>

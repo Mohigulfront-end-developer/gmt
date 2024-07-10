@@ -24,12 +24,11 @@ const catalog = [
     position: "В наличии",
     price: 300000,
     slug: `Новинки`,
-    sale:"-30%",
+    sale: "-30%",
     category: "Реанимация",
     labelClass: "bg-[#59599A]",
     label: "Хит продаж",
-    country: "Австралия"
-
+    country: "Австралия",
   },
   {
     id: 2,
@@ -43,9 +42,9 @@ const catalog = [
     slug: "Новинки",
     category: "Хирургия",
     labelClass: "bg-[#AD7B00]",
-    sale:"-30%",
+    sale: "-30%",
     label: "-30%",
-    country: "Австралия"
+    country: "Австралия",
   },
 
   {
@@ -59,11 +58,10 @@ const catalog = [
     price: 300000,
     slug: "Новинки",
     category: "Офтальмология",
-    sale:"-30%",
+    sale: "-30%",
     labelClass: "bg-[#088269]",
     label: "Новинки",
-    country: "Австралия"
-  
+    country: "Австралия",
   },
   {
     id: 4,
@@ -77,9 +75,9 @@ const catalog = [
     slug: "Акции",
     category: "Лабораторная диагностика",
     labelClass: "bg-[#AD7B00]",
-    sale:"-30%",
+    sale: "-30%",
     label: "-30%",
-    country: "Австралия"
+    country: "Австралия",
   },
 
   {
@@ -92,12 +90,11 @@ const catalog = [
     position: "В наличии",
     price: 300000,
     slug: "Хиты продаж",
-    sale:"-30%",
+    sale: "-30%",
     category: "Акушерство и Гинекология",
     labelClass: "bg-[#59599A]",
     label: "Хит продаж",
-    country: "Германия"
-
+    country: "Германия",
   },
   {
     id: 6,
@@ -110,11 +107,10 @@ const catalog = [
     price: 300000,
     slug: "Акции",
     category: "Гистология",
-    sale:"-30%",
+    sale: "-30%",
     labelClass: "bg-[#088269]",
     label: "Новинки",
-    country: "Испания"
-  
+    country: "Испания",
   },
   {
     id: 7,
@@ -128,9 +124,9 @@ const catalog = [
     slug: "Хиты продаж",
     category: "Косметология",
     labelClass: "bg-[#AD7B00]",
-    sale:"-30%",
+    sale: "-30%",
     label: "-30%",
-    country: "Испания"
+    country: "Испания",
   },
 
   {
@@ -144,11 +140,10 @@ const catalog = [
     price: 300000,
     slug: "Акции",
     category: "Оториноларингология",
-    sale:"-30%",
+    sale: "-30%",
     labelClass: "bg-[#088269]",
     label: "Новинки",
-    country: "Израиль"
-  
+    country: "Израиль",
   },
   {
     id: 9,
@@ -160,12 +155,11 @@ const catalog = [
     position: "В наличии",
     price: 300000,
     slug: "Хиты продаж",
-    sale:"-30%",
+    sale: "-30%",
     category: "Рентгенология и томография",
     labelClass: "bg-[#59599A]",
     label: "Хит продаж",
-    country: "Германия"
-
+    country: "Германия",
   },
   {
     id: 10,
@@ -178,11 +172,10 @@ const catalog = [
     price: 300000,
     slug: "Новинки",
     category: "Стерилизация",
-    sale:"-30%",
+    sale: "-30%",
     labelClass: "bg-[#088269]",
     label: "Новинки",
-    country: "Великобритания"
-  
+    country: "Великобритания",
   },
   {
     id: 11,
@@ -196,9 +189,9 @@ const catalog = [
     slug: "Акции",
     category: "Физиотерапия и реабилитация",
     labelClass: "bg-[#AD7B00]",
-    sale:"-30%",
+    sale: "-30%",
     label: "-30%",
-    country: "Бельгия"
+    country: "Бельгия",
   },
 
   {
@@ -213,9 +206,9 @@ const catalog = [
     slug: "Новинки",
     category: "Функциональная диагностика",
     labelClass: "bg-[#AD7B00]",
-    sale:"-30%",
+    sale: "-30%",
     label: "-30%",
-    country: "Беларусь"
+    country: "Беларусь",
   },
 
   {
@@ -229,11 +222,10 @@ const catalog = [
     price: 300000,
     slug: "Новинки",
     category: "Эндоскопия",
-    sale:"-30%",
+    sale: "-30%",
     labelClass: "bg-[#088269]",
     label: "Новинки",
-    country: "Австралия"
-  
+    country: "Австралия",
   },
   {
     id: 14,
@@ -245,12 +237,11 @@ const catalog = [
     position: "В наличии",
     price: 300000,
     slug: "Хиты продаж",
-    sale:"-30%",
+    sale: "-30%",
     category: "Новинки",
     labelClass: "bg-[#59599A]",
     label: "Хит продаж",
-    country: "Австрия"
-
+    country: "Австрия",
   },
   {
     id: 15,
@@ -263,11 +254,10 @@ const catalog = [
     price: 300000,
     slug: "Хиты продаж",
     category: "Распродажи",
-    sale:"-30%",
+    sale: "-30%",
     labelClass: "bg-[#088269]",
     label: "Новинки",
-    country: "Австралия"
-  
+    country: "Австралия",
   },
   {
     id: 16,
@@ -279,12 +269,11 @@ const catalog = [
     position: "В наличии",
     price: 300000,
     slug: "Хиты продаж",
-    sale:"-30%",
+    sale: "-30%",
     category: "Кабинеты под ключ",
     labelClass: "bg-[#59599A]",
     label: "Хит продаж",
-    country: "Австрия"
-
+    country: "Австрия",
   },
 ];
 export default catalog;

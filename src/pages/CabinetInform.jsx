@@ -1,9 +1,9 @@
-import React from 'react'
-import { Link, NavLink } from 'react-router-dom';
-import Img from "../../public/assets/cabinet/cabinet.png"
-import Order from '../components/cabinet/Order';
-import FastQuestion from '../components/delivery/FastQuestion';
-import Consult from "../components/garantii/Consult"
+import React from "react";
+import { Link, NavLink } from "react-router-dom";
+import Img from "../../public/assets/cabinet/cabinet.png";
+import Order from "../components/cabinet/Order";
+import FastQuestion from "../components/delivery/FastQuestion";
+import Consult from "../components/garantii/Consult";
 import { RiArrowRightSLine } from "react-icons/ri";
 
 const CabinetInform = () => {
@@ -55,6 +55,6 @@ const CabinetInform = () => {
       <Consult />
     </div>
   );
-}
+};
 
-export default CabinetInform
+export default CabinetInform;

@@ -1,15 +1,11 @@
-import Logo from "../../../public/Logo2.svg"
+import Logo from "../../../public/Logo2.svg";
 import { SlSocialVkontakte } from "react-icons/sl";
 import { FaTelegramPlane } from "react-icons/fa";
 import { FaWhatsapp } from "react-icons/fa";
 import { Link, NavLink } from "react-router-dom";
-import Img1 from "../../../public/Icons/master.svg"
-import Img2 from "../../../public/Icons/visa.svg"
-import Img3 from "../../../public/Icons/mir.svg"
-
-
-
-
+import Img1 from "../../../public/Icons/master.svg";
+import Img2 from "../../../public/Icons/visa.svg";
+import Img3 from "../../../public/Icons/mir.svg";
 
 const FooterBottom = () => {
   return (
@@ -72,7 +68,9 @@ const FooterBottom = () => {
             </NavLink>
           </div>
           <div className="w-[220px] flex flex-col">
-            <h4 className="mb-[10px] text-[13px] text-[#F8F7F3]">Способы оплаты</h4>
+            <h4 className="mb-[10px] text-[13px] text-[#F8F7F3]">
+              Способы оплаты
+            </h4>
             <div className="flex gap-3">
               <img src={Img1} alt="" />
               <img src={Img2} alt="" />
@@ -93,6 +91,6 @@ const FooterBottom = () => {
       </div>
     </div>
   );
-}
+};
 
-export default FooterBottom
+export default FooterBottom;

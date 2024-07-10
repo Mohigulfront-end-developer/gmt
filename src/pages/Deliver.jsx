@@ -1,13 +1,12 @@
-import PositiveSide from '../components/delivery/PositiveSide';
-import Course from "../components/main/course/Course"
-import { Link, NavLink } from 'react-router-dom';
-import Document from '../components/delivery/Document';
-import Concultation from '../components/delivery/Concultation';
-import FastQuestion from '../components/delivery/FastQuestion';
+import PositiveSide from "../components/delivery/PositiveSide";
+import Course from "../components/main/course/Course";
+import { Link, NavLink } from "react-router-dom";
+import Document from "../components/delivery/Document";
+import Concultation from "../components/delivery/Concultation";
+import FastQuestion from "../components/delivery/FastQuestion";
 import { RiArrowRightSLine } from "react-icons/ri";
-import MapPostroitMashrut from '../components/Map/MapPostroitMashrut';
+import MapPostroitMashrut from "../components/Map/MapPostroitMashrut";
 import MapPunktVidacha from "../components/Map/MapPunktVidacha";
-
 
 const Dostavka = () => {
   return (
@@ -25,7 +24,7 @@ const Dostavka = () => {
         <h1 className="font-medium text-[48px] pt-[80px] pb-[40px]">
           Информация о доставке
         </h1>
-      <MapPunktVidacha/>
+        <MapPunktVidacha />
         <div className="lg:ml-[50%] lg:w-[50%] sm:w-[60%] w-full">
           <p className="text-[16px] font-medium">
             Учитывая стремительное развитие мировых медицинских технологий,
@@ -103,7 +102,7 @@ const Dostavka = () => {
             </div>
           </div>
         </div>
-       <MapPostroitMashrut/>
+        <MapPostroitMashrut />
       </div>
 
       <Document />
@@ -111,6 +110,6 @@ const Dostavka = () => {
       <Course />
     </div>
   );
-}
+};
 
-export default Dostavka
+export default Dostavka;

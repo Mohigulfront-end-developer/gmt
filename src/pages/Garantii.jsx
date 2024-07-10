@@ -1,7 +1,7 @@
-import { Link, NavLink } from 'react-router-dom';
-import GarantiiService from '../components/garantii/GarantiService';
-import Warning from '../components/garantii/Warning';
-import Consult from '../components/garantii/Consult';
+import { Link, NavLink } from "react-router-dom";
+import GarantiiService from "../components/garantii/GarantiService";
+import Warning from "../components/garantii/Warning";
+import Consult from "../components/garantii/Consult";
 import { RiArrowRightSLine } from "react-icons/ri";
 
 const Garantii = () => {
@@ -58,6 +58,6 @@ const Garantii = () => {
       <Consult />
     </div>
   );
-}
+};
 
-export default Garantii
+export default Garantii;

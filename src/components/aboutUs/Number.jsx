@@ -1,5 +1,3 @@
-
-
 const Number = () => {
   return (
     <div>
@@ -16,7 +14,9 @@ const Number = () => {
               <span className="text-[48px] text-[#088269] font-medium ">
                 7 лет
               </span>
-              <p className="lg:ml-[200px] sm:ml-[150px] ml-[100px] text-[16px] font-medium">на рынке</p>
+              <p className="lg:ml-[200px] sm:ml-[150px] ml-[100px] text-[16px] font-medium">
+                на рынке
+              </p>
             </div>
             <div className="py-4 flex justify-between items-center border-b-[1px] border-[#D5D1E1]">
               <span className="text-[48px] text-[#088269] font-medium">
@@ -47,6 +47,6 @@ const Number = () => {
       </div>
     </div>
   );
-}
+};
 
-export default Number
+export default Number;

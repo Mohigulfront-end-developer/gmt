@@ -1,12 +1,5 @@
 import img2 from "../../public/assets/aboutus/licensia.png";
 
-
-
-
-
-
-
-
 export default [
   {
     id: 1,

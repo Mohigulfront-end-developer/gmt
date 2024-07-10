@@ -8,7 +8,7 @@ import Manifacture from "./pages/Manifacture";
 import CabinetRegister from "./pages/CabinetRegister";
 import Services from "./pages/Services";
 import Customers from "./pages/Customers";
-import Contact  from "./pages/Contact";
+import Contact from "./pages/Contact";
 import AboutUs from "./pages/AboutUs";
 import Dostavka from "./pages/Deliver";
 import Oplata from "./pages/Pay";
@@ -23,24 +23,19 @@ import SalePage from "./pages/Sale";
 import CabinetInform from "./pages/CabinetInform";
 import BrendPage from "./pages/BrendPage";
 import Compare from "./pages/Compare";
-import Otziv from "./pages/Otziv"
+import Otziv from "./pages/Otziv";
 import CertificatePage from "./pages/CertificatePage";
 import FAQS from "./pages/FAQS";
 import Account from "./pages/Account";
 import JobAplication from "./pages/JobAplication";
 import ScrollTop from "./components/scrollTop/ScrollTop";
 
-
-
-
-
 function App() {
- 
   return (
     <>
       <BrowserRouter>
         <Header />
-        <ScrollTop/>
+        <ScrollTop />
         <div className="lg:pt-[160px] sm:pt-[140px] pt-[70px]">
           <Routes>
             <Route path="/" element={<Home />} />
@@ -76,12 +71,13 @@ function App() {
               path="/blog/informatsioniy-statya"
               element={<BlogDetail />}
             />
-            <Route path="/blog/informatsioniy-statya/:id" element={<BlogDetail />} />
-
+            <Route
+              path="/blog/informatsioniy-statya/:id"
+              element={<BlogDetail />}
+            />
           </Routes>
         </div>
 
-       
         <Footer />
       </BrowserRouter>
     </>

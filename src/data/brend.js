@@ -2,7 +2,6 @@ import brend1 from "../../public/assets/brend/brend1.svg";
 import brend2 from "../../public/assets/brend/brend2.svg";
 import brend3 from "../../public/assets/brend/brend3.svg";
 
-
 export default [
   {
     id: 1,
@@ -148,5 +147,4 @@ export default [
     image: brend3,
     country: "Германия",
   },
-
 ];

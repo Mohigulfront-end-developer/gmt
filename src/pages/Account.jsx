@@ -1,6 +1,6 @@
 import { RiArrowRightSLine } from "react-icons/ri";
-import { Link, NavLink} from 'react-router-dom';
-import Vkontakt from "../../public/assets/signin/vk.svg"
+import { Link, NavLink } from "react-router-dom";
+import Vkontakt from "../../public/assets/signin/vk.svg";
 import Facebook from "../../public/assets/signin/facebook.svg";
 import Instagram from "../../public/assets/signin/instagram.svg";
 import Twitter from "../../public/assets/signin/twitter.svg";
@@ -11,12 +11,8 @@ import HistoryOrder from "../components/account/HistoryOrder";
 import Settings from "../components/account/Settings";
 import { useSelector } from "react-redux";
 
-
-
-
-
 const Account = () => {
-   const { login } = useSelector((state) => state.login);
+  const { login } = useSelector((state) => state.login);
 
   return (
     <div className="bg-[#F8F7F3]">
@@ -76,12 +72,12 @@ const Account = () => {
             </span>
           </div>
         </div>
-        <InformCustomer/>
-        <HistoryOrder/>
-        <Settings/>
+        <InformCustomer />
+        <HistoryOrder />
+        <Settings />
       </div>
     </div>
   );
-}
+};
 
-export default Account
+export default Account;

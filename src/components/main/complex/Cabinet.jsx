@@ -66,10 +66,16 @@ const Cabinet = () => {
             </div>
           </div>
           <div className="flex items-center gap-4 cursor-pointer justify-center flex-wrap">
-            <Link to={"kabinet-podklyuch"} className="border text-[14px] font-semibold border-[#D5D1E1] text-[#088269] rounded-full bg-transparent py-2 px-4 hover:bg-[#07745E] hover:text-[#F8F7F3]">
+            <Link
+              to={"kabinet-podklyuch"}
+              className="border text-[14px] font-semibold border-[#D5D1E1] text-[#088269] rounded-full bg-transparent py-2 px-4 hover:bg-[#07745E] hover:text-[#F8F7F3]"
+            >
               Бесплатная консультация
             </Link>
-            <Link to={"kabinet-podklyuch"} className="border text-[14px] font-semibold border-[#D5D1E1] text-[#F8F7F3] rounded-full bg-[#088269] py-2 px-4 hover:bg-[#07745E] hover:text-[#F8F7F3]">
+            <Link
+              to={"kabinet-podklyuch"}
+              className="border text-[14px] font-semibold border-[#D5D1E1] text-[#F8F7F3] rounded-full bg-[#088269] py-2 px-4 hover:bg-[#07745E] hover:text-[#F8F7F3]"
+            >
               Рассчитать стоимость
             </Link>
           </div>

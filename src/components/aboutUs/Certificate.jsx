@@ -1,10 +1,10 @@
-import  { useRef } from "react";
+import { useRef } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import  Data  from "../../data/certificate";
+import Data from "../../data/certificate";
 import { GoArrowLeft, GoArrowRight } from "react-icons/go";
-import {  useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const Certificate = () => {
   const sliderRef = useRef(null);
@@ -20,8 +20,6 @@ const Certificate = () => {
     slidesToScroll: 1,
     initialSlide: 0,
     infinite: true,
-    
-  
 
     responsive: [
       {
@@ -65,7 +63,9 @@ const Certificate = () => {
       <div className="container flex flex-col md:flex-row w-full gap-[30px]">
         <div className=" md:w-1/3 w-full">
           <div className="flex justify-between">
-            <h1 className="text-[30px] font-medium">Сертификаты <br /> на продукцию</h1>
+            <h1 className="text-[30px] font-medium">
+              Сертификаты <br /> на продукцию
+            </h1>
           </div>
         </div>
         <div className=" md:w-2/3 w-full flex flex-col gap-[40px]">
@@ -75,12 +75,13 @@ const Certificate = () => {
                 <div
                   key={index}
                   className="w-[220px] h-[280px] border bg-[#fff]  rounded-lg p-[10px] "
-                   onClick={() =>
-                        navigate(`/o-kompanii/certificate${slide.id}`)
-                      }
+                  onClick={() => navigate(`/o-kompanii/certificate${slide.id}`)}
                 >
-                   <img src={slide.image} alt={slide.title} className="object-cover w-full h-full" />
-                 
+                  <img
+                    src={slide.image}
+                    alt={slide.title}
+                    className="object-cover w-full h-full"
+                  />
                 </div>
               ))}
             </Slider>
@@ -100,7 +101,6 @@ const Certificate = () => {
                 <GoArrowRight className="w-[22px] h-[22px] " />
               </button>
             </div>
-           
           </div>
         </div>
       </div>

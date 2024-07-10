@@ -3,8 +3,7 @@ import { Link, NavLink } from "react-router-dom";
 import { Collapse } from "antd";
 import { PlusOutlined } from "@ant-design/icons";
 import MapPostroitMashrut from "../components/Map/MapPostroitMashrut";
-import Course from "../components/main/course/Course"
-
+import Course from "../components/main/course/Course";
 
 const text = (
   <>
@@ -52,7 +51,6 @@ const text = (
     </div>
     <button className=" text-[#F8F7F3] font-semibold text-[14px] py-2 px-4 mt-[15px] rounded-full bg-[#088269]">
       Отправить резюме
-     
     </button>
   </>
 );
@@ -79,7 +77,9 @@ const items = [
   {
     key: "3",
     label: (
-      <span className=" text-[18px] font-semibold ml-[-12px]">Офис менеджер</span>
+      <span className=" text-[18px] font-semibold ml-[-12px]">
+        Офис менеджер
+      </span>
     ),
     children: text,
   },

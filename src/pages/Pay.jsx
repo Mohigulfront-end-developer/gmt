@@ -1,5 +1,5 @@
-import { Link, NavLink } from 'react-router-dom';
-import Consult from '../components/garantii/Consult';
+import { Link, NavLink } from "react-router-dom";
+import Consult from "../components/garantii/Consult";
 import { RiArrowRightSLine } from "react-icons/ri";
 
 const Oplata = () => {
@@ -150,6 +150,6 @@ const Oplata = () => {
       <Consult />
     </div>
   );
-}
+};
 
-export default Oplata
+export default Oplata;

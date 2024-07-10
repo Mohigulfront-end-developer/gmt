@@ -1,5 +1,3 @@
-import React from 'react'
-
 const Warning = () => {
   return (
     <div className="">
@@ -23,6 +21,6 @@ const Warning = () => {
       </div>
     </div>
   );
-}
+};
 
-export default Warning
+export default Warning;

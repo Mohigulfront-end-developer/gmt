@@ -1,11 +1,11 @@
-import { Link, NavLink } from 'react-router-dom';
-import Sale from "../components/sale/Sale"
+import { Link, NavLink } from "react-router-dom";
+import Sale from "../components/sale/Sale";
 import { GoChevronRight } from "react-icons/go";
-import Cabinet from '../components/main/complex/Cabinet';
-import CategoryProduct from '../components/productComp/CategoryProduct';
-import Brend from '../components/main/brend/Brand';
-import Consult from "../components/garantii/Consult"
-import Course from '../components/main/course/Course';
+import Cabinet from "../components/main/complex/Cabinet";
+import CategoryProduct from "../components/productComp/CategoryProduct";
+import Brend from "../components/main/brend/Brand";
+import Consult from "../components/garantii/Consult";
+import Course from "../components/main/course/Course";
 import { RiArrowRightSLine } from "react-icons/ri";
 
 const SalePage = () => {
@@ -56,6 +56,6 @@ const SalePage = () => {
       <Course />
     </div>
   );
-}
+};
 
-export default SalePage
+export default SalePage;

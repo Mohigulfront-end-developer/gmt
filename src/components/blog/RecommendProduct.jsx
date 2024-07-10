@@ -16,7 +16,7 @@ const RecommendProduct = () => {
   const navigate = useNavigate();
   const [favorites, setFavorites] = useState([]);
   const [compare, setCompare] = useState([]);
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
 
   const sliderRef = useRef(null);
 
@@ -91,7 +91,8 @@ const RecommendProduct = () => {
           <div className="flex justify-between">
             <div className="">
               <h2 className="mb-[20px] text-[30px] font-medium">
-                Рекомендуемые <br />товары
+                Рекомендуемые <br />
+                товары
               </h2>
             </div>
 
@@ -121,7 +122,7 @@ const RecommendProduct = () => {
                       {item.label}
                     </span>
                   )}
-                  
+
                   <div className="w-full h-[250px]  flex items-center justify-center rounded-lg">
                     <img
                       src={item.image}
@@ -141,9 +142,9 @@ const RecommendProduct = () => {
                           : "text-[#202020]"
                       }`}
                       onClick={() => {
-                      handleCompareToggle(item.id)
-                      dispatch(handleCompare(item));
-                }}
+                        handleCompareToggle(item.id);
+                        dispatch(handleCompare(item));
+                      }}
                     />
                     <IoIosHeartEmpty
                       className={`absolute top-2 right-2 text-2xl cursor-pointer ${
@@ -151,10 +152,10 @@ const RecommendProduct = () => {
                           ? "text-[#088269]"
                           : "text-[#202020]"
                       }`}
-                      onClick={() =>{ 
-                      handleFavoriteToggle(item.id);
-                      dispatch(handleLiked(item));
-                }}
+                      onClick={() => {
+                        handleFavoriteToggle(item.id);
+                        dispatch(handleLiked(item));
+                      }}
                     />
                   </div>
 
@@ -179,7 +180,10 @@ const RecommendProduct = () => {
                     </p>
                   </div>
                   <div className="p-4">
-                    <button onClick={() => dispatch(addToCart(item))} className="w-[100%] transition duration-300 flex justify-center items-center px-4 py-[8px] rounded-full font-semibold text-[16px] text-[#088269]  border border-[#D5D1E1] hover:bg-[#07745E] hover:text-white">
+                    <button
+                      onClick={() => dispatch(addToCart(item))}
+                      className="w-[100%] transition duration-300 flex justify-center items-center px-4 py-[8px] rounded-full font-semibold text-[16px] text-[#088269]  border border-[#D5D1E1] hover:bg-[#07745E] hover:text-white"
+                    >
                       Добавить в корзину
                     </button>
                   </div>

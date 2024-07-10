@@ -35,7 +35,7 @@ const HeaderBottom = () => {
             to={"/katalog"}
             className="flex items-center gap-2 text-[14px] font-semibold hover:text-[#07745E]"
           >
-            <HiOutlineMenuAlt1 className="hover:text-[#07745E]"/>
+            <HiOutlineMenuAlt1 className="hover:text-[#07745E]" />
             Каталог
           </NavLink>
           <NavLink
@@ -96,7 +96,9 @@ const HeaderBottom = () => {
           <img src={Account} alt="" />
           <div className="">
             <h3 className="text-[18px] font-medium">Олег Сергеевич</h3>
-            <p className="text-[14px] text-[#7A7687] font-medium">Менеджер по продажам</p>
+            <p className="text-[14px] text-[#7A7687] font-medium">
+              Менеджер по продажам
+            </p>
           </div>
         </div>
         <Formik
@@ -120,7 +122,11 @@ const HeaderBottom = () => {
                   name="number"
                   placeholder="Ваш телефон"
                 />
-                <ErrorMessage name="number" component="div" className="text-red-500 text-sm" />
+                <ErrorMessage
+                  name="number"
+                  component="div"
+                  className="text-red-500 text-sm"
+                />
               </div>
               <div className="mb-6">
                 <Field
@@ -130,7 +136,11 @@ const HeaderBottom = () => {
                   component="textarea"
                   placeholder="Ваше сообщение"
                 />
-                <ErrorMessage name="message" component="div" className="text-red-500 text-sm" />
+                <ErrorMessage
+                  name="message"
+                  component="div"
+                  className="text-red-500 text-sm"
+                />
               </div>
               <div className="flex gap-5 items-center">
                 <button
@@ -141,8 +151,8 @@ const HeaderBottom = () => {
                   Оставить заявку
                 </button>
                 <span className="text-[12px] text-[#7A7687] ">
-                  Нажимая «Отправить», я соглашаюсь c обработкой персональных данных
-                  на условиях{" "}
+                  Нажимая «Отправить», я соглашаюсь c обработкой персональных
+                  данных на условиях{" "}
                   <span className="text-[#088269]">
                     Политики конфиденциальности.
                   </span>

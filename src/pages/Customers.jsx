@@ -1,4 +1,4 @@
-import { Link, NavLink } from 'react-router-dom';
+import { Link, NavLink } from "react-router-dom";
 import { RiArrowRightSLine } from "react-icons/ri";
 
 const Customers = () => {
@@ -20,6 +20,6 @@ const Customers = () => {
       </div>
     </div>
   );
-}
+};
 
-export default Customers
+export default Customers;

@@ -4,7 +4,7 @@ import { RiArrowRightSLine } from "react-icons/ri";
 import Img from "../../public/assets/otziv/icon.svg";
 import { Rate } from "antd";
 import cardData from "../data/otziv";
-import Consult from "../components/garantii/Consult"
+import Consult from "../components/garantii/Consult";
 
 const ITEMS_PER_PAGE = 6;
 
@@ -76,7 +76,7 @@ const Otziv = () => {
           ))}
         </div>
       </div>
-      <Consult/>
+      <Consult />
     </div>
   );
 };

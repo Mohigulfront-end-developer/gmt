@@ -1,11 +1,8 @@
-import Marquee from "react-fast-marquee"; 
-import Clinet1 from "../../../../public/assets/client/image1.svg"
+import Marquee from "react-fast-marquee";
+import Clinet1 from "../../../../public/assets/client/image1.svg";
 import Clinet2 from "../../../../public/assets/client/image2.svg";
 import Clinet3 from "../../../../public/assets/client/image3.svg";
 import Clinet4 from "../../../../public/assets/client/image4.svg";
-
-
-
 
 const Clinet = () => {
   return (
@@ -17,7 +14,9 @@ const Clinet = () => {
           </h1>
           <h2 className="text-[#202020] lg:text-[48px] text-[30px] font-medium">
             БОЛЕЕ{" "}
-            <span className="lg:text-[48px] text-[30px] font-medium text-[#088269]">5000</span>
+            <span className="lg:text-[48px] text-[30px] font-medium text-[#088269]">
+              5000
+            </span>
             <br /> УСПЕШНЫХ ПРОЕКТОВ
           </h2>
         </div>
@@ -135,6 +134,6 @@ const Clinet = () => {
       </Marquee>
     </div>
   );
-}
+};
 
-export default Clinet
+export default Clinet;

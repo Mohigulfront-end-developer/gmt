@@ -1,13 +1,13 @@
-import FooterTop from './FooterTop'
-import FooterBottom from './FooterBottom'
+import FooterTop from "./FooterTop";
+import FooterBottom from "./FooterBottom";
 
 const Footer = () => {
   return (
     <div>
-        <FooterTop/>
-        <FooterBottom/>
+      <FooterTop />
+      <FooterBottom />
     </div>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;

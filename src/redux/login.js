@@ -16,7 +16,7 @@ const loginSlice = createSlice({
     handleLogout: (state) => {
       state.login = {};
       localStorage.removeItem("login");
-    }
+    },
   },
 });
 

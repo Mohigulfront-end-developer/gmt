@@ -2,47 +2,47 @@ import Img1 from "../../../public/assets/aboutus/person2.png";
 import Img2 from "../../../public/assets/aboutus/person2.png";
 import Img3 from "../../../public/assets/aboutus/person3.png";
 import { GoArrowLeft, GoArrowRight } from "react-icons/go";
-import  { useState } from "react";
+import { useState } from "react";
 
 const Doctors = () => {
-    const images = [
-      {
-        src: Img1,
-        alt: "specialist-by-medicine",
-        personName: "Константин Константинопольский",
-        position: "Основатель компании",
-      },
-      {
-        src: Img2,
-        alt: "specialist-by-medicine",
-        personName: "Константин Константинопольский",
-        position: "Основатель компании",
-      },
-      {
-        src: Img3,
-        alt: "specialist-by-medicine",
-        personName: "Константин Константинопольский",
-        position: "Основатель компании",
-      },
-    ];
+  const images = [
+    {
+      src: Img1,
+      alt: "specialist-by-medicine",
+      personName: "Константин Константинопольский",
+      position: "Основатель компании",
+    },
+    {
+      src: Img2,
+      alt: "specialist-by-medicine",
+      personName: "Константин Константинопольский",
+      position: "Основатель компании",
+    },
+    {
+      src: Img3,
+      alt: "specialist-by-medicine",
+      personName: "Константин Константинопольский",
+      position: "Основатель компании",
+    },
+  ];
 
-    const [startIndex, setStartIndex] = useState(0);
+  const [startIndex, setStartIndex] = useState(0);
 
-    const handleNext = () => {
-      setStartIndex((prevIndex) => (prevIndex + 1) % images.length);
-    };
+  const handleNext = () => {
+    setStartIndex((prevIndex) => (prevIndex + 1) % images.length);
+  };
 
-    const handlePrev = () => {
-      setStartIndex(
-        (prevIndex) => (prevIndex - 1 + images.length) % images.length
-      );
-    };
+  const handlePrev = () => {
+    setStartIndex(
+      (prevIndex) => (prevIndex - 1 + images.length) % images.length
+    );
+  };
 
-    const displayedImages = [
-      images[startIndex],
-      images[(startIndex + 1) % images.length],
-      images[(startIndex + 2) % images.length],
-    ];
+  const displayedImages = [
+    images[startIndex],
+    images[(startIndex + 1) % images.length],
+    images[(startIndex + 2) % images.length],
+  ];
   return (
     <div>
       <div className="bg-[#F8F7F3]">
@@ -105,6 +105,6 @@ const Doctors = () => {
       </div>
     </div>
   );
-}
+};
 
-export default Doctors
+export default Doctors;

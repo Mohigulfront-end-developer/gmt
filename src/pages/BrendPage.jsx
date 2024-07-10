@@ -66,7 +66,9 @@ const BrendPage = () => {
             испытанием для большинства больниц и частных клиник.{" "}
           </p>
         </div>
-        <h2 className="text-[30px] font-medium my-[40px]">Оборудование Draeger</h2>
+        <h2 className="text-[30px] font-medium my-[40px]">
+          Оборудование Draeger
+        </h2>
         <div className="flex gap-4">
           <button className="border border-[#D5D1E1] rounded-full px-4 py-[5px] bg-white">
             Дерматологическое оборудование

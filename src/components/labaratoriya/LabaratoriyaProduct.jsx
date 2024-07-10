@@ -1,4 +1,4 @@
-import  { useState } from "react";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import ReactPaginate from "react-paginate";
 import { RiAlignItemBottomLine } from "react-icons/ri";
@@ -8,17 +8,14 @@ import { IoIosHeartEmpty } from "react-icons/io";
 import Data from "../../data/catalog";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../../redux/addToCard";
-import {  handleLiked } from "../../redux/Liked";
+import { handleLiked } from "../../redux/Liked";
 import { handleCompare } from "../../redux/Compare";
-
-
-
 
 const LabaratoriyaProduct = () => {
   const [currentPage, setCurrentPage] = useState(0);
   const itemsPerPage = 9;
 
-const dispatch = useDispatch();
+  const dispatch = useDispatch();
 
   const handlePageClick = ({ selected }) => {
     setCurrentPage(selected);
