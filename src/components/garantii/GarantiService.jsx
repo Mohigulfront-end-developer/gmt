@@ -37,10 +37,10 @@ const GarantiiService = () => {
           </div>
         </div>
         <div className="flex justify-end gap-4 items-center">
-          <button className="bg-transparent text-[16px] font-semibold text-[#088269] px-[30px] py-[12px] rounded-full border">
+          <button className="bg-transparent text-[16px] font-semibold text-[#088269] px-[30px] py-[12px] rounded-full border hover:border-[#088269]">
             Гарантийный случай
           </button>
-          <button className="bg-[#088269] text-[16px] font-semibold text-[#F8F7F3] px-[30px] py-[12px] rounded-full border ">
+          <button className="bg-[#088269] text-[16px] font-semibold text-[#F8F7F3] px-[30px] py-[12px] rounded-full border hover:bg-[#07745E]">
             Замена товара
           </button>
         </div>

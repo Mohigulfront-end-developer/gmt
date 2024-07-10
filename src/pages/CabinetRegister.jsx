@@ -30,7 +30,7 @@ const CabinetRegister = () => {
             {Data.map((item, index) => (
               <div
                 key={index}
-                className=" border rounded-lg overflow-hidden h-[380px]"
+                className=" border rounded-lg overflow-hidden h-[380px] cursor-pointer"
               >
                 <img
                   src={item.image}

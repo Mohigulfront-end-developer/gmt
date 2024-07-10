@@ -1,29 +1,38 @@
 import { createSlice } from "@reduxjs/toolkit";
 
+const initialState = {
+  liked: JSON.parse(localStorage.getItem("liked")) || [],
+};
+
 const likedProductsSlice = createSlice({
   name: "Liked Products",
-  initialState: [] initialState: [],,
+  initialState,
   reducers: {
-    addAllLikedProducts: (state, { payload }) => {
-      state = payload;
-      return state;
-    },
+
+
     addLikedProduct: (state, { payload }) => {
-      if (payload) {
-        state.push(payload);
-      }
+    
+        state.liked = [ ...state.liked, payload];
+        // Update local storage here
+      
     },
-    removeLikedProduct: (state, { payload }) => {
-      for (let i = 0; i < state.length; i++) {
-        let index = state.findIndex((product) => product.id == payload);
-        state.splice(index, 1);
-        break;
+
+
+    handleLiked : (state, action) => {
+      const item = action.payload;
+      const likedProduct = state.liked.findIndex(product => product.id === item.id);
+      if(likedProduct === -1){
+        state.liked = [ ...state.liked, item ]
+      } else {
+        state.liked = state.liked.filter((product) => product.id !== item.id);
       }
-    },
+       localStorage.setItem("liked", JSON.stringify(state.liked));
+    }
   },
 });
 
 export default likedProductsSlice.reducer;
 
-export const { addLikedProduct, removeLikedProduct, addAllLikedProducts } =
+export const { handleLiked, addLikedProduct, removeLikedProduct, removeLiked, addAllLikedProducts } =
   likedProductsSlice.actions;
+

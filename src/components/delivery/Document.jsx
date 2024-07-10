@@ -47,12 +47,12 @@ const items = [
 const Document = () => {
   return (
     <div className="bg-[#E5E4ED]">
-      <div className="container flex justify-between pt-[100px] pb-[150px]">
-        <div className="w-[50%]">
-          <h2 className="w-[60%] text-[30px] font-medium">
+      <div className="container lg:flex justify-between pt-[100px] pb-[150px] flex-wrap">
+        <div className="lg:w-[50%] w-full">
+          <h2 className="lg:w-[60%] w-full text-[30px] font-medium">
             Документы, необходимые для получения груза
           </h2>
-          <p className="w-[80%] text-[16px] pt-[16px] font-medium ">
+          <p className="lg:w-[80%] w-full text-[16px] pt-[16px] font-medium ">
             По копиям доверенностей и доверенностям с незаполненными
             обязательными реквизитами отгрузка не производится
           </p>
@@ -69,7 +69,7 @@ const Document = () => {
               />
             </div>
           )}
-          className="bg-[#E5E4ED] w-[50%] border-none h-full "
+          className="bg-[#E5E4ED] lg:w-[50%] w-full  border-none h-full "
         />
       </div>
     </div>

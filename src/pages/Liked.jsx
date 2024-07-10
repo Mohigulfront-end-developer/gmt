@@ -1,14 +1,43 @@
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { RiArrowRightSLine } from "react-icons/ri";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import { IoIosArrowDown } from "react-icons/io";
 import Burger from "../../public/assets/signin/burger.svg"
 import Table from "../../public/assets/signin/table.svg"
+import { handleLiked, removeLiked } from "../redux/Liked";
+import { RiAlignItemBottomLine } from "react-icons/ri";
+import { IoIosHeartEmpty } from "react-icons/io";
+import { useState } from "react";
+import { handleCompare } from "../redux/Compare";
+import { addToCart } from "../redux/addToCard";
 
 
 
 const Liked = () => {
-    const { cards } = useSelector((state) => state.cartProducts);
+  const dispatch = useDispatch()
+  const { liked } = useSelector((state) => state.likedProducts);
+
+  const navigate = useNavigate();
+  const [favorites, setFavorites] = useState([]);
+  const [compare, setCompare] = useState([]);
+
+  const handleFavoriteToggle = (id) => {
+    setFavorites((prevFavorites) =>
+      prevFavorites.includes(id)
+        ? prevFavorites.filter((favId) => favId !== id)
+        : [...prevFavorites, id]
+    );
+  };
+
+   const handleCompareToggle = (id) => {
+    setCompare((prevCompare) =>
+      prevCompare.includes(id)
+        ? prevCompare.filter((compId) => compId !== id)
+        : [...prevCompare, id]
+    );
+  };
+console.log(liked);
+
   return (
     <div className="bg-[#F8F7F3]">
       <div className="container">
@@ -44,10 +73,43 @@ const Liked = () => {
               </div>
            </div>
         <div className="grid grid-cols-3 gap-4">
-           {cards.map((card) => (
+           {liked.map((card) => (
           <div key={card.id} className="border rounded-xl w-[320px] pb-5 ">
             <div className="w-[320px] h-[320px] rounded-xl p-14 bg-white">
-              <img src={card.image} alt={card.title} className="w-full h-full rounded-xl object-contain"/>
+              {card.label && (
+              <span
+                className={`relative bottom-10 left-[-40px] px-2 py-1 rounded-full text-[#F8F7F3] font-medium text-xs ${card.labelClass}`}
+              >
+                {card.label}
+              </span>
+            )}
+              <img src={card.image} alt={card.title} 
+              onClick={() => navigate(`/katalog/laboratornoe/${card.id}`)}
+              className="w-full h-full rounded-xl object-contain"/>
+               <div className="flex items-center gap-4 justify-end ">
+              <RiAlignItemBottomLine
+                className={`w-[25px] h-[25px] relative bottom-[270px] left-5 text-2xl cursor-pointer ${
+                  compare.includes(card.id)
+                    ? "text-[#088269]"
+                    : "text-[#202020]"
+                }`}
+                onClick={() => {
+                  handleCompareToggle(card.id)
+                  dispatch(handleCompare(card));
+                }}
+              />
+              <IoIosHeartEmpty
+                className={`w-[25px] h-[25px] relative bottom-[270px] left-5 text-2xl cursor-pointer ${
+                  favorites.includes(card.id)
+                    ? "text-[#088269]"
+                    : "text-[#202020]"
+                }`}
+                onClick={() =>{ 
+                   handleFavoriteToggle(card.id);
+                   dispatch(handleLiked(card));
+                }}
+              />
+            </div>
             </div>
             <div className="px-4 py-2">
               <h3 className="text-[18px] font-semibold w-[200px]">{card.title}</h3>
@@ -55,10 +117,11 @@ const Liked = () => {
               <p className="text-[#7A7687] text-[14px] ">{card.position}</p>
             </div>
             <div className="px-4 py-2 my-[30px]">
-              <p className="text-[18px] font-semibold">{card.price}</p>
+              <p className="text-[18px] font-semibold">{card.price} руб.</p>
+             
             </div>
             <div className="px-4">
-              <button className="w-full bg-transparent border rounded-full text-[14px] font-semibold py-2 px-4 text-[#088269]">Добавить в корзину</button>
+              <button  onClick={() => dispatch(addToCart(card))} className="w-full bg-transparent border rounded-full text-[14px] font-semibold py-2 px-4 text-[#088269]">Добавить в корзину</button>
             </div>
            
           </div>

@@ -101,10 +101,10 @@ const Manifacture = () => {
                   />
                   <GoSearch className="relative right-6 w-[20px] h-[20px] text-[#7A7687] text-[20px]" />
                 </div>
-                <div className="flex flex-col px-5 gap-2">
+                <div className="flex flex-col px-5 gap-2 ">
                   {uniqueCountries.map((country, index) => (
                     <div
-                      className="flex items-center gap-2 px-4 py-2"
+                      className="flex items-center gap-2 px-4 py-2 cursor-pointer"
                       key={index}
                     >
                       <input
@@ -116,7 +116,7 @@ const Manifacture = () => {
                       />
                       <label
                         htmlFor={`country-${index}`}
-                        className="text-[#202020]"
+                        className="text-[#202020] cursor-pointer"
                       >
                         {country}
                       </label>
@@ -126,13 +126,13 @@ const Manifacture = () => {
               </div>
               <div className="flex gap-4 my-4">
                 <button
-                  className="w-[50%] px-4 py-2 rounded-full border font-semibold text-[14px]"
+                  className="w-[50%] px-4 py-2 rounded-full border font-semibold text-[14px] cursor-pointer hover:border-[#088269] hover:text-[#088269]"
                   onClick={handleResetFilters}
                 >
                   Сбросить
                 </button>
                 <button
-                  className="w-[50%] px-4 py-2 rounded-full bg-[#088269] text-[#F8F7F3] text-[14px] font-semibold"
+                  className="w-[50%] px-4 py-2 rounded-full bg-[#088269] text-[#F8F7F3] text-[14px] font-semibold cursor-pointer"
                   onClick={handleShowFilters}
                 >
                   Показать
@@ -143,7 +143,7 @@ const Manifacture = () => {
               <div className="card grid grid-cols-3 gap-4 ">
                 {currentData.map((item, index) => (
                   <div
-                    className="border rounded-xl"
+                    className="border rounded-xl cursor-pointer"
                     key={index}
                     onClick={() => navigate(`/proizvoditel/${item.id}`)}
                   >

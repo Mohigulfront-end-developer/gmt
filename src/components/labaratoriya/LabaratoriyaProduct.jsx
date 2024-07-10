@@ -8,6 +8,8 @@ import { IoIosHeartEmpty } from "react-icons/io";
 import Data from "../../data/catalog";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../../redux/addToCard";
+import {  handleLiked } from "../../redux/Liked";
+import { handleCompare } from "../../redux/Compare";
 
 
 
@@ -76,7 +78,10 @@ const dispatch = useDispatch();
                     ? "text-[#088269]"
                     : "text-[#202020]"
                 }`}
-                onClick={() => handleCompareToggle(data.id)}
+                onClick={() => {
+                  handleCompareToggle(data.id);
+                  dispatch(handleCompare(data));
+                }}
               />
               <IoIosHeartEmpty
                 className={`absolute top-2 right-2 text-2xl cursor-pointer ${
@@ -84,7 +89,10 @@ const dispatch = useDispatch();
                     ? "text-[#088269]"
                     : "text-[#202020]"
                 }`}
-                onClick={() => handleFavoriteToggle(data.id)}
+                onClick={() => {
+                  handleFavoriteToggle(data.id);
+                  dispatch(handleLiked(data));
+                }}
               />
             </div>
             <div
@@ -103,13 +111,13 @@ const dispatch = useDispatch();
                 </p>
               </div>
               <p className="text-[16px] font-medium text-[#202020]">
-                {data.price}
+                {data.price} руб.
               </p>
             </div>
             <div className="p-4">
               <button
                 onClick={() => dispatch(addToCart(data))}
-                className="w-[100%] transition duration-300 flex justify-center items-center px-4 py-[8px] rounded-full font-semibold text-[16px] text-[#088269] border border-[#D5D1E1] hover:bg-green-600 hover:text-white"
+                className="w-[100%] transition duration-300 flex justify-center items-center px-4 py-[8px] rounded-full font-semibold text-[16px] text-[#088269] border border-[#D5D1E1] hover:bg-[#07745E] hover:text-white"
               >
                 Добавить в корзину
               </button>
@@ -131,7 +139,7 @@ const dispatch = useDispatch();
         pageLinkClassName={
           "px-3 py-2 rounded-lg border border-[#E5E2EE] font-semibold text-[#202020] bg-white"
         }
-        activeLinkClassName={"bg-emerald-600 text-[#FFFFFF]"}
+        activeLinkClassName={"text-[green]"}
       />
     </div>
   );

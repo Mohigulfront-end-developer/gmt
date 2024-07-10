@@ -1,20 +1,21 @@
 import { configureStore } from "@reduxjs/toolkit";
-// import likedProductsSlice from "./likedProductsSlice";
+import likedProductsSlice from "./Liked";
 import cartProductsSlice from "./addToCard";
-// import filterSlice from "./filterSlice";
-// import paginationSlice from "./paginationSlice";
-// import loginWindowSlice from "./loginWindowSlice";
+import loginSlice from "./login";
+import compareProductsSlice from "./Compare"
+
 
 const store = configureStore({
 
   reducer: {
-    // likedProducts: likedProductsSlice,
+    likedProducts: likedProductsSlice,
+    login : loginSlice,
+    compareProducts: compareProductsSlice,
     cartProducts: cartProductsSlice,
-    // filterSlice: filterSlice,
-    // paginationSlice: paginationSlice,
-    // loginWindowSlice: loginWindowSlice,
+
   },
 });
+
 
 
 const subscribe = store.subscribe(() => {

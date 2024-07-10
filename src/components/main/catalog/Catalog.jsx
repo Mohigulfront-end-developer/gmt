@@ -7,11 +7,16 @@ import Data from "../../../data/catalog";
 import { Link, useNavigate } from "react-router-dom";
 import { RiAlignItemBottomLine } from "react-icons/ri";
 import { IoIosHeartEmpty } from "react-icons/io";
+import { useDispatch } from "react-redux";
+import { handleCompare } from "../../../redux/Compare";
+import { handleLiked } from "../../../redux/Liked";
+import { addToCart } from "../../../redux/addToCard";
 
 const Catalog = () => {
   const navigate = useNavigate();
   const [favorites, setFavorites] = useState([]);
   const [compare, setCompare] = useState([]);
+  const dispatch = useDispatch()
 
   const sliderRef = useRef(null);
 
@@ -142,7 +147,10 @@ const Catalog = () => {
                           ? "text-[#088269]"
                           : "text-[#202020]"
                       }`}
-                      onClick={() => handleCompareToggle(item.id)}
+                      onClick={() => {
+                  handleCompareToggle(item.id)
+                  dispatch(handleCompare(item));
+                }}
                     />
                     <IoIosHeartEmpty
                       className={`absolute top-2 right-2 text-2xl cursor-pointer ${
@@ -150,7 +158,10 @@ const Catalog = () => {
                           ? "text-[#088269]"
                           : "text-[#202020]"
                       }`}
-                      onClick={() => handleFavoriteToggle(item.id)}
+                     onClick={() =>{ 
+                   handleFavoriteToggle(item.id);
+                   dispatch(handleLiked(item));
+                }}
                     />
                   </div>
 
@@ -166,16 +177,16 @@ const Catalog = () => {
                         {item.desc}
                       </span>
 
-                      <p className="text-[16px] font-normal text-[#7A7687]">
+                      <p className="text-[14px] font-normal text-[#7A7687]">
                         {item.position}
                       </p>
                     </div>
-                    <p className="text-[16px] font-medium text-[#202020]">
-                      {item.price}
+                    <p className="text-[18px] font-semibold text-[#202020]">
+                      {item.price} руб.
                     </p>
                   </div>
                   <div className="p-4">
-                    <button className="w-[100%] transition duration-300 flex justify-center items-center px-4 py-[8px] rounded-full font-semibold text-[16px] text-[#088269]  border border-[#D5D1E1] hover:bg-[#07745E] hover:text-[#F8F7F3]">
+                    <button onClick={() => dispatch(addToCart(item))} className="w-[100%] transition duration-300 flex justify-center items-center px-4 py-[8px] rounded-full font-semibold text-[16px] text-[#088269]  border border-[#D5D1E1] hover:bg-[#07745E] hover:text-[#F8F7F3]">
                       Добавить в корзину
                     </button>
                   </div>

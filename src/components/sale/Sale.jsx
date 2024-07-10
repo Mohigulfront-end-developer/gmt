@@ -106,7 +106,7 @@ const LabaratoriyaProduct = () => {
             <div className="p-4">
               <button
                 onClick={() => dispatch(addToCart(data))}
-                className="w-[100%] transition duration-300 flex justify-center items-center px-4 py-[8px] rounded-full font-semibold text-[16px] text-[#088269] border border-[#D5D1E1] hover:bg-green-600 hover:text-white"
+                className="w-[100%] transition duration-300 flex justify-center items-center px-4 py-[8px] rounded-full font-semibold text-[16px] text-[#088269] border border-[#D5D1E1] hover:bg-[#07745E] hover:text-white"
               >
                 Добавить в корзину
               </button>

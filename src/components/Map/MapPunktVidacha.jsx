@@ -13,7 +13,7 @@ const MapPunktVidacha = () => {
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
         ></iframe>
-        <button className="bg-[#088269] text-[14px] font-semibold text-[#F8F7F3] px-4 py-2 bottom-14 rounded-full ml-[82%] relative">
+        <button className="sm:flex hidden bg-[#088269] text-[14px] font-semibold text-[#F8F7F3] px-4 py-2 bottom-14 rounded-full ml-[82%] relative">
           Пункт выдачи
         </button>
       </div>

@@ -58,7 +58,7 @@ const items = [
 const FastQuestion = () => {
   return (
     <div className="bg-[#088269]">
-      <div className="container flex justify-between py-[100px]  ">
+      <div className="container lg:flex justify-between py-[100px]  flex-wrap">
         <div>
           <h2 className="text-white text-[30px] font-medium sm:mb-[30px] ">
             Часто задоваемые вопросы
@@ -76,7 +76,7 @@ const FastQuestion = () => {
               />
             </div>
           )}
-          className="bg-[#088269] w-[50%] border-none h-full text-white"
+          className="bg-[#088269] lg:w-[50%] w-full border-none h-full text-white"
         />
       </div>
     </div>

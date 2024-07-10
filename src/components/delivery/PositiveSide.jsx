@@ -1,7 +1,5 @@
-
-import Icon1 from "../../../public/assets/delivery/icon1.svg"
+import Icon1 from "../../../public/assets/delivery/icon1.svg";
 import Icon2 from "../../../public/assets/delivery/icon2.svg";
-
 import Icon4 from "../../../public/assets/delivery/icon4.svg";
 import Icon5 from "../../../public/assets/delivery/icon5.svg";
 
@@ -38,7 +36,7 @@ const PositiveSide = () => {
             </p>
           </div>
         </div>
-        <button className="bg-[#088269] text-[16px] font-semibold text-[#F8F7F3] px-[20px] py-[12px] rounded-full border ml-[79%]">
+        <button className="bg-[#088269] text-[16px] font-semibold text-[#F8F7F3] px-[20px] py-[12px] rounded-full border lg:ml-[79%] sm:ml-[60%] ml-4">
           Проверить статус доставки
         </button>
       </div>

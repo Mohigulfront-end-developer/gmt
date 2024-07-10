@@ -24,23 +24,23 @@ const SalePage = () => {
         <div className="my-10">
           <div className="flex justify-between gap-4">
             <div className="w-[25%] h-[50%]">
-              <div className="border rounded-xl  px-4">
+              <div className="border rounded-xl  px-4 cursor-pointer">
                 <h3 className="flex justify-between items-center py-2  border-b-[1px] border-[#E5E2EE]">
                   Категории
                 </h3>
-                <p className="flex justify-between items-center py-2">
+                <p className="flex justify-between items-center py-2 hover:text-[#07745E]">
                   Группы товаров <GoChevronRight />
                 </p>
-                <p className="flex justify-between items-center py-2">
+                <p className="flex justify-between items-center py-2 hover:text-[#07745E]">
                   Мониторы <GoChevronRight />
                 </p>
-                <p className="flex justify-between items-center py-2">
+                <p className="flex justify-between items-center py-2 hover:text-[#07745E]">
                   Лампы <GoChevronRight />
                 </p>
-                <p className="flex justify-between items-center py-2">
+                <p className="flex justify-between items-center py-2 hover:text-[#07745E]">
                   Кровати <GoChevronRight />
                 </p>
-                <p className="flex justify-between items-center py-2">
+                <p className="flex justify-between items-center py-2 hover:text-[#07745E]">
                   Рентгены <GoChevronRight />
                 </p>
               </div>

@@ -7,11 +7,16 @@ import Data from "../../data/catalog";
 import { useNavigate } from "react-router-dom";
 import { RiAlignItemBottomLine } from "react-icons/ri";
 import { IoIosHeartEmpty } from "react-icons/io";
+import { useDispatch } from "react-redux";
+import { handleCompare } from "../../redux/Compare";
+import { handleLiked } from "../../redux/Liked";
+import { addToCart } from "../../redux/addToCard";
 
 const RecommendProduct = () => {
   const navigate = useNavigate();
   const [favorites, setFavorites] = useState([]);
   const [compare, setCompare] = useState([]);
+  const dispatch = useDispatch()
 
   const sliderRef = useRef(null);
 
@@ -19,6 +24,8 @@ const RecommendProduct = () => {
     dots: false,
     infinite: false,
     speed: 500,
+    autoplay: true,
+    autoplaySpeed: 3000,
     slidesToShow: 3,
     slidesToScroll: 1,
     initialSlide: 0,
@@ -28,28 +35,34 @@ const RecommendProduct = () => {
       {
         breakpoint: 1024,
         settings: {
+          autoplay: true,
+          autoplaySpeed: 3000,
           slidesToShow: 2,
           slidesToScroll: 1,
           infinite: true,
-          dots: true,
+          dots: false,
         },
       },
       {
         breakpoint: 768,
         settings: {
+          autoplay: true,
+          autoplaySpeed: 3000,
           slidesToShow: 2,
           slidesToScroll: 1,
           infinite: true,
-          dots: true,
+          dots: false,
         },
       },
       {
         breakpoint: 600,
         settings: {
+          autoplay: true,
+          autoplaySpeed: 3000,
           slidesToShow: 1,
           slidesToScroll: 1,
           infinite: true,
-          dots: true,
+          dots: false,
         },
       },
     ],
@@ -127,7 +140,10 @@ const RecommendProduct = () => {
                           ? "text-[#088269]"
                           : "text-[#202020]"
                       }`}
-                      onClick={() => handleCompareToggle(item.id)}
+                      onClick={() => {
+                      handleCompareToggle(item.id)
+                      dispatch(handleCompare(item));
+                }}
                     />
                     <IoIosHeartEmpty
                       className={`absolute top-2 right-2 text-2xl cursor-pointer ${
@@ -135,7 +151,10 @@ const RecommendProduct = () => {
                           ? "text-[#088269]"
                           : "text-[#202020]"
                       }`}
-                      onClick={() => handleFavoriteToggle(item.id)}
+                      onClick={() =>{ 
+                      handleFavoriteToggle(item.id);
+                      dispatch(handleLiked(item));
+                }}
                     />
                   </div>
 
@@ -155,12 +174,12 @@ const RecommendProduct = () => {
                         {item.position}
                       </p>
                     </div>
-                    <p className="text-[16px] font-medium text-[#202020]">
-                      {item.price}
+                    <p className="text-[18px] font-bold text-[#202020]">
+                      {item.price} руб.
                     </p>
                   </div>
                   <div className="p-4">
-                    <button className="w-[100%] transition duration-300 flex justify-center items-center px-4 py-[8px] rounded-full font-semibold text-[16px] text-[#088269]  border border-[#D5D1E1] hover:bg-green-600 hover:text-white">
+                    <button onClick={() => dispatch(addToCart(item))} className="w-[100%] transition duration-300 flex justify-center items-center px-4 py-[8px] rounded-full font-semibold text-[16px] text-[#088269]  border border-[#D5D1E1] hover:bg-[#07745E] hover:text-white">
                       Добавить в корзину
                     </button>
                   </div>
@@ -173,23 +192,23 @@ const RecommendProduct = () => {
             <div className="hidden md:flex gap-3 ml-3 ">
               <div
                 onClick={() => sliderRef.current.slickNext()}
-                className="p-[10px] rounded-full border flex items-center justify-center"
+                className="p-[10px] rounded-full border flex items-center justify-center hover:border-[#07745E]"
               >
-                <GoArrowLeft className="w-[25px] h-[25px] hover:text-green-600" />
+                <GoArrowLeft className="w-[22px] h-[22px] " />
               </div>
               <div
                 onClick={() => sliderRef.current.slickPrev()}
-                className="p-[10px] rounded-full border flex items-center justify-center"
+                className="p-[10px] rounded-full border flex items-center justify-center hover:border-[#07745E]"
               >
-                <GoArrowRight className="w-[25px] h-[25px] hover:text-green-600" />
+                <GoArrowRight className="w-[22px] h-[22px] " />
               </div>
             </div>
 
             <div className=" flex  gap-4 h-[40px]  md:gap-4 justify-items-end ">
-              <button className="px-4 py-[4px] text-[14px] transition duration-300 flex justify-center items-center md:px-6 lg:py-[11px] rounded-full font-semibold lg:text-[16px] text-[#088269]  border border-[#D5D1E1] ">
+              <button className="px-4 py-[4px] text-[14px] transition duration-300 flex justify-center items-center md:px-6 lg:py-[11px] rounded-full font-semibold lg:text-[16px] text-[#088269]  border border-[#D5D1E1] hover:bg-[#07745E] hover:text-white ">
                 Бесплатная консультация
               </button>
-              <button className=" px-4 py-[4px] text-[14px] transition duration-300 flex justify-center items-center md:px-6 lg:py-[11px] rounded-full font-semibold lg:text-[16px] text-white bg-[#088269] border-none ">
+              <button className=" px-4 py-[4px] text-[14px] transition duration-300 flex justify-center items-center md:px-6 lg:py-[11px] rounded-full font-semibold lg:text-[16px] text-white bg-[#088269] border-none  hover:bg-[#07745E]">
                 Все товары
               </button>
             </div>

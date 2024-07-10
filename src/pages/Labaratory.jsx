@@ -1,19 +1,17 @@
-import { Link, NavLink, } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { GoChevronDown } from "react-icons/go";
 import { GoChevronUp } from "react-icons/go";
 import LabaratoriyaProduct from "../components/labaratoriya/LabaratoriyaProduct";
 import { RiArrowRightSLine } from "react-icons/ri";
-import { Slider } from 'antd';
+import { Slider } from "antd";
 import FilterCountry from "../components/manifacture/FilterCountry";
 
 const onChange = (value) => {
-  console.log('onChange: ', value);
+  console.log("onChange: ", value);
 };
 const onChangeComplete = (value) => {
-  console.log('onChangeComplete: ', value);
+  console.log("onChangeComplete: ", value);
 };
-
-
 
 const Labaratory = () => {
   return (
@@ -66,22 +64,27 @@ const Labaratory = () => {
                 <div className="">
                   <div className="flex gap-5 items-center">
                     <div className="border-b-[1px] w-[50%] pb-3">
-                  <p className="text-[#7A7687] text-[14px] font-medium">От:</p>
-                  <p className="text-[14px] font-medium">20.000</p>
+                      <p className="text-[#7A7687] text-[14px] font-medium">
+                        От:
+                      </p>
+                      <p className="text-[14px] font-medium">20.000</p>
+                    </div>
+                    <div className="border-b-[1px] w-[50%] pb-3">
+                      <p className="text-[#7A7687] text-[14px] font-medium">
+                        До:
+                      </p>
+                      <p className="text-[14px] font-medium">950.000</p>
+                    </div>
                   </div>
-                  <div className="border-b-[1px] w-[50%] pb-3">
-                  <p className="text-[#7A7687] text-[14px] font-medium">До:</p>
-                  <p className="text-[14px] font-medium">950.000</p>
-                  </div>
-                  </div>
-                 <Slider defaultValue={30} onChange={onChange} onChangeComplete={onChangeComplete} className="" />
-                  <FilterCountry/>
-                  <div className="">
-                    
-                  </div>
+                  <Slider
+                    defaultValue={30}
+                    onChange={onChange}
+                    onChangeComplete={onChangeComplete}
+                    className=""
+                  />
+                  <FilterCountry />
+                  <div className=""></div>
                 </div>
-                
-                                      
               </div>
             </div>
             <LabaratoriyaProduct />

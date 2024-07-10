@@ -36,26 +36,26 @@ const CatalogPage = () => {
               Каталог
             </NavLink>
           </div>
-          <div className="flex justify-between">
-            <div className="w-[25%] h-[50%] border rounded-lg p-5">
+          <div className="sm:flex justify-between grid grid-cols-1 gap-4">
+            <div className="lg:w-[30%] sm:h-[40%] sm:w-[80%] w-[100%] border rounded-lg p-5">
               <h3 className="text-[18px] text-[#202020] border-b-[1px] border-[#E5E2EE] pb-[10px]">
                 Направления
               </h3>
               {Data.map((data, index) => (
                 <div key={index} className="">
-                  <div className="flex flex-col pt-[10px]">
+                  <div className="sm:flex flex-col hidden pt-[10px]">
                     <NavLink
                       to={"/katalog/laboratornoe"}
-                      className="flex justify-between text-[16px]  text-[#202020]"
+                      className="flex justify-between text-[16px]  text-[#202020] hover:text-[#07745E]"
                     >
-                      {data.category} <GoChevronRight />
+                      {data.category} <GoChevronRight className="sm:flex hidden"/>
                     </NavLink>
                   </div>
                 </div>
               ))}
             </div>
-            <div className="w-[72%]">
-              <div className=" mb-[16px] grid grid-cols-3 gap-3">
+            <div className="lg:w-[72%] sm:w-[90%]">
+              <div className=" mb-[16px] grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-3">
                 <div className="h-[304px] cursor-pointer border rounded-xl">
                   <div className="h-[80%] p-7 bg-white rounded-t-xl">
                     <img
@@ -139,7 +139,7 @@ const CatalogPage = () => {
                   </h4>
                 </div>
               </div>
-              <div className="grid grid-cols-3 gap-4">
+              <div className="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-4">
                 <div className=" row-span-2 border rounded-xl cursor-pointer">
                   <div className="p-10 bg-white h-[90%] rounded-t-xl ">
                     <img

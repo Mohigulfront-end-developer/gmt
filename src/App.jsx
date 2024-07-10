@@ -28,6 +28,7 @@ import CertificatePage from "./pages/CertificatePage";
 import FAQS from "./pages/FAQS";
 import Account from "./pages/Account";
 import JobAplication from "./pages/JobAplication";
+import ScrollTop from "./components/scrollTop/ScrollTop";
 
 
 
@@ -39,7 +40,8 @@ function App() {
     <>
       <BrowserRouter>
         <Header />
-        <div className="lg:pt-[160px] sm:pt-[160px] pt-[90px]">
+        <ScrollTop/>
+        <div className="lg:pt-[160px] sm:pt-[140px] pt-[70px]">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/katalog" element={<Catalog />} />

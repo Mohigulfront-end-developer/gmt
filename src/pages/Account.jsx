@@ -1,5 +1,5 @@
 import { RiArrowRightSLine } from "react-icons/ri";
-import { Link, NavLink } from 'react-router-dom';
+import { Link, NavLink} from 'react-router-dom';
 import Vkontakt from "../../public/assets/signin/vk.svg"
 import Facebook from "../../public/assets/signin/facebook.svg";
 import Instagram from "../../public/assets/signin/instagram.svg";
@@ -9,11 +9,15 @@ import Pen from "../../public/assets/signin/edit.svg";
 import InformCustomer from "../components/account/InformCustomer";
 import HistoryOrder from "../components/account/HistoryOrder";
 import Settings from "../components/account/Settings";
+import { useSelector } from "react-redux";
+
 
 
 
 
 const Account = () => {
+   const { login } = useSelector((state) => state.login);
+
   return (
     <div className="bg-[#F8F7F3]">
       <div className="container">
@@ -64,7 +68,7 @@ const Account = () => {
           </div>
           <div className="">
             <div className="flex gap-2">
-              <p className="text-[16px] font-medium">person@mail.ru</p>
+              <p className="text-[16px] font-medium">{login.email} </p>
               <img src={Pen} alt="" />
             </div>
             <span className="text-[16px] font-medium text-[#7A7687]">

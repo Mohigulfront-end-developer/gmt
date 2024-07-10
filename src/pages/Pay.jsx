@@ -6,7 +6,7 @@ const Oplata = () => {
   return (
     <div className="bg-[rgb(248,247,243)]">
       <div className="container">
-        <div className="flex items-center gap-2 py-[40px] text-[16px] font-normal">
+        <div className="flex items-center gap-2 py-[20px] text-[16px] font-normal">
           <Link to={"/"} className="text-[#7A7687]">
             Главная
           </Link>
@@ -111,7 +111,7 @@ const Oplata = () => {
         </div>
         <div className="pt-[50px]">
           <h1 className="text-[48px] font-medium py-5">Условия поставок</h1>
-          <p className=" w-[50%] text-[16px] font-medium text-[#202020]">
+          <p className="w-[50%] text-[16px] font-medium text-[#202020]">
             Учитывая стремительное развитие мировых медицинских технологий,
             врачи в Российской Федерации и соседних странах столкнулись
             с вызовом, требующим обновления приборов в различных направлениях,

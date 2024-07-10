@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import Logo from "../../../public/Logo.svg";
 import { FaCaretDown } from "react-icons/fa";
 import { IoPersonOutline, IoSearch } from "react-icons/io5";
@@ -8,12 +9,20 @@ import { RiAlignItemBottomLine } from "react-icons/ri";
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
-import Modal from "./Modal"; // Make sure to update the path based on your file structure
+import Modal from "./Modal"; 
+import { handleLogin } from "../../redux/login"
+import Burger from "../../../public/assets/signin/burger.svg"
 
 const Navbar = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const navigate = useNavigate();
+  const dispatch = useDispatch();
+  const { login } = useSelector((state) => state.login);
+  const { liked } = useSelector((state) => state.likedProducts);
+  const { compare } = useSelector((state) => state.compareProducts);
+  const { cards, totalPrice } = useSelector((state) => state.cartProducts);
 
+  console.log(liked.length,'count');
   const handleOpenModal = () => {
     setIsModalOpen(true);
   };
@@ -31,14 +40,36 @@ const Navbar = () => {
       .required("Обязательно для заполнения"),
   });
 
+  const handleSubmit = (values) => {
+    dispatch(handleLogin(values));
+    navigate("/profil");
+    handleCloseModal();
+  };
+
   return (
     <div className="bg-[#F8F7F3] border-b-[1px] border-[#E5E2EE]">
       <div className="container py-4">
         <div className="flex justify-between items-center">
           <div className="flex items-center gap-8">
-            <NavLink to={"/"}>
+            <NavLink to={"/"} className="lg:flex hidden">
               <img src={Logo} alt="Logo" />
             </NavLink>
+            <div className="lg:hidden sm:flex hidden justify-between gap-[500px]">
+              <NavLink to={"/"} className="">
+              <img src={Logo} alt="Logo" />
+            </NavLink>
+             <div className=" lg:hidden">
+              <img src={Burger} alt="" className="w-[45px] h-[45px]" />
+             </div>
+             </div>
+              <div className="lg:hidden sm:hidden flex justify-between gap-[200px]">
+              <NavLink to={"/"} className="">
+              <img src={Logo} alt="Logo" />
+            </NavLink>
+             <div className=" lg:hidden">
+              <img src={Burger} alt="" className="w-[45px] h-[45px]" />
+             </div>
+             </div>
 
             <div className="lg:flex hidden items-center border border-[#D5D1E1] px-2 rounded-full">
               <button className="flex font-bold items-center gap-2 text-[14px] text-[#7A7687] rounded-full bg-[#EFEFEF] p-2 relative right-[8px]">
@@ -53,52 +84,56 @@ const Navbar = () => {
                 <IoSearch className="text-[#7A7687] ml-5" />
               </button>
             </div>
-            <div className="sm:flex lg:hidden hidden items-center border border-[#D5D1E1] px-2 rounded-full">
-              <button className="flex font-bold items-center gap-2 text-[14px] text-[#7A7687] rounded-full bg-[#EFEFEF] p-2 relative right-[8px]">
-                Все категории <FaCaretDown className="text-[#7A7687]" />
-              </button>
-              <input
-                type="text"
-                placeholder="Поиск"
-                className="bg-[#F8F7F3] px-4 w-[400px] outline-none "
-              />
-              <button className="h-[38px] w-[50px] flex items-center gap-2 text-[15px] text-[#7A7687] rounded-r-full bg-[#D5D1E1] left-2 relative ">
-                <IoSearch className="text-[#7A7687] ml-5" />
-              </button>
-            </div>
-            <div className="">
+            <div className="lg:flex flex-col hidden">
               <p className="text-[13px] text-[#7A7687]">Пн-Пт с 09:00-19:00 </p>
               <p className="text-[13px] text-[#7A7687]">Сб-Вс - выходной</p>
             </div>
           </div>
 
-          <div className="sm:flex hidden items-center gap-4">
-            <button
-              className="text-[#7A7687] text-[13px] flex flex-col items-center hover:text-[#088269]"
-              onClick={handleOpenModal}
-            >
-              <IoPersonOutline className="text-[black] text-center w-[20px] h-[22px] hover:text-[#088269]" />
-              Войти
-            </button>
+          <div className="lg:flex hidden items-center gap-4">
+            {login.email ? (
+              <Link
+                to={"/profil"}
+                className="text-[#7A7687] text-[13px] flex flex-col items-center hover:text-[#088269]"
+              >
+                <IoPersonOutline className="text-[black] text-center w-[20px] h-[22px] hover:text-[#088269]" />
+                Профиль
+              </Link>
+            ) : (
+              <button
+                className="text-[#7A7687] text-[13px] flex flex-col items-center hover:text-[#088269]"
+                onClick={handleOpenModal}
+              >
+                <IoPersonOutline className="text-[black] text-center w-[20px] h-[22px] hover:text-[#088269]" />
+                Войти
+              </button>
+            )}
             <Link
               to={"/izbrannoe"}
-              className="text-[#7A7687] text-[13px] flex flex-col items-center hover:text-[#088269] "
+              className="text-[#7A7687] text-[13px] flex  items-center hover:text-[#088269] "
             >
-              <IoIosHeartEmpty className="text-[black] text-center w-[20px] h-[22px] hover:text-[#088269] " />
+              <div className="flex flex-col items-center">
+                <IoIosHeartEmpty className="text-[black] text-center w-[20px] h-[22px] hover:text-[#088269] " />
               Избранное
+              </div>
+               {liked.length > 0 && <span className="relative bottom-4 right-2 text-[14px] font-bold text-green-600">{liked.length}</span>}
             </Link>
             <Link
               to={"/sravniti"}
-              className="text-[#7A7687] text-[13px] flex flex-col items-center hover:text-[#088269]"
+              className="text-[#7A7687] text-[13px] flex items-center hover:text-[#088269]"
             >
-              <RiAlignItemBottomLine className="text-[black] text-center w-[20px] h-[22px] hover:text-[#088269]" />
+              <div className="flex flex-col items-center">
+                <RiAlignItemBottomLine className="text-[black] text-center w-[20px] h-[22px] hover:text-[#088269]" />
               Сравнить
+              </div>
+              {compare.length > 0 && <span className="relative bottom-4 right-2 text-[14px] font-bold text-green-600">{compare.length}</span>}
             </Link>
-            <Link to={"/korzinka"}>
-              <button className="text-[#7A7687] text-[13px] flex flex-col items-center hover:text-[#088269]">
+            <Link to={"/korzinka"} className="text-[#7A7687] text-[13px] flex items-center hover:text-[#088269]">
+              <div className="flex flex-col items-center">
                 <FiShoppingCart className="text-[black] text-center w-[20px] h-[22px] hover:text-[#088269]" />
                 Корзина
-              </button>
+              </div>
+                {cards.length > 0 && <span className="relative bottom-4 right-2 text-[14px] font-bold text-green-600">{cards.length}</span>}
             </Link>
           </div>
         </div>
@@ -108,10 +143,7 @@ const Navbar = () => {
         <Formik
           initialValues={{ email: "", password: "" }}
           validationSchema={validationSchema}
-          onSubmit={(values) => {
-            console.log(values);
-            navigate("/profil");
-          }}
+          onSubmit={handleSubmit}
         >
           {({ errors, touched }) => (
             <Form>

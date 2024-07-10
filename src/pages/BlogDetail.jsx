@@ -1,15 +1,13 @@
-import { Link, NavLink } from 'react-router-dom';
-import Img1 from "../../public/assets/statya/img1.png"
+import { Link, NavLink } from "react-router-dom";
+import Img1 from "../../public/assets/statya/img1.png";
 import Img2 from "../../public/assets/statya/img2.png";
 import Img3 from "../../public/assets/statya/img3.png";
 import Img4 from "../../public/assets/statya/img4.png";
-import RecommendProduct from '../components/blog/RecommendProduct';
-import Cabinet  from "../components/main/complex/Cabinet"
+import RecommendProduct from "../components/blog/RecommendProduct";
+import Cabinet from "../components/main/complex/Cabinet";
 import Brend from "../components/main/brend/Brand";
-import Concult from "../components/garantii/Consult"
+import Concult from "../components/garantii/Consult";
 import { RiArrowRightSLine } from "react-icons/ri";
-
-
 
 const BlogDetail = () => {
   return (
@@ -128,6 +126,6 @@ const BlogDetail = () => {
       <Concult />
     </div>
   );
-}
+};
 
-export default BlogDetail
+export default BlogDetail;

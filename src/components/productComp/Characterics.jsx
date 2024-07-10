@@ -14,7 +14,7 @@ const Product = () => {
       <div className="container pb-[20px]">
         <div className="rounded-xl border ">
           <div className="px-[25px] pt-[10px]">
-            <div className="flex gap-20 items-center">
+            <div className="sm:w-full w-full overflow-hidden flex gap-20 items-center ">
               <button className="active:border-b-[2px] active:border-b-[#07745E]  pb-[10px]" onClick={() => setChangeBtn("0")}>
                 Описание оборудования
               </button>
@@ -38,7 +38,7 @@ const Product = () => {
           )}
           {changeBtn == "1" && (
             <>
-  <div className=" bg-white px-[25px] border-t-[1px] pb-[20px] border-b-[1px]">
+  <div className="sm:w-full w-full bg-white px-[25px] border-t-[1px] pb-[20px] border-b-[1px]">
               <h3 className="text-[18px] font-semibold py-4">
                 Технические характеристики
               </h3>
@@ -188,7 +188,7 @@ const Product = () => {
 
 
           </div>
-          <div className="text-[14px] font-medium text-[#07745E] flex gap-[40px] py-[10px] px-[25px]">
+          <div className="text-[14px] font-medium text-[#07745E] flex flex-wrap gap-[40px] py-[10px] px-[25px]">
             <p>Новинки</p>
             <p>Получить прайс</p>
             <p>Условия доставки</p>

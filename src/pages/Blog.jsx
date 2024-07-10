@@ -40,7 +40,7 @@ const Blog = () => {
             {Data.map((data, index) => (
               <div key={index} className="">
                 <div className="flex flex-col pt-[10px]">
-                  <h4 className="flex justify-between text-[16px]  text-[#202020] cursor-pointer">
+                  <h4 className="flex justify-between text-[16px]  text-[#202020] cursor-pointer hover:text-[#07745E]">
                     {data.direction} <GoChevronRight />
                   </h4>
                 </div>
@@ -73,7 +73,7 @@ const Blog = () => {
                   </p>
                   <NavLink
                     to={"/blog/informatsioniy-statya"}
-                    className=" px-4 py-2 text-[14px] text-[#088269] font-semibold rounded-full border border-[#D5D1E1]"
+                    className=" px-4 py-2 text-[14px] text-[#088269] font-semibold rounded-full border border-[#D5D1E1] hover:border-[#07745E]"
                   >
                     Подробнее
                   </NavLink>
@@ -92,9 +92,9 @@ const Blog = () => {
               containerClassName={"flex justify-center mt-4 items-center"}
               pageClassName={"mx-1"}
               pageLinkClassName={
-                "px-3 py-1 rounded-lg border border-[#E5E2EE] font-semibold text-[#202020] bg-white"
+                "px-3 py-2 rounded-lg border border-[#E5E2EE] font-semibold text-[#202020] bg-white"
               }
-              activeLinkClassName={"bg-emerald-700 text-[#FFFFFF]"}
+              activeLinkClassName={"text-green-600"}
             />
           </div>
         </div>

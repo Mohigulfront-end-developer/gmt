@@ -30,11 +30,11 @@ const AboutUs = () => {
             <img src={Img} alt="" className="rounded-lg" />
           </div>
 
-          <div className="flex justify-between items-start py-5">
-            <h1 className="text-[48px] font-medium w-[50%]">
+          <div className="sm:flex justify-between items-start py-5 flex-wrap">
+            <h1 className="lg:text-[48px] sm:text-[35px] text-[30px] font-medium sm:w-[50%] w-full">
               Глобал медикал трейд
             </h1>
-            <div className="w-[50%]">
+            <div className="sm:w-[50%] w-full">
               <p className="text-[16px] font-medium pb-5">
                 Учитывая стремительное развитие мировых медицинских технологий,
                 врачи в Российской Федерации и соседних странах столкнулись
@@ -57,15 +57,15 @@ const AboutUs = () => {
         <Number />
       </div>
       <div className="bg-[#088269]">
-        <div className="container flex justify-between py-20">
+        <div className="container sm:flex justify-between py-20 flex-wrap">
           <div className="">
             <img
               src={Partner}
               alt=""
-              className="w-full h-full rounded-lg object-cover "
+              className="lg:w-full sm:w-[90%] h-full rounded-lg object-cover "
             />
           </div>
-          <div className="w-[50%]">
+          <div className="lg:w-[50%] sm:w-full">
             <h3 className=" pb-6 text-[30px] font-medium text-[#F8F7F3]">
               Наши партнёры
             </h3>

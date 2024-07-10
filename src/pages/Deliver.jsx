@@ -26,7 +26,7 @@ const Dostavka = () => {
           Информация о доставке
         </h1>
       <MapPunktVidacha/>
-        <div className="ml-[50%] w-[50%] ">
+        <div className="lg:ml-[50%] lg:w-[50%] sm:w-[60%] w-full">
           <p className="text-[16px] font-medium">
             Учитывая стремительное развитие мировых медицинских технологий,
             врачи в Российской Федерации и соседних странах столкнулись
@@ -39,18 +39,18 @@ const Dostavka = () => {
         </div>
       </div>
       <PositiveSide />
-      <div className="container pt-10 pb-[150px] flex justify-between">
+      <div className="container pt-10 pb-[150px] lg:flex justify-between grid grid-cols-1">
         <div className="">
-          <h2 className="w-[50%] text-[30px] font-medium pb-[25px]">
+          <h2 className="lg:w-[50%] w-full text-[30px] font-medium pb-[25px]">
             Правила получения товара в пункте выдачи
           </h2>
-          <p className="w-[70%] font-medium text-[16px]">
+          <p className="lg:w-[70%] w-[80%] font-medium text-[16px]">
             Учитывая стремительное развитие мировых медицинских технологий,
             врачи в Российской Федерации и соседних странах столкнулись
             с вызовом, требующим обновления приборов.
           </p>
         </div>
-        <div className="">
+        <div className="sm:mt-[20px] mt-[20px]">
           <div className="py-[20px] border-t-[1px] border-[#D5D1E1]">
             <h4 className="text-[18px] font-medium">Подготовить документы</h4>
             <p className="text-[16px] font-medium pt-[12px] text-[#7A7687]">
@@ -76,13 +76,13 @@ const Dostavka = () => {
       </div>
       <FastQuestion />
       <div className="container py-[150px]">
-        <div className="flex justify-between mb-[15px] items-center">
-          <h2 className="w-[50%] text-[30px] font-medium">
+        <div className="lg:flex justify-between mb-[15px] items-center flex-wrap">
+          <h2 className="lg:w-[50%] w-full text-[30px] font-medium">
             Вы сможете забрать оборудование{" "}
             <span className="text-[#088269]">самостоятельно</span> из нашего
             офиса
           </h2>
-          <div className="flex justify-between gap-3 w-[50%]">
+          <div className="flex justify-between gap-3 sm:mt-[15px] w-full lg:w-[50%]">
             <div className="w-full border rounded-lg p-[25px]">
               <h4 className="text-[18px] font-semibold mb-[20px]">Контакты</h4>
               <p className="text-[#7A7687] text-medium text-[16px]">
