@@ -28,63 +28,63 @@ const HeaderBottom = () => {
   });
 
   return (
-    <div className="bg-[#F8F7F3] border-b-2 border-[#E5E2EE]">
-      <div className="container flex items-center justify-between py-2">
+    <div className="bg-[#F8F7F3] border-b-[1px] border-[#E5E2EE]">
+      <div className="container sm:flex hidden items-center justify-between py-2">
         <ul className="flex items-center justify-between gap-5">
           <NavLink
             to={"/katalog"}
-            className="flex items-center gap-2 text-[14px] font-semibold active:text-green-600"
+            className="flex items-center gap-2 text-[14px] font-semibold hover:text-[#07745E]"
           >
-            <HiOutlineMenuAlt1 />
+            <HiOutlineMenuAlt1 className="hover:text-[#07745E]"/>
             Каталог
           </NavLink>
           <NavLink
             to={"/proizvoditel"}
-            className="flex items-center text-[14px] font-semibold"
+            className="flex items-center text-[14px] font-semibold hover:text-[#07745E]"
           >
             Производители
           </NavLink>
           <NavLink
             to={"/kabinet-podklyuch"}
-            className="flex items-center text-[14px] font-semibold"
+            className="flex items-center text-[14px] font-semibold hover:text-[#07745E]"
           >
             Кабинеты под ключ
           </NavLink>
           <NavLink
             to={"/uslugi"}
-            className="flex items-center text-[14px] font-semibold"
+            className="flex items-center text-[14px] font-semibold hover:text-[#07745E]"
           >
             Услуги
           </NavLink>
           <NavLink
             to={"/aktsiya"}
-            className="flex items-center text-[14px] font-semibold"
+            className="flex items-center text-[14px] font-semibold hover:text-[#07745E]"
           >
             Акции
           </NavLink>
           <NavLink
             to={"/pokupatel"}
-            className="flex items-center text-[14px] font-semibold"
+            className="flex items-center text-[14px] font-semibold hover:text-[#07745E]"
           >
             Покупателям
           </NavLink>
           <NavLink
             to={"/kontakt"}
-            className="flex items-center text-[14px] font-semibold"
+            className="flex items-center text-[14px] font-semibold hover:text-[#07745E]"
           >
             Контакты
           </NavLink>
         </ul>
-        <div className="flex items-center justify-between gap-4">
+        <div className="lg:flex hidden items-center justify-between gap-4">
           <p className="flex items-center gap-2 text-[14px] font-semibold">
             Москва <IoLocationOutline className="" />
           </p>
-          <button className="text-[14px] px-4 py-2 bg-transparent border border-[#E5E2EE] rounded-full hover:bg-[#088269] hover:text-white">
+          <button className="text-[14px] px-4 py-2 bg-transparent border border-[#E5E2EE] rounded-full hover:border-[#07745E] ">
             +7(495)000-00-00
           </button>
           <button
             onClick={handleOpenModal}
-            className="text-[14px] px-4 py-2 bg-transparent border border-[#E5E2EE] rounded-full hover:bg-[#088269] hover:text-white"
+            className="text-[14px] px-4 py-2  border border-[#E5E2EE] text-[#F8F7F3] rounded-full bg-[#088269] hover:bg-[#07745E] hover:text-[#F8F7F3]"
           >
             Заказать звонок
           </button>

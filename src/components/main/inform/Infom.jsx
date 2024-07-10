@@ -58,9 +58,9 @@ const items = [
 const Infom = () => {
   return (
     <div className="bg-[#088269]">
-      <div className="container flex justify-between py-[100px]  ">
+      <div className="container flex justify-between py-[100px] flex-wrap ">
         <div>
-          <h2 className="text-white text-[30px] font-medium sm:mb-[30px] ">
+          <h2 className="text-white sm:text-[30px] font-medium sm:mb-[30px] text-[25px] ">
             Информация о компании
           </h2>
         </div>
@@ -76,7 +76,7 @@ const Infom = () => {
               />
             </div>
           )}
-          className="bg-[#088269] w-[50%] border-none h-full text-white"
+          className="bg-[#088269] lg:w-[50%] sm:w-[50%] border-none h-full text-white w-[100%] "
         />
       </div>
     </div>

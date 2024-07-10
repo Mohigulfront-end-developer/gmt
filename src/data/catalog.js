@@ -28,6 +28,7 @@ const catalog = [
     category: "Реанимация",
     labelClass: "bg-[#59599A]",
     label: "Хит продаж",
+    country: "Австралия"
 
   },
   {
@@ -44,6 +45,7 @@ const catalog = [
     labelClass: "bg-[#AD7B00]",
     sale:"-30%",
     label: "-30%",
+    country: "Австралия"
   },
 
   {
@@ -60,6 +62,7 @@ const catalog = [
     sale:"-30%",
     labelClass: "bg-[#088269]",
     label: "Новинки",
+    country: "Австралия"
   
   },
   {
@@ -76,6 +79,7 @@ const catalog = [
     labelClass: "bg-[#AD7B00]",
     sale:"-30%",
     label: "-30%",
+    country: "Австралия"
   },
 
   {
@@ -92,6 +96,7 @@ const catalog = [
     category: "Акушерство и Гинекология",
     labelClass: "bg-[#59599A]",
     label: "Хит продаж",
+    country: "Германия"
 
   },
   {
@@ -108,6 +113,7 @@ const catalog = [
     sale:"-30%",
     labelClass: "bg-[#088269]",
     label: "Новинки",
+    country: "Испания"
   
   },
   {
@@ -124,6 +130,7 @@ const catalog = [
     labelClass: "bg-[#AD7B00]",
     sale:"-30%",
     label: "-30%",
+    country: "Испания"
   },
 
   {
@@ -140,6 +147,7 @@ const catalog = [
     sale:"-30%",
     labelClass: "bg-[#088269]",
     label: "Новинки",
+    country: "Израиль"
   
   },
   {
@@ -156,6 +164,7 @@ const catalog = [
     category: "Рентгенология и томография",
     labelClass: "bg-[#59599A]",
     label: "Хит продаж",
+    country: "Германия"
 
   },
   {
@@ -172,6 +181,7 @@ const catalog = [
     sale:"-30%",
     labelClass: "bg-[#088269]",
     label: "Новинки",
+    country: "Великобритания"
   
   },
   {
@@ -188,6 +198,7 @@ const catalog = [
     labelClass: "bg-[#AD7B00]",
     sale:"-30%",
     label: "-30%",
+    country: "Бельгия"
   },
 
   {
@@ -204,6 +215,7 @@ const catalog = [
     labelClass: "bg-[#AD7B00]",
     sale:"-30%",
     label: "-30%",
+    country: "Беларусь"
   },
 
   {
@@ -220,6 +232,7 @@ const catalog = [
     sale:"-30%",
     labelClass: "bg-[#088269]",
     label: "Новинки",
+    country: "Австралия"
   
   },
   {
@@ -236,6 +249,7 @@ const catalog = [
     category: "Новинки",
     labelClass: "bg-[#59599A]",
     label: "Хит продаж",
+    country: "Австрия"
 
   },
   {
@@ -252,6 +266,7 @@ const catalog = [
     sale:"-30%",
     labelClass: "bg-[#088269]",
     label: "Новинки",
+    country: "Австралия"
   
   },
   {
@@ -268,6 +283,7 @@ const catalog = [
     category: "Кабинеты под ключ",
     labelClass: "bg-[#59599A]",
     label: "Хит продаж",
+    country: "Австрия"
 
   },
 ];

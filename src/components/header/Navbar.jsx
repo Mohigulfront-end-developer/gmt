@@ -32,7 +32,7 @@ const Navbar = () => {
   });
 
   return (
-    <div className="bg-[#F8F7F3] border-b-2 border-[#E5E2EE]">
+    <div className="bg-[#F8F7F3] border-b-[1px] border-[#E5E2EE]">
       <div className="container py-4">
         <div className="flex justify-between items-center">
           <div className="flex items-center gap-8">
@@ -40,7 +40,20 @@ const Navbar = () => {
               <img src={Logo} alt="Logo" />
             </NavLink>
 
-            <div className="flex items-center border border-[#D5D1E1] px-2 rounded-full">
+            <div className="lg:flex hidden items-center border border-[#D5D1E1] px-2 rounded-full">
+              <button className="flex font-bold items-center gap-2 text-[14px] text-[#7A7687] rounded-full bg-[#EFEFEF] p-2 relative right-[8px]">
+                Все категории <FaCaretDown className="text-[#7A7687]" />
+              </button>
+              <input
+                type="text"
+                placeholder="Поиск"
+                className="bg-[#F8F7F3] px-4 w-[400px] outline-none "
+              />
+              <button className="h-[38px] w-[50px] flex items-center gap-2 text-[15px] text-[#7A7687] rounded-r-full bg-[#D5D1E1] left-2 relative ">
+                <IoSearch className="text-[#7A7687] ml-5" />
+              </button>
+            </div>
+            <div className="sm:flex lg:hidden hidden items-center border border-[#D5D1E1] px-2 rounded-full">
               <button className="flex font-bold items-center gap-2 text-[14px] text-[#7A7687] rounded-full bg-[#EFEFEF] p-2 relative right-[8px]">
                 Все категории <FaCaretDown className="text-[#7A7687]" />
               </button>
@@ -59,40 +72,33 @@ const Navbar = () => {
             </div>
           </div>
 
-          <div className="flex items-center gap-4">
+          <div className="sm:flex hidden items-center gap-4">
             <button
-              className="text-[#7A7687] text-[13px] flex flex-col items-center"
+              className="text-[#7A7687] text-[13px] flex flex-col items-center hover:text-[#088269]"
               onClick={handleOpenModal}
             >
-              <IoPersonOutline className="text-[black] text-center w-[20px] h-[22px]" />
+              <IoPersonOutline className="text-[black] text-center w-[20px] h-[22px] hover:text-[#088269]" />
               Войти
             </button>
             <Link
               to={"/izbrannoe"}
-              className="text-[#7A7687] text-[13px] flex flex-col items-center "
+              className="text-[#7A7687] text-[13px] flex flex-col items-center hover:text-[#088269] "
             >
-              <IoIosHeartEmpty className="text-[black] text-center w-[20px] h-[22px]" />
+              <IoIosHeartEmpty className="text-[black] text-center w-[20px] h-[22px] hover:text-[#088269] " />
               Избранное
             </Link>
             <Link
               to={"/sravniti"}
-              className="text-[#7A7687] text-[13px] flex flex-col items-center"
+              className="text-[#7A7687] text-[13px] flex flex-col items-center hover:text-[#088269]"
             >
-              <RiAlignItemBottomLine className="text-[black] text-center w-[20px] h-[22px]" />
+              <RiAlignItemBottomLine className="text-[black] text-center w-[20px] h-[22px] hover:text-[#088269]" />
               Сравнить
             </Link>
             <Link to={"/korzinka"}>
-              <button className="text-[#7A7687] text-[13px] flex flex-col items-center">
-                <FiShoppingCart className="text-[black] text-center w-[20px] h-[22px]" />
+              <button className="text-[#7A7687] text-[13px] flex flex-col items-center hover:text-[#088269]">
+                <FiShoppingCart className="text-[black] text-center w-[20px] h-[22px] hover:text-[#088269]" />
                 Корзина
               </button>
-              {/* {card.length ? (
-                <p className="absolute left-[22px] top-[-10px] rounded-full bg-green-600 px-[5px] text-white">
-                  {card.length}
-                </p>
-              ) : (
-                ""
-              )} */}
             </Link>
           </div>
         </div>

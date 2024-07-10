@@ -5,6 +5,8 @@ import { useRef, useState } from "react";
 import Modal from "./Modal";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
+import { Link } from "react-router-dom";
+
 
 export default function SimpleSlider() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -39,7 +41,9 @@ export default function SimpleSlider() {
   var settings = {
     dots: true,
     infinite: true,
-    speed: 500,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    speed: 2000,
     slidesToShow: 1,
     slidesToScroll: 1,
   };
@@ -51,24 +55,24 @@ export default function SimpleSlider() {
           {[...Array(4)].map((_, index) => (
             <div key={index} className="bg-[#E5E4ED] border rounded-xl">
               <div className="lg:flex justify-between grid grid-cols-1 rounded-xl">
-                <div className="sm:w-[100%] lg:w-[50%] px-[60px] py-[33px]">
-                  <h1 className="lg:w-[85%] text-[#202020] text-[48px] font-medium leading-none mb-[25px]">
+                <div className="sm:w-[100%] lg:w-[50%] w-full lg:px-[60px] sm:px-[60px] px-[10px] py-[33px]">
+                  <h1 className="lg:w-[85%] text-[#202020] lg:text-[48px] sm:text-[48px] text-[35px] font-medium leading-none mb-[25px]">
                     Заголовок баннера в пару строк
                   </h1>
-                  <p className="sm:w-[100%] lg:w-[60%] text-[18px] text-[#7A7687]">
+                  <p className="sm:w-[100%] lg:w-[70%]  lg:text-[18px] sm:text-[18px] text-[16px] text-[#7A7687]">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                     do eiusmod tempor
                   </p>
-                  <div className="flex items-center gap-5 mt-[65px] sm:w-[100%] lg:w-[70%]">
+                  <div className="flex items-center gap-5 mt-[65px] sm:w-[100%] lg:w-[70%] w-full">
                     <button
                       onClick={handleOpenModal}
-                      className="sm:w-[100%] lg:w-[65%] border text-[14px] font-semibold border-[#D5D1E1] rounded-full bg-transparent py-2 px-4 hover:bg-[#088269] hover:text-white"
+                      className="sm:w-[100%] lg:w-[65%] w-full border lg:text-[14px] sm:text-[14px] text-[12px] font-semibold text-[#F8F7F3] border-[#D5D1E1] bg-[#088269] rounded-full px-4 py-2  hover:bg-[#07745E] "
                     >
                       Запросить цену
                     </button>
-                    <button className="sm:w-[100%] lg:w-[50%] border text-[14px] font-semibold border-[#D5D1E1] rounded-full bg-transparent py-2 px-6 hover:bg-[#088269] hover:text-white">
+                    <Link to={"/katalog"} className="sm:w-[100%] lg:w-[50%] w-full border text-center lg:text-[14px] sm:text-[14px] text-[12px] font-semibold border-[#D5D1E1] text-[#088269] rounded-full bg-transparent py-2 px-6 hover:bg-[#07745E] hover:text-[#F8F7F3] ">
                       В каталог
-                    </button>
+                    </Link>
                   </div>
                 </div>
                 <div className="relative lg:w-[50%] flex items-center justify-center">
@@ -77,7 +81,7 @@ export default function SimpleSlider() {
                     alt=""
                     className="w-full h-full object-cover object-left rounded-r-lg"
                   />
-                  <div className="flex gap-2 absolute bottom-4 right-4">
+                  <div className="lg:flex  hidden gap-2 absolute bottom-4 right-4">
                     <button
                       className="border rounded-full bg-white p-2"
                       onClick={previous}

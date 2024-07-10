@@ -1,18 +1,21 @@
 import  { useRef } from "react";
 import Slider from "react-slick";
-
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import  Data  from "../../../data/brend";
 import { GoArrowLeft, GoArrowRight } from "react-icons/go";
+import { Link, useNavigate } from "react-router-dom";
 
 const Brend = () => {
   const sliderRef = useRef(null);
+  const navigate = useNavigate();
 
   const settings = {
     dots: false,
     infinite: false,
-    speed: 500,
+    speed: 1000,
+    autoplay: true,
+    autoplaySpeed: 3000,
     slidesToShow: 3,
     slidesToScroll: 1,
     initialSlide: 0,
@@ -24,28 +27,34 @@ const Brend = () => {
       {
         breakpoint: 1024,
         settings: {
+          autoplay: true,
+          autoplaySpeed: 3000,
           slidesToShow: 2,
           slidesToScroll: 1,
           infinite: true,
-          dots: true,
+          dots: false,
         },
       },
       {
         breakpoint: 768,
         settings: {
+          autoplay: true,
+          autoplaySpeed: 3000,
           slidesToShow: 2,
           slidesToScroll: 1,
           infinite: true,
-          dots: true,
+          dots: false,
         },
       },
       {
         breakpoint: 600,
         settings: {
+          autoplay: true,
+          autoplaySpeed: 3000,
           slidesToShow: 1,
           slidesToScroll: 1,
           infinite: true,
-          dots: true,
+          dots: false,
         },
       },
     ],
@@ -72,6 +81,9 @@ const Brend = () => {
                 <div
                   key={index}
                   className="w-[320px] border bg-[#f8f7f3]  rounded-lg"
+                   onClick={() =>
+                        navigate(`/proizvoditel/${slide.id}`)
+                      }
                 >
                   <div className="w-full h-[220px] bg-[#fff] flex items-center justify-center rounded-t-lg">
                     <img src={slide.image} alt={slide.title} className="" />
@@ -88,21 +100,21 @@ const Brend = () => {
           <div className="flex sm:hidden md:flex justify-center md:justify-between  ">
             <div className="hidden md:flex gap-3 ml-3">
               <button
-                className="p-[10px] rounded-full border flex items-center justify-center"
+                className="p-[10px] rounded-full border flex items-center justify-center hover:border-[#07745E]"
                 onClick={() => sliderRef.current.slickNext()}
               >
-                <GoArrowLeft className="w-[25px] h-[25px] hover:text-green-600" />
+                <GoArrowLeft className="w-[22px] h-[22px] " />
               </button>
               <button
-                className="p-[10px] rounded-full border flex items-center justify-center"
+                className="p-[10px] rounded-full border flex items-center justify-center hover:border-[#07745E]"
                 onClick={() => sliderRef.current.slickPrev()}
               >
-                <GoArrowRight className="w-[25px] h-[25px] hover:text-green-600" />
+                <GoArrowRight className="w-[22px] h-[22px] " />
               </button>
             </div>
-            <button className="px-5 py-3  rounded-full font-semibold border text-[14px] text-[#fff] bg-[#088269]">
+            <Link to={"/o-kompanii/certificate"} className="px-5 py-3  rounded-full font-semibold border text-[14px] text-[#F8F7F3] bg-[#088269] hover:bg-[#07745E]">
               Сертификаты
-            </button>
+            </Link>
           </div>
         </div>
       </div>

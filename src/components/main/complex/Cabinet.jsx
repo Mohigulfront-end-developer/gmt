@@ -3,6 +3,7 @@ import Img1 from "../../../../public/assets/cabinet/complex1.png";
 import Img2 from "../../../../public/assets/cabinet/complex2.png";
 import Img3 from "../../../../public/assets/cabinet/complex3.png";
 import { GoArrowLeft, GoArrowRight } from "react-icons/go";
+import { Link } from "react-router-dom";
 
 const Cabinet = () => {
   const images = [
@@ -34,11 +35,11 @@ const Cabinet = () => {
         <h2 className="text-[30px] font-medium ">
           Комплексное оснащение кабинетов
         </h2>
-        <div className="flex justify-between items-start gap-2 py-[43px]">
+        <div className="flex justify-between items-start gap-2 py-[43px] ">
           {displayedImages.map((image, index) => (
             <div
               key={index}
-              className="border rounded-lg overflow-hidden w-[425px]"
+              className="border rounded-lg overflow-hidden w-[425px] cursor-pointer"
             >
               <img
                 src={image.src}
@@ -50,27 +51,27 @@ const Cabinet = () => {
           ))}
         </div>
         <div className="flex justify-between items-center mt-2 gap-4">
-          <div className="flex items-center gap-3">
+          <div className="lg:flex sm:flex hidden items-center gap-3">
             <div
               onClick={handlePrev}
-              className="p-[10px] border border-[#D5D1E1] rounded-full cursor-pointer"
+              className="p-[10px] border border-[#D5D1E1] rounded-full cursor-pointer hover:border-[#07745E]"
             >
               <GoArrowLeft />
             </div>
             <div
               onClick={handleNext}
-              className="p-[10px] border border-[#D5D1E1] rounded-full cursor-pointer"
+              className="p-[10px] border border-[#D5D1E1] rounded-full cursor-pointer hover:border-[#07745E]"
             >
               <GoArrowRight />
             </div>
           </div>
-          <div className="flex items-center gap-4">
-            <button className="border text-[14px] font-semibold border-[#D5D1E1] text-[#088269] rounded-full bg-transparent py-2 px-4 hover:bg-[#088269] hover:text-white">
+          <div className="flex items-center gap-4 cursor-pointer justify-center flex-wrap">
+            <Link to={"kabinet-podklyuch"} className="border text-[14px] font-semibold border-[#D5D1E1] text-[#088269] rounded-full bg-transparent py-2 px-4 hover:bg-[#07745E] hover:text-[#F8F7F3]">
               Бесплатная консультация
-            </button>
-            <button className="border text-[14px] font-semibold border-[#D5D1E1] text-[#088269] rounded-full bg-transparent py-2 px-4 hover:bg-[#088269] hover:text-white">
+            </Link>
+            <Link to={"kabinet-podklyuch"} className="border text-[14px] font-semibold border-[#D5D1E1] text-[#F8F7F3] rounded-full bg-[#088269] py-2 px-4 hover:bg-[#07745E] hover:text-[#F8F7F3]">
               Рассчитать стоимость
-            </button>
+            </Link>
           </div>
         </div>
       </div>

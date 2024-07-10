@@ -4,10 +4,10 @@ const Course = () => {
   return (
     <div className="bg-[#E5E4ED]">
       <div className="container flex justify-between ">
-        <div className="w-[46%]">
+        <div className="lg:w-[46%] sm:w-[46%] lg:flex sm:flex hidden ">
           <img src={Img} alt="" />
         </div>
-        <div className="py-4 w-[46%]">
+        <div className="py-4 lg:w-[46%] sm:w-[46%] w-full">
           <h3 className=" text-[30px] font-semibold mb-[15px]">
             Подпишитесь и будьте в курсе!
           </h3>
@@ -20,7 +20,7 @@ const Course = () => {
               placeholder="Введите email"
               className="outline-none px-4 py-2 rounded-l-full border-[#E5E4ED] w-[70%] "
             />
-            <button className="px-8 py-2 bg-[#088269] text-white rounded-full  relative ml-[-50px] ">
+            <button className="px-8 py-2 bg-[#088269] text-white rounded-full  relative ml-[-50px] hover:bg-[#07745E] hover:text-[#F8F7F3]">
               Подписаться
             </button>
           </div>

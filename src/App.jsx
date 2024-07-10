@@ -39,7 +39,7 @@ function App() {
     <>
       <BrowserRouter>
         <Header />
-        <div className="pt-[160px]">
+        <div className="lg:pt-[160px] sm:pt-[160px] pt-[90px]">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/katalog" element={<Catalog />} />
@@ -74,6 +74,8 @@ function App() {
               path="/blog/informatsioniy-statya"
               element={<BlogDetail />}
             />
+            <Route path="/blog/informatsioniy-statya/:id" element={<BlogDetail />} />
+
           </Routes>
         </div>
 

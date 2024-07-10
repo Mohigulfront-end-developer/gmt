@@ -1,4 +1,3 @@
-import React from 'react'
 import { Link, NavLink } from 'react-router-dom';
 import Img1 from "../../public/assets/brend/img1.png"
 import Img2 from "../../public/assets/brend/img2.png";

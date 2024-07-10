@@ -17,10 +17,7 @@ const cartProductsSlice = createSlice({
     },
 
     removeFromCart: (state, { payload }) => {
-      /**    Having received the id of the product from the payload,
-       * this function returns a new state which does not
-       * include the product that has been eliminated
-       * */
+
       for (let i = 0; i < state.length; i++) {
         const product = state[i];
         if (product.id == payload) {

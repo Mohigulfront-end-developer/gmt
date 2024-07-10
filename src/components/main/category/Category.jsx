@@ -1,7 +1,4 @@
-
-// import Image from "next/image";
-// import Link from "next/link";
-import img1 from "../../../../public/assets/category/category1.png"
+import img1 from "../../../../public/assets/category/category1.png";
 import img2 from "../../../../public/assets/category/category2.png";
 import img3 from "../../../../public/assets/category/category3.png";
 import img4 from "../../../../public/assets/category/category4.png";
@@ -11,97 +8,117 @@ import img7 from "../../../../public/assets/category/category7.png";
 import { Link } from "react-router-dom";
 
 const Category = () => {
+
   return (
-    <section className="px-16 py-5 gap-12 bg-[#F8F7F3]">
+    <section className="px-4 md:px-16 py-5 gap-12 bg-[#F8F7F3]">
       <div className="container">
-        <div className=" flex items-center  justify-between">
+        <div className="flex items-center justify-between">
           <h2 className="text-[#202020] text-3xl font-medium leading-[120%] my-10">
             Популярные категории
           </h2>
-          <Link href="/">
-            <button className="transition duration-300 flex justify-center items-center px-[20px] py-[11px] rounded-full font-manrope font-semibold text-sm text-white bg-[#088269] border-none">
+          <Link to="/">
+            <Link to={"/katalog"} className="transition duration-300 lg:flex sm:flex hidden justify-center items-center px-[20px] py-[11px] rounded-full font-manrope font-semibold text-sm text-white bg-[#088269] border-none">
               Все категории
-            </button>
+            </Link>
           </Link>
         </div>
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2">
-          <div className="grid grid-cols-1 gap-4">
-            <div className="w-[98%] h-[98%] border border-[#E5E2EE] rounded-lg">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2">
+          <div className="grid grid-cols-1 gap-2">
+            <Link to={"/katalog"}>
+             <div className="w-full h-full border border-[#E5E2EE] rounded-lg cursor-pointer">
               <img
                 src={img1}
                 alt="image"
-                className="w-full h-[200px] object-contain rounded-t-xl bg-white p-10 "
+                className="w-full h-[200px] object-contain rounded-t-xl bg-white p-5"
               />
-              <p className="text-[16px] font-normal p-4 ">
+              <p className="lg:text-[16px] sm:text-[14px] text-[12px] p-4">
                 Дерматологическое оборудование
               </p>
             </div>
-            <div className="w-[98%] h-[304px] border border-[#E5E2EE] rounded-lg">
+            </Link>
+           <Link to={"/katalog"}>
+            <div className="w-full h-full border border-[#E5E2EE] rounded-lg cursor-pointer">
               <img
                 src={img2}
                 alt="image"
-                className="w-full h-[200px] object-contain rounded-t-xl bg-white p-10"
+                className="w-full h-[200px] object-contain rounded-t-xl bg-white p-5"
               />
-              <p className="text-[16px] font-normal p-4">
+              <p className="lg:text-[16px] sm:text-[14px] text-[12px] p-4">
                 Ветеринарное оборудование
               </p>
             </div>
+           </Link>
           </div>
-          <div className="w-[98%] h-[578px] border border-[#E5E2EE] rounded-lg row-span-2">
+         <Link to={"/katalog"}>
+          <div className="w-full h-full border border-[#E5E2EE] rounded-lg md:row-span-2 cursor-pointer">
             <img
               src={img3}
-              alt=""
-              className=" w-full h-[470px] object-contain rounded-t-xl bg-white p-10"
+              alt="image"
+              className="w-full h-[460px] object-contain rounded-t-xl bg-white p-5"
             />
-            <p className="text-[16px] font-normal p-4">
+            <p className="lg:text-[16px] sm:text-[14px] text-[12px] p-4">
               Дерматологическое оборудование
             </p>
           </div>
-          <div className="grid grid-cols-1 gap-4">
-            <div className=" w-[98%] h-[280px] border border-[#E5E2EE] rounded-lg">
+         </Link>
+          <div className="grid grid-cols-1 gap-2">
+           <Link to={"/katalog"}>
+            <div className="w-full h-full border border-[#E5E2EE] rounded-lg cursor-pointer">
               <img
                 src={img4}
                 alt="image"
-                className="w-full h-[200px] object-contain rounded-t-xl bg-white p-10"
+                className="w-full h-[200px] object-contain rounded-t-xl bg-white p-5"
               />
-              <p className="text-[16px] font-normal p-4">
+              <p className="lg:text-[16px] sm:text-[14px] text-[12px] p-4">
                 Оборудование для анастезиологии
               </p>
             </div>
-            <div className="w-[98%] h-[280px] border border-[#E5E2EE] rounded-lg">
+           </Link>
+            <Link to={"/katalog"}>
+            <div className="w-full h-full border border-[#E5E2EE] rounded-lg cursor-pointer">
               <img
                 src={img5}
                 alt="image"
-                className="w-full h-[200px] object-contain rounded-t-xl bg-white p-10"
+                className="w-full h-[200px] object-contain rounded-t-xl bg-white p-5"
               />
-              <p className="text-[16px] font-normal p-4">
-                Мебель для медецинских целей
+              <p className="lg:text-[16px] sm:text-[14px] text-[12px] p-4">
+                Мебель для медицинских целей
               </p>
             </div>
+            </Link>
           </div>
-          <div className="grid grid-cols-1 gap-4">
-            <div className="w-[98%] h-[280px] border border-[#E5E2EE] rounded-lg">
+          <div className="grid grid-cols-1 gap-2">
+           <Link to={"/katalog"}>
+            <div className="w-full h-full border border-[#E5E2EE] rounded-lg cursor-pointer">
               <img
                 src={img6}
                 alt="image"
-                className="w-full h-[200px] object-contain rounded-t-xl bg-white p-10"
+                className="w-full h-[200px] object-contain rounded-t-xl bg-white p-5"
               />
-              <p className="text-[16px] font-normal p-4">
+              <p className="lg:text-[16px] sm:text-[14px] text-[12px] font-normal p-4">
                 Оборудование для анастезиологии
               </p>
             </div>
-            <div className="w-[98%] h-[280px] border border-[#E5E2EE] rounded-lg">
+           </Link>
+           <Link to={"/katalog"}>
+            <div className="w-full h-full border border-[#E5E2EE] rounded-lg cursor-pointer">
               <img
                 src={img7}
                 alt="image"
-                className="w-full h-[200px] object-contain rounded-t-xl bg-white p-10"
+                className="w-full h-[200px] object-contain rounded-t-xl bg-white p-5"
               />
-              <p className="text-[16px] font-normal p-4">
+              <p className="lg:text-[16px] sm:text-[14px] text-[12px] font-normal p-4">
                 Дерматологическое оборудование
               </p>
             </div>
+           </Link>
           </div>
         </div>
+        <Link to="/">
+            <Link to={"/katalog"} className="transition duration-300 lg:hidden sm:hidden flex w-[50%] mt-[20px] mx-auto justify-center items-center px-[20px] py-[11px] rounded-full font-manrope font-semibold text-sm text-white bg-[#088269] border-none">
+              Все категории
+            </Link>
+          </Link>
       </div>
     </section>
   );
